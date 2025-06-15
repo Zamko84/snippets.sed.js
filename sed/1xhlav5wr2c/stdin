@@ -1,0 +1,1 @@
+están preparando un parche en iRacing para que el efecto esté más bajo por defecto, y aplicar un filtro a los 360 Hz con Moza, pero aún no lo tienen listo, imagino que saldrá en una o dos semanas, por lo que he leído, pero eso, que mientras basta con desactivarlo en iRacing (para quitar todo lo nuevo basta con poner loadMozaAPI=0 en el app.ini
