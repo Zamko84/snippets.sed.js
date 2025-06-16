@@ -1,0 +1,12 @@
+channels:
+- conda-forge
+dependencies:
+- python=3.11.10
+- pip<=24.2
+- pip:
+  - mlflow==2.22.0
+  - cloudpickle==2.2.1
+  - numpy==1.26.4
+  - pandas==2.3.0
+  - torch==2.5.1
+name: 6a8d18ef6d1d7cea1e233a10e9865346
