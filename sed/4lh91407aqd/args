@@ -1,0 +1,1 @@
+-e 's|importsources -name \\$app_name -path /mnt/workspace/Xilinx2022.2/Vitis/2022.2/data/embeddedsw/lib/sw_services/xilskey_v7_3/examples/xilskey_efuseps_zynqmp_input.h|importsources -name \$app_name -path mnt/workspace/jenkins/workspace/app_zynqmp_khushbooc_secure_boot/efuse_app/secure_boot_efuse_programming/xilskey_efuseps_zynqmp_input.h|'
