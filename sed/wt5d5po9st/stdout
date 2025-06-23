@@ -1,0 +1,10 @@
+Message handshakeReply = userClient.handshake(ImmutableMap.of(
+                SessionManager.AUTHORIZATION_SECRET_PARAM, MOCK_USER_ACCESS_TOKEN_1
+        ));
+  assertTrue(handshakeReply.isSuccessful(), "Handshake failed");
+
+        assertThat(handshakeReply.getExt(), hasKey(SessionManager.AUTHORIZATION_SESSION_PARAM));
+        String sessionUid = (String)handshakeReply.getExt().get(SessionManager.AUTHORIZATION_SESSION_PARAM);
+        // Subscribe to message channel
+        assertTrue(userClient.subscribe(messageChannel).isSuccessful(), "Subscription failed");
+        // Connect the bridge client
