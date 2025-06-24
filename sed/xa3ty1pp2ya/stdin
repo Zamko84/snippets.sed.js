@@ -1,0 +1,11 @@
+  <bean id="lnEventProcessingJobTrigger" class="org.springframework.scheduling.quartz.SimpleTriggerFactoryBean">
+    <property name="jobDetail" ref="lnEventProcessingJobDetail"/>
+    <property name="startDelay" value="10000"/>
+    <property name="repeatInterval" value="#{ 10 * 1000 }"/>
+  </bean>
+
+  <bean id="deleteOrphanedProbePDULinksJobTrigger" class="org.springframework.scheduling.quartz.SimpleTriggerFactoryBean">
+    <property name="jobDetail" ref="deleteOrphanedProbePDULinksJobDetail"/>
+    <property name="startDelay" value="10000"/>
+    <property name="repeatInterval" value="#{ 3 * 60 * 1000 }"/>
+  </bean>
