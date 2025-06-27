@@ -1,0 +1,1 @@
+-z 's/\(\w\)\n\(\w\)/\1 \2/g; s/ / --tests /g; s/^/--tests /; s/--tests $//; s/.classMethod//g'
