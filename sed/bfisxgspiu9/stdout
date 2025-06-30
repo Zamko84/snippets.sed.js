@@ -1,0 +1,4 @@
+|%{color: green}Pass%|
+|%{color:purple}False Fail%|
+|%{color:blue}Skip%|
+|%{color.red}Fail%|

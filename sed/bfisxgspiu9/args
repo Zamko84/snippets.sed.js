@@ -1,0 +1,1 @@
+'s/|\(Pass\)/|%{color: green}\1%/g; s/|\(False Fail\)/|%{color:purple}\1%/g; s/|\(Fail\)/|%{color.red}\1%/g; s/|\(Skip\)/|%{color:blue}\1%/g;'
