@@ -1,0 +1,71 @@
+apiVersion: v1
+kind: PersistentVolumeClaim
+metadata:
+  name: fin-api-mssql-pvc-data
+spec:
+  accessModes:
+    - ReadWriteOnce
+  resources:
+    requests:
+      storage: 60Gi
+  storageClassName: STORAGE_CLASS_NAME
+---
+apiVersion: v1
+kind: PersistentVolumeClaim
+metadata:
+  name: fin-api-mssql-pvc-log
+spec:
+  accessModes:
+    - ReadWriteOnce
+  resources:
+    requests:
+      storage: 60Gi
+  storageClassName: STORAGE_CLASS_NAME
+---
+apiVersion: v1
+kind: PersistentVolumeClaim
+metadata:
+  name: fin-api-mssql-pvc-system
+spec:
+  accessModes:
+    - ReadWriteOnce
+  resources:
+    requests:
+      storage: 60Gi
+  storageClassName: STORAGE_CLASS_NAME
+---
+apiVersion: v1
+kind: PersistentVolumeClaim
+metadata:
+  name: fin-api-mssql-pvc-scripts
+spec:
+  accessModes:
+    - ReadWriteOnce
+  resources:
+    requests:
+      storage: 100Mi
+  storageClassName: STORAGE_CLASS_NAME
+---
+apiVersion: v1
+kind: PersistentVolumeClaim
+metadata:
+  name: fin-api-pvc-fin-log
+spec:
+  accessModes:
+    - ReadWriteOnce
+  resources:
+    requests:
+      storage: 5Gi
+  storageClassName: STORAGE_CLASS_NAME
+---
+apiVersion: v1
+kind: PersistentVolumeClaim
+metadata:
+  name: fin-api-mssql-pvc-backup
+spec:
+  accessModes:
+    - ReadWriteOnce
+  resources:
+    requests:
+      storage: 10Gi
+  storageClassName: STORAGE_CLASS_NAME

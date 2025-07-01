@@ -1,0 +1,1 @@
+'s/STORAGE_CLASS_NAME/'$USER'/g'
