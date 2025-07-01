@@ -1,0 +1,1 @@
+-e '/func provide[a-zA-Z]*Operation() server.Operation/d' 

@@ -1,0 +1,41 @@
+
+func provideCreateNewSessionOperation() server.Operation[*server.CreateNewSessionRequest, *server.CreateNewSessionResult] {
+	return operations.NewCreateNewSessionOperation()
+}
+
+func provideGetViewerPageOperation() server.Operation[*server.GetViewerPageRequest, *server.GetViewerPageResult] {
+	return operations.NewGetViewerPageOperation()
+}
+
+func provideHealthCheckOperation() server.Operation[*server.HealthCheckRequest, *server.HealthCheckResult] {
+	return operations.NewHealthCheckOperation()
+}
+
+func provideProxyGetOperation() server.Operation[*server.ProxyGetRequest, *server.ProxyGetResult] {
+	return operations.NewProxyGetOperation()
+}
+
+func provideServiceImpl(
+	createNewSessionOperation server.Operation[*server.CreateNewSessionRequest, *server.CreateNewSessionResult],
+	getViewerPageOperation server.Operation[*server.GetViewerPageRequest, *server.GetViewerPageResult],
+	healthCheckOperation server.Operation[*server.HealthCheckRequest, *server.HealthCheckResult],
+	proxyGetOperation server.Operation[*server.ProxyGetRequest, *server.ProxyGetResult],
+) server.BareMetalProxy_2025_06_30 {
+	return server.NewBareMetalProxy_2025_06_30(
+		createNewSessionOperation,
+		getViewerPageOperation,
+		healthCheckOperation,
+		proxyGetOperation,
+	)
+}
+
+var ServiceModule = wire.NewSet(
+	provideCreateNewSessionOperation,
+	provideGetViewerPageOperation,
+	provideHealthCheckOperation,
+	provideProxyGetOperation,
+	operations.NewCreateNewSessionOperation,
+	operations.NewGetViewerPageOperation,
+	operations.NewHealthCheckOperation,
+	operations.NewProxyGetOperation,
+	provideServiceImpl)
