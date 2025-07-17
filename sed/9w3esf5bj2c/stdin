@@ -1,0 +1,8 @@
+dn: uid=test=TEST TEST,ou=Services,o=test
+ds-pwp-password-policy-dn: cn=Password Policies,cn=config
+
+dn: uid=test=TEST TEST,ou=Services,o=test
+ds-pwp-password-policy-dn: cn=Password Policies,cn=config
+
+dn: uid=test=TEST TEST,ou=Services,o=test
+ds-pwp-password-policy-dn: cn=Password Policies,cn=config
