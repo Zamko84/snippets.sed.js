@@ -1,0 +1,1 @@
+"s/\(\- name: SPRING_PROFILES_ACTIVE[[:space:]]*\n[[:space:]]*value: \)\"sit\"/\1\"alpha\"/"
