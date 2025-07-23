@@ -1,0 +1,6 @@
+project(projectName
+	VERSION 1.0.0
+	LANGUAGES CXX
+	DESCRIPTION "Stuff here to describe shit"
+	HOMEPAGE_URL "https://shit.com"
+)
