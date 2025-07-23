@@ -1,0 +1,3 @@
+/* 50 */     BLOCK_ENTITIES.register();
+     
+/* 52 */     ITEMS.register();
