@@ -1,0 +1,11 @@
+    _data.files.addAll(
+      images.map(
+        (i) => MapEntry(
+          'images',
+          MultipartFile.fromBytes(
+            await i.readAsBytes(),
+            filename: i.name,
+          ),
+        ),
+      ),
+    );

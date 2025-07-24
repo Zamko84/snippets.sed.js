@@ -1,0 +1,1 @@
+--regexp-extended ':a;N;$!ba;s/_data\.files\.addAll\(\n\s*(.+)\.map\(\n\s*\(i\) => MapEntry\(/_data.files.addAll(await Future.wait(s.map((i) async => MapEntry(/g'

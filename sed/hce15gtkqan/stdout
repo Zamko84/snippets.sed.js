@@ -1,0 +1,9 @@
+    _data.files.addAll(await Future.wait(s.map((i) async => MapEntry(
+          'images',
+          MultipartFile.fromBytes(
+            await i.readAsBytes(),
+            filename: i.name,
+          ),
+        ),
+      ),
+    );
