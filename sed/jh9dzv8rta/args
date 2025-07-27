@@ -1,0 +1,1 @@
+--expression='s/[[:blank:]]\+/, /g' --expression='s/—/0/g' --expression='s/^/=AVERAGE(/g' --expression='s/$/)/g'
