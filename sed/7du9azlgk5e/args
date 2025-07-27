@@ -1,0 +1,1 @@
+"s/Exec=[^ ]*/& --enable-features=UseOzonePlatform --ozone-platform-hint=auto --enable-webrtc-pipewire-capturer --enable-blink-features=MiddleClickAutoscroll/"

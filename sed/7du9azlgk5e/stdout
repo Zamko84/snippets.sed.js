@@ -1,0 +1,1 @@
+Exec=env --enable-features=UseOzonePlatform --ozone-platform-hint=auto --enable-webrtc-pipewire-capturer --enable-blink-features=MiddleClickAutoscroll LD_PRELOAD=/usr/lib/spotify-adblock.so spotify --uri=%U
