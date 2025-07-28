@@ -1,0 +1,1 @@
+--regexp-extended 's/Your branch is behind commits/\1/ t isbehind s/Your branch is up to date// t isupdated b problem : isbehind p : isupdated p : problem p'
