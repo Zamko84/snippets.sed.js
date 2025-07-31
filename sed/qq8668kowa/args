@@ -1,0 +1,1 @@
+'s/Key ([0-9]+) fingerprint: [0-9]* value:/Key $1/'
