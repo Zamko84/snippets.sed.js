@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite thread-count="20" parallel="classes" name="Failed suite [Uber Eats Test (Retry 1)]" guice-stage="DEVELOPMENT" verbose="0">
+    <listeners>
+        <listener class-name="com.automato.browserstack.BrowserStackListener"/>
+        <listener class-name="com.automato.testinformation.LogListener"/>
+        <listener class-name="com.automato.report.google.GoogleReportListener"/>
+        <listener class-name="com.uber.utils.KnownIssueListener"/>
+    </listeners>
+    <test thread-count="20" parallel="classes" name="Web Uber Eats Test(failed)" verbose="0">
+        <method-selectors>
+            <method-selector>
+                <script language="beanshell">
+                    <![CDATA[
+                        String suite = System.getProperty("au.suite").toUpperCase();
+                        String platform = System.getProperty("au.platform").toUpperCase();
+                        return groups.containsKey(suite) && groups.containsKey(platform);
+                    ]]>
+                </script>
+            </method-selector>
+        </method-selectors>
+        <classes>
+            <class name="com.uber.test.eats.web.VerifyPickupNearMePageTest">
+                <methods>
+                    <include name="afterSuite"/>
+                    <include name="userDeletion"/>
+                    <include name="verifyPickupNearMePage" invocation-numbers="0"/>
+                    <include name="signalTestAccount"/>
+                    <include name="quitDriver"/>
+                    <include name="dynamicDataCreation"/>
+                    <include name="setupAutomato"/>
+                </methods>
+            </class> <!-- com.uber.test.eats.web.VerifyPickupNearMePageTest -->
+            <class name="com.uber.test.eats.hypercriticalflow.RemoveItemViaCartTest">
+                <methods>
+                    <include name="removeItemViaCart" invocation-numbers="0"/>
+                    <include name="afterSuite"/>
+                    <include name="userDeletion"/>
+                    <include name="signalTestAccount"/>
+                    <include name="dynamicDataCreation"/>
+                    <include name="quitDriver"/>
+                    <include name="setupAutomato"/>
+                </methods>
+            </class> <!-- com.uber.test.eats.hypercriticalflow.RemoveItemViaCartTest -->
+            <class name="com.uber.test.eats.web.RemoveAddressTest">
+                <methods>
+                    <include name="afterSuite"/>
+                    <include name="userDeletion"/>
+                    <include name="removeAddress" invocation-numbers="0"/>
+                    <include name="signalTestAccount"/>
+                    <include name="quitDriver"/>
+                    <include name="dynamicDataCreation"/>
+                    <include name="setupAutomato"/>
+                </methods>
+            </class> <!-- com.uber.test.eats.web.RemoveAddressTest -->
+            <class name="com.uber.test.eats.web.VerifySearchWithInvalidInputTest">
+                <methods>
+                    <include name="afterSuite"/>
+                    <include name="userDeletion"/>
+                    <include name="verifySearchWithInvalidInput" invocation-numbers="0"/>
+                    <include name="signalTestAccount"/>
+                    <include name="quitDriver"/>
+                    <include name="dynamicDataCreation"/>
+                    <include name="setupAutomato"/>
+                </methods>
+            </class> <!-- com.uber.test.eats.web.VerifySearchWithInvalidInputTest -->
+            <class name="com.uber.test.eats.hypercriticalflow.CheckPlaceOrderTest">
+                <methods>
+                    <include name="afterSuite"/>
+                    <include name="userDeletion"/>
+                    <include name="signalTestAccount"/>
+                    <include name="quitDriver"/>
+                    <include name="dynamicDataCreation"/>
+                    <include name="checkPlaceOrder"/>
+                    <include name="setupAutomato"/>
+                </methods>
+            </class> <!-- com.uber.test.eats.hypercriticalflow.CheckPlaceOrderTest -->
+            <class name="com.uber.test.eats.web.VerifyAddressAutocompleteTest">
+                <methods>
+                    <include name="afterSuite"/>
+                    <include name="userDeletion"/>
+                    <include name="signalTestAccount"/>
+                    <include name="quitDriver"/>
+                    <include name="dynamicDataCreation"/>
+                    <include name="setupAutomato"/>
+                    <include name="verifyAddressAutocomplete" invocation-numbers="0"/>
+                </methods>
+            </class> <!-- com.uber.test.eats.web.VerifyAddressAutocompleteTest -->
+            <class name="com.uber.test.eats.web.ScheduleTimeFutureDateTest">
+                <methods>
+                    <include name="afterSuite"/>
+                    <include name="userDeletion"/>
+                    <include name="scheduleTimeFutureDate" invocation-numbers="0"/>
+                    <include name="signalTestAccount"/>
+                    <include name="dynamicDataCreation"/>
+                    <include name="quitDriver"/>
+                    <include name="setupAutomato"/>
+                </methods>
+            </class> <!-- com.uber.test.eats.web.ScheduleTimeFutureDateTest -->
+            <class name="com.uber.test.eats.web.ValidatePickupTimeStandardTest">
+                <methods>
+                    <include name="afterSuite"/>
+                    <include name="userDeletion"/>
+                    <include name="signalTestAccount"/>
+                    <include name="quitDriver"/>
+                    <include name="dynamicDataCreation"/>
+                    <include name="validatePickupTimeStandard"/>
+                    <include name="setupAutomato"/>
+                </methods>
+            </class> <!-- com.uber.test.eats.web.ValidatePickupTimeStandardTest -->
+            <class name="com.uber.test.eats.web.ScheduleTimeSameDayTest">
+                <methods>
+                    <include name="scheduleTimeSameDay" invocation-numbers="0"/>
+                    <include name="afterSuite"/>
+                    <include name="userDeletion"/>
+                    <include name="signalTestAccount"/>
+                    <include name="quitDriver"/>
+                    <include name="dynamicDataCreation"/>
+                    <include name="setupAutomato"/>
+                </methods>
+            </class> <!-- com.uber.test.eats.web.ScheduleTimeSameDayTest -->
+            <class name="com.uber.test.eats.web.MiddleAddressBarTest">
+                <methods>
+                    <include name="middleAddressBar"/>
+                    <include name="afterSuite"/>
+                    <include name="userDeletion"/>
+                    <include name="signalTestAccount"/>
+                    <include name="dynamicDataCreation"/>
+                    <include name="quitDriver"/>
+                    <include name="setupAutomato"/>
+                </methods>
+            </class> <!-- com.uber.test.eats.web.MiddleAddressBarTest -->
+            <class name="com.uber.test.eats.web.VerifyHeaderTest">
+                <methods>
+                    <include name="afterSuite"/>
+                    <include name="userDeletion"/>
+                    <include name="signalTestAccount"/>
+                    <include name="dynamicDataCreation"/>
+                    <include name="quitDriver"/>
+                    <include name="setupAutomato"/>
+                    <include name="verifyHeader" invocation-numbers="0"/>
+                </methods>
+            </class> <!-- com.uber.test.eats.web.VerifyHeaderTest -->
+        </classes>
+    </test> <!-- Web Uber Eats Test(failed) -->
+</suite> <!-- Failed suite [Uber Eats Test] -->
