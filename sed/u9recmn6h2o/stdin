@@ -1,0 +1,5 @@
+# mail.konobono.com
+local_name mail.konobono.com {
+        ssl_cert = </etc/letsencrypt/live/mail.konobono.com/fullchain.pem
+        ssl_key = </etc/letsencrypt/live/mail.konobono.com/privkey.pem
+}
