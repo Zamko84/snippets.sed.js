@@ -1,0 +1,5 @@
+"
+    s/name=\"([\w|\s|\[]*)(( \(Retry [1-9][0-9]*\))*)(\])/name=\"\1 (Retry 3)\"/
+    s/name=\"Failed suite \[\(.*\)\( (Retry [0-9][0-9]*)\)*\]\"/name=\"\1 (Retry 3)\"/
+    s/name=\"\([^\"]*\)(failed)\"/name=\"\1\"/
+  "
