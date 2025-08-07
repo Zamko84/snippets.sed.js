@@ -1,0 +1,7 @@
+  <dp:cloud-deployment-config>
+    <dp:deployment-variant>cnSBC-signaling</dp:deployment-variant>
+    <dp:net-info>
+      <dp:net-label>internal-control</dp:net-label>
+      <dp:net-id>internal-control</dp:net-id>
+      <dp:binding-type>normal</dp:binding-type>
+    </dp:net-info>
