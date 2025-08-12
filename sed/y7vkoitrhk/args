@@ -1,0 +1,1 @@
+'s/;session.save_path = "\/tmp"/session.save_path = "tcp:\/\/[[REDIS_HOST]]:[[REDIS_PORT]]?auth[]=default&auth[]=[[REDIS_PASSWORD]]&prefix=PHPREDIS_SESSION_"/'
