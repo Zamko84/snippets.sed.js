@@ -1,0 +1,1 @@
+-n -e s#^https://github\.vrsn\.com/\([^/]\+\)/\([^/]\+\)\.git$#\1/\2#p
