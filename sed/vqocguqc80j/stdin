@@ -1,0 +1,93 @@
+{
+  "rn-version": "0.79.5",
+  "app-name": "Arapuca RN0.79.5 Example",
+
+  "modules": {
+    "base": {
+      "enabled": true,
+      "android": {
+        "app-id": "br.com.mobiltracker.arapucadev",
+        "version-code": 1,
+        "version-name": "0.1.0",
+
+        "signing": {
+          "store-file": "arapuca-dev.jks",
+          "store-pass": %REPLACE_ME_STOREPASS%,
+          "key-alias": "arapuca",
+          "key-pass": %REPLACE_ME_KEYPASS%
+        }
+      },
+      "ios": {
+        "app-id": "br.com.mobiltracker.arapucadev",
+        "version-code": 1,
+        "version-name": "0.1.0",
+
+        "descriptions": {
+          "location-when-in-usage": "", // optional
+          "location-always-and-when-in-usage": "", // optional
+          "motion-usage": "" // optional
+        },
+
+        "supported-orientations": ["PORTRAIT"],
+
+        "targeted-device-families": ["iphone", "ipad"],
+
+        "provisioning-profiles": {
+          "development": "Development XC br.com.mobiltracker.arapucadev",
+          "distribution": "Ad Hoc br.com.mobiltracker.arapucadev"
+        }
+      }
+    },
+
+    "background-location": {
+      "enabled": true,
+      "rnbg-license": ""
+    },
+
+    "checkbox": {
+      "enabled": true
+    },
+
+    "firebase": {
+      "enabled": true,
+      "android": {
+        "app-id": "1:638154878239:android:97388d0cbfdbf56d12d42a",
+        "project-id": "api-project-638154878239",
+        "api-key": "AIzaSyC45z-T_jhuVzyvTcHCpFO3ATq7tpqSU2E"
+      },
+      "ios": {
+        "app-id": "1:638154878239:ios:4804c0bbd590fc7012d42a",
+        "project-id": "api-project-638154878239",
+        "api-key": "AIzaSyBEcZV6X9X2hk06sO3fK4wwtP4SoHg8CNQ",
+        "gcm-sender-id": "638154878239"
+      }
+    },
+
+    "maps": {
+      "enabled": true,
+      "google-maps-api-key": "AIzaSyCsCM1H5DqB3ncihYlGBILLSBj-HZE13Io"
+    },
+
+    "navigation": {
+      "enabled": true,
+
+      "navigation-components": ["bottom-tabs"]
+    },
+
+    "vector-icons": {
+      "enabled": true
+    },
+
+    "webview": {
+      "enabled": true
+    },
+
+    "keep-awake": {
+      "enabled": true
+    },
+
+    "sound": {
+      "enabled": true
+    }
+  }
+}
