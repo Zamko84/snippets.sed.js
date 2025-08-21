@@ -1,0 +1,5 @@
+metadata:
+  name: {{  .Chart.Name }}-basedeployment
+  labels:
+    chart: {{ .Chart.Name }}-{{ .Chart.Version | replace + _ }}
+
