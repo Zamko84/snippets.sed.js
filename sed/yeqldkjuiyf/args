@@ -1,0 +1,1 @@
+--regexp-extended "s/\^[\d+\.\d+\.\d+-\d+\.\d+\.\d+:\d+\]\[[\s\d]+\]LogChat: \[SenderId: ([0-9a-f]{8}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{12})\] (.+): (.+)/**[\2](<https:\/\/brickadia.com\/users\/\1>)**: \3/"
