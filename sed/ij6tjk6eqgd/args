@@ -1,0 +1,1 @@
+sed -En |^[[:space:]]alert_action:[[:space:]](.*)$|\1|p'

@@ -1,0 +1,2 @@
+    - bundle: threat_intel
+      alert_action: testnotable
