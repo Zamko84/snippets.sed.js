@@ -1,0 +1,2040 @@
+{
+    "openapi": "3.0.0",
+    "info": {
+        "title": "Infraport",
+        "description": "This is the Infraport API documentation.",
+        "version": "2.25.0-dev",
+        "x-app-git-commit": "none",
+        "x-app-branch-name": "develop",
+        "x-app-build-timestamp": "0001-01-01T00:00:00Z",
+        "x-app-build-number": "0"
+    },
+    "servers": [
+        {
+            "url": "http://gateway_srv/ifp/v1",
+            "description": "Current environment"
+        },
+        {
+            "url": "https://api.infraport.world/ifp/v1",
+            "description": "Production"
+        }
+    ],
+    "paths": {
+        "/api/sf/customer/{customer}/alarm-triggers/{trigger}": {
+            "get": {
+                "tags": [
+                    "Alarm Triggers"
+                ],
+                "description": "Get existing trigger.",
+                "operationId": "get_api_alarm_trigger_get",
+                "parameters": [
+                    {
+                        "name": "customer",
+                        "in": "path",
+                        "required": true,
+                        "schema": {
+                            "type": "string"
+                        }
+                    },
+                    {
+                        "name": "trigger",
+                        "in": "path",
+                        "required": true,
+                        "schema": {
+                            "type": "string"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Get existing trigger.",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/AlarmTrigger"
+                                }
+                            }
+                        }
+                    },
+                    "400": {
+                        "description": "Any of the following reasons: Resource not found, Resource owner unauthorized.",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "oneOf": [
+                                        {
+                                            "$ref": "#/components/schemas/BadRequestResourceNotFoundError"
+                                        },
+                                        {
+                                            "$ref": "#/components/schemas/BadRequestResourceOwnerUnauthorizedError"
+                                        }
+                                    ]
+                                }
+                            }
+                        }
+                    },
+                    "401": {
+                        "description": "Unauthorized",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "oneOf": [
+                                        {
+                                            "$ref": "#/components/schemas/UnauthorizedError"
+                                        }
+                                    ]
+                                }
+                            }
+                        }
+                    },
+                    "500": {
+                        "description": "System Error",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "oneOf": [
+                                        {
+                                            "$ref": "#/components/schemas/InternalSystemError"
+                                        }
+                                    ]
+                                }
+                            }
+                        }
+                    },
+                    "404": {
+                        "description": "Customer not found",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "oneOf": [
+                                        {
+                                            "$ref": "#/components/schemas/BadRequestCustomerNotFoundError"
+                                        }
+                                    ]
+                                }
+                            }
+                        }
+                    }
+                }
+            },
+            "delete": {
+                "tags": [
+                    "Alarm Triggers"
+                ],
+                "summary": "Delete existing trigger.",
+                "description": "Delete existing trigger.",
+                "operationId": "delete_api_alarm_trigger_delete",
+                "parameters": [
+                    {
+                        "name": "customer",
+                        "in": "path",
+                        "required": true,
+                        "schema": {
+                            "type": "string"
+                        }
+                    },
+                    {
+                        "name": "trigger",
+                        "in": "path",
+                        "required": true,
+                        "schema": {
+                            "type": "string"
+                        }
+                    }
+                ],
+                "responses": {
+                    "204": {
+                        "description": "Delete existing trigger."
+                    },
+                    "400": {
+                        "description": "Any of the following reasons: Resource not found, Resource owner unauthorized",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "oneOf": [
+                                        {
+                                            "$ref": "#/components/schemas/BadRequestResourceNotFoundError"
+                                        },
+                                        {
+                                            "$ref": "#/components/schemas/BadRequestResourceOwnerUnauthorizedError"
+                                        }
+                                    ]
+                                }
+                            }
+                        }
+                    },
+                    "401": {
+                        "description": "Unauthorized",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "oneOf": [
+                                        {
+                                            "$ref": "#/components/schemas/UnauthorizedError"
+                                        }
+                                    ]
+                                }
+                            }
+                        }
+                    },
+                    "500": {
+                        "description": "System Error",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "oneOf": [
+                                        {
+                                            "$ref": "#/components/schemas/InternalSystemError"
+                                        }
+                                    ]
+                                }
+                            }
+                        }
+                    },
+                    "404": {
+                        "description": "Customer not found",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "oneOf": [
+                                        {
+                                            "$ref": "#/components/schemas/BadRequestCustomerNotFoundError"
+                                        }
+                                    ]
+                                }
+                            }
+                        }
+                    }
+                }
+            },
+            "patch": {
+                "tags": [
+                    "Alarm Triggers"
+                ],
+                "summary": "Edit existing trigger.",
+                "description": "Edit existing trigger.",
+                "operationId": "patch_api_alarm_trigger_patch",
+                "parameters": [
+                    {
+                        "name": "customer",
+                        "in": "path",
+                        "required": true,
+                        "schema": {
+                            "type": "string"
+                        }
+                    },
+                    {
+                        "name": "trigger",
+                        "in": "path",
+                        "required": true,
+                        "schema": {
+                            "type": "string"
+                        }
+                    }
+                ],
+                "requestBody": {
+                    "required": true,
+                    "content": {
+                        "application/json": {
+                            "schema": {
+                                "$ref": "#/components/schemas/AlarmTrigger2"
+                            }
+                        }
+                    }
+                },
+                "responses": {
+                    "200": {
+                        "description": "Edit existing trigger.",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/AlarmTrigger"
+                                }
+                            }
+                        }
+                    },
+                    "400": {
+                        "description": "Any of the following reasons: Resource not found, Resource owner unauthorized, Constraint Violation",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "oneOf": [
+                                        {
+                                            "$ref": "#/components/schemas/BadRequestResourceNotFoundError"
+                                        },
+                                        {
+                                            "$ref": "#/components/schemas/BadRequestResourceOwnerUnauthorizedError"
+                                        },
+                                        {
+                                            "$ref": "#/components/schemas/ConstraintValidationError"
+                                        }
+                                    ]
+                                }
+                            }
+                        }
+                    },
+                    "415": {
+                        "description": "Unsupported media type",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/UnsupportedMediaTypeError"
+                                }
+                            }
+                        }
+                    },
+                    "401": {
+                        "description": "Unauthorized",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "oneOf": [
+                                        {
+                                            "$ref": "#/components/schemas/UnauthorizedError"
+                                        }
+                                    ]
+                                }
+                            }
+                        }
+                    },
+                    "500": {
+                        "description": "System Error",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "oneOf": [
+                                        {
+                                            "$ref": "#/components/schemas/InternalSystemError"
+                                        }
+                                    ]
+                                }
+                            }
+                        }
+                    },
+                    "404": {
+                        "description": "Customer not found",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "oneOf": [
+                                        {
+                                            "$ref": "#/components/schemas/BadRequestCustomerNotFoundError"
+                                        }
+                                    ]
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "/api/sf/customer/{customer}/loggers/list/compact": {
+            "get": {
+                "tags": [
+                    "Loggers"
+                ],
+                "summary": "Get list of loggers.",
+                "description": "Return all loggers of the given Customer.",
+                "operationId": "get_api_article_logger_list_compact",
+                "parameters": [
+                    {
+                        "name": "customer",
+                        "in": "path",
+                        "required": true,
+                        "schema": {
+                            "type": "string"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Return all loggers of the given Customer.",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "type": "array",
+                                    "items": {
+                                        "$ref": "#/components/schemas/ApiLoggerCompact"
+                                    }
+                                }
+                            }
+                        }
+                    },
+                    "400": {
+                        "description": "Bad request",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/BadRequestError"
+                                }
+                            }
+                        }
+                    },
+                    "401": {
+                        "description": "Unauthorized",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "oneOf": [
+                                        {
+                                            "$ref": "#/components/schemas/UnauthorizedError"
+                                        }
+                                    ]
+                                }
+                            }
+                        }
+                    },
+                    "500": {
+                        "description": "System Error",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "oneOf": [
+                                        {
+                                            "$ref": "#/components/schemas/InternalSystemError"
+                                        }
+                                    ]
+                                }
+                            }
+                        }
+                    },
+                    "404": {
+                        "description": "Customer not found",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "oneOf": [
+                                        {
+                                            "$ref": "#/components/schemas/BadRequestCustomerNotFoundError"
+                                        }
+                                    ]
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "/api/sf/customer/{customer}/alarm-triggers/": {
+            "get": {
+                "tags": [
+                    "Alarm Triggers"
+                ],
+                "summary": "Get list of all AlarmTriggers.",
+                "description": "Get list of all AlarmTriggers of current Customer.",
+                "operationId": "get_api_alarm_triggers_get",
+                "parameters": [
+                    {
+                        "name": "customer",
+                        "in": "path",
+                        "required": true,
+                        "schema": {
+                            "type": "string"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "List of all AlarmTriggers.",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "type": "array",
+                                    "items": {
+                                        "$ref": "#/components/schemas/AlarmTriggerAutoco"
+                                    }
+                                }
+                            }
+                        }
+                    },
+                    "401": {
+                        "description": "Unauthorized",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "oneOf": [
+                                        {
+                                            "$ref": "#/components/schemas/UnauthorizedError"
+                                        }
+                                    ]
+                                }
+                            }
+                        }
+                    },
+                    "500": {
+                        "description": "System Error",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "oneOf": [
+                                        {
+                                            "$ref": "#/components/schemas/InternalSystemError"
+                                        }
+                                    ]
+                                }
+                            }
+                        }
+                    },
+                    "404": {
+                        "description": "Customer not found",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "oneOf": [
+                                        {
+                                            "$ref": "#/components/schemas/BadRequestCustomerNotFoundError"
+                                        }
+                                    ]
+                                }
+                            }
+                        }
+                    }
+                }
+            },
+            "post": {
+                "tags": [
+                    "Alarm Triggers"
+                ],
+                "summary": "Create a new trigger.",
+                "description": "Create a new trigger.",
+                "operationId": "post_api_alarm_trigger_post",
+                "parameters": [
+                    {
+                        "name": "customer",
+                        "in": "path",
+                        "required": true,
+                        "schema": {
+                            "type": "string"
+                        }
+                    }
+                ],
+                "requestBody": {
+                    "required": true,
+                    "content": {
+                        "application/json": {
+                            "schema": {
+                                "$ref": "#/components/schemas/AlarmTriggerAutoco2"
+                            }
+                        }
+                    }
+                },
+                "responses": {
+                    "200": {
+                        "description": "Create a new trigger.",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/AlarmTrigger"
+                                }
+                            }
+                        }
+                    },
+                    "400": {
+                        "description": "Any of the following reasons: Invalid alarm trigger type, Resource not found, Resource owner unauthorized, Bad request, Constraint Violation",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "oneOf": [
+                                        {
+                                            "$ref": "#/components/schemas/BadRequestInvalidAlarmTriggerError"
+                                        },
+                                        {
+                                            "$ref": "#/components/schemas/BadRequestResourceNotFoundError"
+                                        },
+                                        {
+                                            "$ref": "#/components/schemas/BadRequestResourceOwnerUnauthorizedError"
+                                        },
+                                        {
+                                            "$ref": "#/components/schemas/BadRequestError"
+                                        },
+                                        {
+                                            "$ref": "#/components/schemas/ConstraintValidationError"
+                                        }
+                                    ]
+                                }
+                            }
+                        }
+                    },
+                    "415": {
+                        "description": "Unsupported media type",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/UnsupportedMediaTypeError"
+                                }
+                            }
+                        }
+                    },
+                    "401": {
+                        "description": "Unauthorized",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "oneOf": [
+                                        {
+                                            "$ref": "#/components/schemas/UnauthorizedError"
+                                        }
+                                    ]
+                                }
+                            }
+                        }
+                    },
+                    "500": {
+                        "description": "System Error",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "oneOf": [
+                                        {
+                                            "$ref": "#/components/schemas/InternalSystemError"
+                                        }
+                                    ]
+                                }
+                            }
+                        }
+                    },
+                    "404": {
+                        "description": "Customer not found",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "oneOf": [
+                                        {
+                                            "$ref": "#/components/schemas/BadRequestCustomerNotFoundError"
+                                        }
+                                    ]
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "/api/sf/auth/login": {
+            "post": {
+                "tags": [
+                    "Authorization"
+                ],
+                "summary": "Login VR password.",
+                "description": "Authenticate by username and password to default customer.",
+                "operationId": "post_api_auth_login_rbac",
+                "parameters": [
+                    {
+                        "name": "scope",
+                        "in": "header",
+                        "description": "Space separated list of scopes.",
+                        "required": true,
+                        "schema": {
+                            "type": "string",
+                            "default": "HP3"
+                        },
+                        "example": "HP3 MEAS"
+                    }
+                ],
+                "requestBody": {
+                    "required": true,
+                    "content": {
+                        "application/json": {
+                            "schema": {
+                                "$ref": "#/components/schemas/ApiLogin"
+                            }
+                        }
+                    }
+                },
+                "responses": {
+                    "200": {
+                        "description": "Authentication request success.",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/ApiToken"
+                                }
+                            }
+                        }
+                    },
+                    "401": {
+                        "description": "Unauthorized",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/UnauthorizedError"
+                                }
+                            }
+                        }
+                    },
+                    "400": {
+                        "description": "Bad request",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/BadRequestError"
+                                }
+                            }
+                        }
+                    },
+                    "403": {
+                        "description": "Any of the following reasons:<br>\nTell user has to be activated<br>\nCustomer is inactive<br>\nAccess Forbidden<br>",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "oneOf": [
+                                        {
+                                            "$ref": "#/components/schemas/AccessDeniedTellLoginError"
+                                        },
+                                        {
+                                            "$ref": "#/components/schemas/ForbiddenCustomerInactiveError"
+                                        },
+                                        {
+                                            "$ref": "#/components/schemas/ForbiddenError"
+                                        }
+                                    ]
+                                }
+                            }
+                        }
+                    },
+                    "503": {
+                        "description": "Service Unavailable",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/ServiceUnavailableError"
+                                }
+                            }
+                        }
+                    },
+                    "500": {
+                        "description": "System Error",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "oneOf": [
+                                        {
+                                            "$ref": "#/components/schemas/InternalSystemError"
+                                        }
+                                    ]
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "/api/sf/auth/refresh": {
+            "get": {
+                "tags": [
+                    "Authorization"
+                ],
+                "summary": "Refresh VR token.",
+                "description": "When access token expires, use refresh token to get another one.",
+                "operationId": "get_api_auth_refresh",
+                "parameters": [
+                    {
+                        "name": "Authorization",
+                        "in": "header",
+                        "description": "Bearer token",
+                        "required": true,
+                        "schema": {
+                            "type": "string"
+                        },
+                        "example": "Bearer def502007b09e370916bf2fba277c55dfd1a0661...."
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Authentication request success.",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/ApiToken"
+                                }
+                            }
+                        }
+                    },
+                    "401": {
+                        "description": "Unauthorized",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/UnauthorizedError"
+                                }
+                            }
+                        }
+                    },
+                    "400": {
+                        "description": "Bad request",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/BadRequestError"
+                                }
+                            }
+                        }
+                    },
+                    "500": {
+                        "description": "System Error",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "oneOf": [
+                                        {
+                                            "$ref": "#/components/schemas/InternalSystemError"
+                                        }
+                                    ]
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "/api/sf/auth/logout": {
+            "get": {
+                "tags": [
+                    "Authorization"
+                ],
+                "summary": "Log out.",
+                "description": "Log out and destroy user token.",
+                "operationId": "get_api_auth_logout",
+                "parameters": [
+                    {
+                        "name": "Authorization",
+                        "in": "header",
+                        "description": "Bearer token",
+                        "required": true,
+                        "schema": {
+                            "type": "string"
+                        },
+                        "example": "Bearer def502007b09e370916bf2fba277c55dfd1a0661...."
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Logout success."
+                    },
+                    "400": {
+                        "description": "Bad request",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/BadRequestError"
+                                }
+                            }
+                        }
+                    },
+                    "401": {
+                        "description": "Unauthorized",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "oneOf": [
+                                        {
+                                            "$ref": "#/components/schemas/UnauthorizedError"
+                                        }
+                                    ]
+                                }
+                            }
+                        }
+                    },
+                    "500": {
+                        "description": "System Error",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "oneOf": [
+                                        {
+                                            "$ref": "#/components/schemas/InternalSystemError"
+                                        }
+                                    ]
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "/api/sf/customer/{customer}/correlations/materials": {
+            "get": {
+                "tags": [
+                    "Correlations"
+                ],
+                "summary": "Get list of correlation materials.",
+                "description": "Get list of correlation materials.",
+                "operationId": "get_api_correlation_material",
+                "parameters": [
+                    {
+                        "name": "customer",
+                        "in": "path",
+                        "required": true,
+                        "schema": {
+                            "type": "string"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Get list of correlation materials",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "type": "array",
+                                    "items": {
+                                        "$ref": "#/components/schemas/ApiCorrelationMaterial"
+                                    }
+                                }
+                            }
+                        }
+                    },
+                    "400": {
+                        "description": "Bad request",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/BadRequestError"
+                                }
+                            }
+                        }
+                    },
+                    "401": {
+                        "description": "Unauthorized",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "oneOf": [
+                                        {
+                                            "$ref": "#/components/schemas/UnauthorizedError"
+                                        }
+                                    ]
+                                }
+                            }
+                        }
+                    },
+                    "500": {
+                        "description": "System Error",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "oneOf": [
+                                        {
+                                            "$ref": "#/components/schemas/InternalSystemError"
+                                        }
+                                    ]
+                                }
+                            }
+                        }
+                    },
+                    "404": {
+                        "description": "Customer not found",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "oneOf": [
+                                        {
+                                            "$ref": "#/components/schemas/BadRequestCustomerNotFoundError"
+                                        }
+                                    ]
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "/api/sf/customer/{customer}/correlations/pipes": {
+            "post": {
+                "tags": [
+                    "Correlations"
+                ],
+                "summary": "Make correlation between loggers.",
+                "description": "Calculates latest correlation between loggers.",
+                "operationId": "post_api_correlation_pipe_create",
+                "parameters": [
+                    {
+                        "name": "customer",
+                        "in": "path",
+                        "required": true,
+                        "schema": {
+                            "type": "string"
+                        }
+                    }
+                ],
+                "requestBody": {
+                    "required": true,
+                    "content": {
+                        "application/json": {
+                            "schema": {
+                                "required": [
+                                    "first_logger",
+                                    "second_logger",
+                                    "pipes"
+                                ],
+                                "properties": {
+                                    "first_logger": {
+                                        "description": "Id of the first logger.",
+                                        "type": "integer",
+                                        "example": 44
+                                    },
+                                    "second_logger": {
+                                        "description": "Id of the second logger.",
+                                        "type": "integer",
+                                        "example": 66
+                                    },
+                                    "pipes": {
+                                        "description": "List of the pipes between loggers.",
+                                        "type": "array",
+                                        "items": {
+                                            "required": [
+                                                "correlation_material",
+                                                "pipe_length"
+                                            ],
+                                            "properties": {
+                                                "correlation_material": {
+                                                    "description": "Id of the correlation material.",
+                                                    "type": "integer",
+                                                    "example": 1
+                                                },
+                                                "pipe_length": {
+                                                    "description": "Length of the pipe in meters.",
+                                                    "type": "integer",
+                                                    "example": 100
+                                                }
+                                            },
+                                            "type": "object"
+                                        }
+                                    }
+                                },
+                                "type": "object"
+                            }
+                        }
+                    }
+                },
+                "responses": {
+                    "200": {
+                        "description": "Returns correlation between given loggers.",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "type": "array",
+                                    "items": {
+                                        "$ref": "#/components/schemas/ApiCorrelation"
+                                    }
+                                }
+                            }
+                        }
+                    },
+                    "400": {
+                        "description": "Any of the following reasons.",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/BadRequestError"
+                                }
+                            }
+                        }
+                    },
+                    "401": {
+                        "description": "Unauthorized",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "oneOf": [
+                                        {
+                                            "$ref": "#/components/schemas/UnauthorizedError"
+                                        }
+                                    ]
+                                }
+                            }
+                        }
+                    },
+                    "500": {
+                        "description": "System Error",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "oneOf": [
+                                        {
+                                            "$ref": "#/components/schemas/InternalSystemError"
+                                        }
+                                    ]
+                                }
+                            }
+                        }
+                    },
+                    "404": {
+                        "description": "Customer not found",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "oneOf": [
+                                        {
+                                            "$ref": "#/components/schemas/BadRequestCustomerNotFoundError"
+                                        }
+                                    ]
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "/api/sf/customer/{customer}/correlations/segment-report/sync": {
+            "post": {
+                "tags": [
+                    "Correlations"
+                ],
+                "summary": "Get list of leaking segments.",
+                "description": "Returns list of segments with at least one positive correlation result.",
+                "operationId": "post_api_correlation_segment_report_post_sync",
+                "parameters": [
+                    {
+                        "name": "customer",
+                        "in": "path",
+                        "required": true,
+                        "schema": {
+                            "type": "string"
+                        }
+                    }
+                ],
+                "requestBody": {
+                    "required": true,
+                    "content": {
+                        "application/json": {
+                            "schema": {
+                                "required": [
+                                    "date"
+                                ],
+                                "properties": {
+                                    "date": {
+                                        "title": "The report date.",
+                                        "type": "string",
+                                        "example": "2024-01-01"
+                                    }
+                                },
+                                "type": "object"
+                            }
+                        }
+                    }
+                },
+                "responses": {
+                    "400": {
+                        "description": "Bad request",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/BadRequestCorrelationObjectError"
+                                }
+                            }
+                        }
+                    },
+                    "200": {
+                        "description": "Segment Report.",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "type": "array",
+                                    "items": {
+                                        "$ref": "#/components/schemas/ReportEntry"
+                                    }
+                                }
+                            }
+                        }
+                    },
+                    "401": {
+                        "description": "Unauthorized",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "oneOf": [
+                                        {
+                                            "$ref": "#/components/schemas/UnauthorizedError"
+                                        }
+                                    ]
+                                }
+                            }
+                        }
+                    },
+                    "500": {
+                        "description": "System Error",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "oneOf": [
+                                        {
+                                            "$ref": "#/components/schemas/InternalSystemError"
+                                        }
+                                    ]
+                                }
+                            }
+                        }
+                    },
+                    "404": {
+                        "description": "Customer not found",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "oneOf": [
+                                        {
+                                            "$ref": "#/components/schemas/BadRequestCustomerNotFoundError"
+                                        }
+                                    ]
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    },
+    "components": {
+        "schemas": {
+            "AlarmTrigger": {
+                "required": [
+                    "type",
+                    "label"
+                ],
+                "properties": {
+                    "type": {
+                        "type": "string",
+                        "enum": [
+                            "autoco"
+                        ],
+                        "example": "autoco"
+                    },
+                    "id": {
+                        "title": "Internal identifier.",
+                        "type": "string",
+                        "example": "boJaM3SMum"
+                    },
+                    "label": {
+                        "title": "Label.",
+                        "type": "string",
+                        "example": "Alarm trigger label."
+                    },
+                    "template": {
+                        "type": "string"
+                    },
+                    "has_email_alarm": {
+                        "title": "Has email alarm.",
+                        "type": "boolean",
+                        "example": true
+                    },
+                    "alarm_emails": {
+                        "title": "Alarm emails.",
+                        "type": "string",
+                        "example": "john.doe@vonroll-infratec.world"
+                    },
+                    "notification_channels": {
+                        "title": "Notification channels.",
+                        "type": "array",
+                        "items": {
+                            "$ref": "#/components/schemas/AlarmNotificationChannel"
+                        },
+                        "minItems": 1
+                    },
+                    "strategy": {
+                        "type": "string",
+                        "example": "tell"
+                    },
+                    "updated_at": {
+                        "title": "Date of last update.",
+                        "type": "string",
+                        "example": "2017-07-28T11:20:23+00:00"
+                    }
+                },
+                "type": "object"
+            },
+            "BadRequestResourceNotFoundError": {
+                "properties": {
+                    "error": {
+                        "example": "Resource not found"
+                    },
+                    "code": {
+                        "example": "ECBadRequestResourceNotFoundError"
+                    },
+                    "fields": {
+                        "example": []
+                    },
+                    "errors": {
+                        "example": []
+                    },
+                    "meta": {
+                        "example": []
+                    }
+                },
+                "type": "object"
+            },
+            "BadRequestResourceOwnerUnauthorizedError": {
+                "properties": {
+                    "error": {
+                        "example": "Resource owner unauthorized"
+                    },
+                    "code": {
+                        "example": "ECBadRequestResourceOwnerUnauthorizedError"
+                    },
+                    "fields": {
+                        "example": []
+                    },
+                    "errors": {
+                        "example": []
+                    },
+                    "meta": {
+                        "example": []
+                    }
+                },
+                "type": "object"
+            },
+            "AlarmTrigger2": {
+                "required": [
+                    "type",
+                    "label"
+                ],
+                "properties": {
+                    "type": {
+                        "type": "string",
+                        "enum": [
+                            "autoco"
+                        ],
+                        "example": "autoco"
+                    },
+                    "label": {
+                        "title": "Label.",
+                        "type": "string",
+                        "example": "Alarm trigger label."
+                    },
+                    "notification_channels": {
+                        "title": "Notification channels.",
+                        "type": "array",
+                        "items": {
+                            "$ref": "#/components/schemas/AlarmNotificationChannel"
+                        },
+                        "minItems": 1
+                    }
+                },
+                "type": "object"
+            },
+            "ConstraintValidationError": {
+                "properties": {
+                    "error": {
+                        "example": "Constraint Violation"
+                    },
+                    "code": {
+                        "example": "ECConstraintValidationError"
+                    },
+                    "fields": {
+                        "example": []
+                    },
+                    "errors": {
+                        "example": []
+                    },
+                    "meta": {
+                        "example": []
+                    }
+                },
+                "type": "object"
+            },
+            "UnsupportedMediaTypeError": {
+                "properties": {
+                    "error": {
+                        "example": "Unsupported media type"
+                    },
+                    "code": {
+                        "example": "ECUnsupportedMediaTypeError"
+                    },
+                    "fields": {
+                        "example": []
+                    },
+                    "errors": {
+                        "example": []
+                    },
+                    "meta": {
+                        "example": []
+                    }
+                },
+                "type": "object"
+            },
+            "ApiLoggerCompact": {
+                "properties": {
+                    "id": {
+                        "description": "Device ID",
+                        "type": "integer",
+                        "example": 1
+                    },
+                    "label": {
+                        "description": "Device label",
+                        "type": "string",
+                        "example": "POS001"
+                    },
+                    "latitude": {
+                        "description": "Geographic Latitude",
+                        "type": "number",
+                        "format": "float",
+                        "example": "47.372784908514"
+                    },
+                    "longitude": {
+                        "description": "Geographic Longitude",
+                        "type": "number",
+                        "format": "float",
+                        "example": "8.5402364553578"
+                    },
+                    "serial_number": {
+                        "description": "Logger serial number",
+                        "type": "string",
+                        "example": "30087"
+                    },
+                    "logger_type": {
+                        "description": "Logger type ID",
+                        "type": "integer",
+                        "example": 3
+                    },
+                    "device_id": {
+                        "description": "Logger device ID",
+                        "type": "string",
+                        "example": "0185de42-b522-77ab-a5e5-8e61c572947e"
+                    }
+                },
+                "type": "object"
+            },
+            "BadRequestError": {
+                "properties": {
+                    "error": {
+                        "example": "Bad request"
+                    },
+                    "code": {
+                        "example": "ECBadRequestError"
+                    },
+                    "fields": {
+                        "example": []
+                    },
+                    "errors": {
+                        "example": []
+                    },
+                    "meta": {
+                        "example": []
+                    }
+                },
+                "type": "object"
+            },
+            "AlarmTriggerAutoco": {
+                "required": [
+                    "type",
+                    "label",
+                    "number_of_days",
+                    "score_comparison_operator",
+                    "score"
+                ],
+                "properties": {
+                    "type": {
+                        "type": "string",
+                        "enum": [
+                            "autoco"
+                        ],
+                        "example": "autoco"
+                    },
+                    "id": {
+                        "title": "Internal identifier.",
+                        "type": "string",
+                        "example": "boJaM3SMum"
+                    },
+                    "label": {
+                        "title": "Label.",
+                        "type": "string",
+                        "example": "Alarm trigger label."
+                    },
+                    "template": {
+                        "type": "string"
+                    },
+                    "has_email_alarm": {
+                        "title": "Has email alarm.",
+                        "type": "boolean",
+                        "example": true
+                    },
+                    "alarm_emails": {
+                        "title": "Alarm emails.",
+                        "type": "string",
+                        "example": "john.doe@vonroll-infratec.world"
+                    },
+                    "notification_channels": {
+                        "title": "Notification channels.",
+                        "type": "array",
+                        "items": {
+                            "$ref": "#/components/schemas/AlarmNotificationChannel"
+                        },
+                        "minItems": 1
+                    },
+                    "strategy": {
+                        "type": "string",
+                        "example": "tell"
+                    },
+                    "updated_at": {
+                        "title": "Date of last update.",
+                        "type": "string",
+                        "example": "2017-07-28T11:20:23+00:00"
+                    },
+                    "number_of_days": {
+                        "title": "Number of days",
+                        "type": "integer",
+                        "minimum": 0,
+                        "exclusiveMinimum": true,
+                        "example": 1
+                    },
+                    "score_comparison_operator": {
+                        "title": "Comparison operator for score",
+                        "type": "string",
+                        "enum": [
+                            ">=",
+                            "<=",
+                            ">",
+                            "<",
+                            "="
+                        ],
+                        "example": "="
+                    },
+                    "score": {
+                        "title": "Confidence value in percents",
+                        "type": "integer",
+                        "maximum": 100,
+                        "minimum": 0,
+                        "exclusiveMinimum": true,
+                        "example": 1
+                    }
+                },
+                "type": "object"
+            },
+            "AlarmTriggerAutoco2": {
+                "required": [
+                    "type",
+                    "label",
+                    "number_of_days",
+                    "score_comparison_operator",
+                    "score"
+                ],
+                "properties": {
+                    "type": {
+                        "type": "string",
+                        "enum": [
+                            "autoco"
+                        ],
+                        "example": "autoco"
+                    },
+                    "label": {
+                        "title": "Label.",
+                        "type": "string",
+                        "example": "Alarm trigger label."
+                    },
+                    "notification_channels": {
+                        "title": "Notification channels.",
+                        "type": "array",
+                        "items": {
+                            "$ref": "#/components/schemas/AlarmNotificationChannel"
+                        },
+                        "minItems": 1
+                    },
+                    "number_of_days": {
+                        "title": "Number of days",
+                        "type": "integer",
+                        "minimum": 0,
+                        "exclusiveMinimum": true,
+                        "example": 1
+                    },
+                    "score_comparison_operator": {
+                        "title": "Comparison operator for score",
+                        "type": "string",
+                        "enum": [
+                            ">=",
+                            "<=",
+                            ">",
+                            "<",
+                            "="
+                        ],
+                        "example": "="
+                    },
+                    "score": {
+                        "title": "Confidence value in percents",
+                        "type": "integer",
+                        "maximum": 100,
+                        "minimum": 0,
+                        "exclusiveMinimum": true,
+                        "example": 1
+                    }
+                },
+                "type": "object"
+            },
+            "BadRequestInvalidAlarmTriggerError": {
+                "properties": {
+                    "error": {
+                        "example": "Invalid alarm trigger type"
+                    },
+                    "code": {
+                        "example": "ECBadRequestInvalidAlarmTriggerError"
+                    },
+                    "fields": {
+                        "example": []
+                    },
+                    "errors": {
+                        "example": []
+                    },
+                    "meta": {
+                        "example": []
+                    }
+                },
+                "type": "object"
+            },
+            "ApiLogin": {
+                "required": [
+                    "username",
+                    "password"
+                ],
+                "properties": {
+                    "username": {
+                        "type": "string",
+                        "example": "test-user"
+                    },
+                    "password": {
+                        "type": "string",
+                        "example": "test-user-password"
+                    }
+                },
+                "type": "object"
+            },
+            "ApiToken": {
+                "properties": {
+                    "token": {
+                        "$ref": "#/components/schemas/ApiTokenBody"
+                    }
+                },
+                "type": "object"
+            },
+            "UnauthorizedError": {
+                "properties": {
+                    "error": {
+                        "example": "Unauthorized"
+                    },
+                    "code": {
+                        "example": "ECUnauthorizedError"
+                    },
+                    "fields": {
+                        "example": []
+                    },
+                    "errors": {
+                        "example": []
+                    },
+                    "meta": {
+                        "example": []
+                    }
+                },
+                "type": "object"
+            },
+            "AccessDeniedTellLoginError": {
+                "properties": {
+                    "error": {
+                        "example": "Tell user has to be activated"
+                    },
+                    "code": {
+                        "example": "ECAccessDeniedTellLoginError"
+                    },
+                    "fields": {
+                        "example": []
+                    },
+                    "errors": {
+                        "example": []
+                    },
+                    "meta": {
+                        "example": []
+                    }
+                },
+                "type": "object"
+            },
+            "ForbiddenCustomerInactiveError": {
+                "properties": {
+                    "error": {
+                        "example": "forbidden.customer.inactive"
+                    },
+                    "code": {
+                        "example": "ECForbiddenCustomerInactiveError"
+                    },
+                    "fields": {
+                        "example": []
+                    },
+                    "errors": {
+                        "example": []
+                    },
+                    "meta": {
+                        "example": []
+                    }
+                },
+                "type": "object"
+            },
+            "ForbiddenError": {
+                "properties": {
+                    "error": {
+                        "example": "Access Forbidden"
+                    },
+                    "code": {
+                        "example": "ECForbiddenError"
+                    },
+                    "fields": {
+                        "example": []
+                    },
+                    "errors": {
+                        "example": []
+                    },
+                    "meta": {
+                        "example": []
+                    }
+                },
+                "type": "object"
+            },
+            "ServiceUnavailableError": {
+                "properties": {
+                    "error": {
+                        "example": "Service Unavailable"
+                    },
+                    "code": {
+                        "example": "ECServiceUnavailableError"
+                    },
+                    "fields": {
+                        "example": []
+                    },
+                    "errors": {
+                        "example": []
+                    },
+                    "meta": {
+                        "example": []
+                    }
+                },
+                "type": "object"
+            },
+            "ApiCorrelationMaterial": {
+                "properties": {
+                    "id": {
+                        "type": "integer",
+                        "example": 1
+                    },
+                    "name": {
+                        "type": "string",
+                        "example": "Steel, \u00f825-1.0, 1384 m/s"
+                    },
+                    "type": {
+                        "type": "string",
+                        "example": "Steel"
+                    },
+                    "diameter": {
+                        "type": "string",
+                        "example": "\u00f825-1.0"
+                    },
+                    "speed": {
+                        "type": "integer",
+                        "example": 1384
+                    },
+                    "is_metric": {
+                        "type": "boolean",
+                        "example": true
+                    }
+                },
+                "type": "object"
+            },
+            "ApiCorrelation": {
+                "properties": {
+                    "id": {
+                        "type": "integer",
+                        "example": 1,
+                        "nullable": true
+                    },
+                    "date": {
+                        "type": "string",
+                        "example": "04/19/17 15:06:11",
+                        "nullable": true
+                    },
+                    "quality_of_correlation": {
+                        "type": "integer",
+                        "example": 0,
+                        "nullable": true
+                    },
+                    "quality_msg": {
+                        "type": "string",
+                        "example": "NoCorrelation",
+                        "nullable": true
+                    },
+                    "left_distance": {
+                        "type": "number",
+                        "format": "float",
+                        "example": 0,
+                        "nullable": true
+                    },
+                    "right_distance": {
+                        "type": "number",
+                        "format": "float",
+                        "example": 0,
+                        "nullable": true
+                    },
+                    "left_measurement": {
+                        "type": "number",
+                        "format": "float",
+                        "example": 0,
+                        "nullable": true
+                    },
+                    "right_measurement": {
+                        "type": "string",
+                        "nullable": true
+                    },
+                    "left_audio": {
+                        "type": "string",
+                        "nullable": true
+                    },
+                    "right_audio": {
+                        "type": "string",
+                        "nullable": true
+                    },
+                    "chart_data": {
+                        "type": "array",
+                        "items": {
+                            "type": "integer"
+                        },
+                        "example": [
+                            "0.12894733847368423",
+                            "14.9959"
+                        ]
+                    },
+                    "error": {
+                        "type": "string",
+                        "example": "Error message",
+                        "nullable": true
+                    },
+                    "links": {
+                        "title": "ApiLink",
+                        "type": "array",
+                        "items": {
+                            "$ref": "#/components/schemas/ApiLink"
+                        },
+                        "example": []
+                    },
+                    "corr_algo": {
+                        "title": "Correlation algorithm used",
+                        "type": "string",
+                        "example": "c-1"
+                    },
+                    "sync_method": {
+                        "title": "Synchronization method",
+                        "type": "string",
+                        "example": "lte"
+                    },
+                    "left_sound_spectrogram_plot_uri": {
+                        "type": "string",
+                        "nullable": true
+                    },
+                    "right_sound_spectrogram_plot_uri": {
+                        "type": "string",
+                        "nullable": true
+                    },
+                    "left_serial_number": {
+                        "type": "string",
+                        "nullable": true
+                    },
+                    "right_serial_number": {
+                        "type": "string",
+                        "nullable": true
+                    },
+                    "left_dev_id": {
+                        "type": "string"
+                    },
+                    "right_dev_id": {
+                        "type": "string"
+                    }
+                },
+                "type": "object"
+            },
+            "BadRequestCorrelationObjectError": {
+                "properties": {
+                    "error": {
+                        "example": "The object lacks appropriate attributes"
+                    },
+                    "code": {
+                        "example": "ECBadRequestCorrelationObjectError"
+                    },
+                    "fields": {
+                        "example": []
+                    },
+                    "errors": {
+                        "example": []
+                    },
+                    "meta": {
+                        "example": []
+                    }
+                },
+                "type": "object"
+            },
+            "ReportEntry": {
+                "properties": {
+                    "segment": {
+                        "type": "string"
+                    },
+                    "status": {
+                        "type": "string"
+                    },
+                    "a_label": {
+                        "type": "string"
+                    },
+                    "a_sn": {
+                        "type": "string"
+                    },
+                    "a_meas": {
+                        "type": "number",
+                        "format": "float"
+                    },
+                    "a_dist": {
+                        "type": "number",
+                        "format": "float"
+                    },
+                    "b_label": {
+                        "type": "string"
+                    },
+                    "b_sn": {
+                        "type": "string"
+                    },
+                    "b_meas": {
+                        "type": "number",
+                        "format": "float"
+                    },
+                    "b_dist": {
+                        "type": "number",
+                        "format": "float"
+                    },
+                    "corr_dist": {
+                        "type": "number",
+                        "format": "float"
+                    },
+                    "leak_lat": {
+                        "type": "number",
+                        "format": "float"
+                    },
+                    "leak_lng": {
+                        "type": "number",
+                        "format": "float"
+                    },
+                    "score": {
+                        "type": "number",
+                        "format": "float"
+                    }
+                },
+                "type": "object"
+            },
+            "AlarmNotificationChannel": {
+                "required": [
+                    "channeltype"
+                ],
+                "properties": {
+                    "channeltype": {
+                        "title": "Type of channel.",
+                        "type": "string",
+                        "enum": [
+                            "EML",
+                            "PSH"
+                        ],
+                        "example": "EML"
+                    },
+                    "enabled": {
+                        "title": "Enabled.",
+                        "type": "boolean",
+                        "example": true
+                    },
+                    "recipients": {
+                        "title": "Recipients.",
+                        "type": "string",
+                        "example": "john.doe@vonroll-infratec.world"
+                    }
+                },
+                "type": "object"
+            },
+            "ApiTokenBody": {
+                "properties": {
+                    "token_type": {
+                        "type": "string",
+                        "example": "Bearer"
+                    },
+                    "access_token": {
+                        "type": "string",
+                        "example": "AiOiJ... sImp0aSI"
+                    },
+                    "refresh_token": {
+                        "type": "string",
+                        "example": "bd0c0d... a68964af6"
+                    },
+                    "expires": {
+                        "type": "int",
+                        "example": 1605886680
+                    }
+                },
+                "type": "object"
+            },
+            "ApiLink": {
+                "properties": {
+                    "rel": {
+                        "type": "string",
+                        "example": "api.dashboard.index",
+                        "nullable": true
+                    },
+                    "href": {
+                        "type": "string",
+                        "example": "/dashboards/",
+                        "nullable": true
+                    }
+                },
+                "type": "object"
+            },
+            "InternalSystemError": {
+                "description": "System Error",
+                "properties": {
+                    "error": {
+                        "example": "System Error"
+                    },
+                    "code": {
+                        "example": "ECInternalSystemError"
+                    },
+                    "fields": {
+                        "example": []
+                    },
+                    "errors": {
+                        "example": []
+                    },
+                    "meta": {
+                        "example": []
+                    }
+                },
+                "type": "object"
+            },
+            "BadRequestCustomerNotFoundError": {
+                "description": "Customer not found",
+                "properties": {
+                    "error": {
+                        "example": "Customer not found"
+                    },
+                    "code": {
+                        "example": "ECBadRequestCustomerNotFoundError"
+                    },
+                    "fields": {
+                        "example": []
+                    },
+                    "errors": {
+                        "example": []
+                    },
+                    "meta": {
+                        "example": []
+                    }
+                },
+                "type": "object"
+            }
+        },
+        "securitySchemes": {
+            "Bearer": {
+                "type": "apiKey",
+                "description": "Value for the Authorization header parameter.",
+                "name": "Authorization",
+                "in": "header"
+            }
+        }
+    },
+    "security": [
+        {
+            "Bearer": []
+        }
+    ]
+}
