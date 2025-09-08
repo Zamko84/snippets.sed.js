@@ -1,0 +1,1 @@
+'s/$LCOPY -DEL "%file%" "%scanDir-NoPGP%\/%mailbox%\/%srcfilebase%%srcfileext%.%transferid%.scan"\$SYSTEM %scriptsDir%\/move_file_gcp.ksh "%NASstorageDrive%mailbox\/%mailbox%\/%destfilebase%%destfileext%" "\/cleouat\/ede\/stage-work\/scanned-in/" %mailbox% "%transferid%.scanned"/g'

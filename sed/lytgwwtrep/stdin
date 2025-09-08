@@ -1,0 +1,1 @@
+Test-Bypass-NoPGP.xml:  <Advanced>ExecuteOnSuccessfulReceive=$LCOPY -DEL "%file%" "%scanDir-NoPGP%/%mailbox%/%srcfilebase%%srcfileext%.%transferid%.scan"</Advanced>
