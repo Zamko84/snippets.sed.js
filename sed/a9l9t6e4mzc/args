@@ -1,0 +1,1 @@
+sed 's/.*END INIT INFO.*/&\n\n# Set up a default search path.\nVMPRO_HTTPD_i686_PATH=\"\/opt\/vmpro\/VMProWebService\"\nexport VMPRO_HTTPD_i686_PATH\n\nLD_LIBRARY_PATH="$VMPRO_HTTPD_i686_PATH\/usr\/lib:$VMPRO_HTTPD_i686_PATH\/lib:$VMPRO_HTTPD_i686_PATH\/etc\/httpd\/modules"\nexport LD_LIBRARY_PATH/' httpd >tmphttpd
