@@ -1,0 +1,1 @@
+--posix --expression='/replication/a  replSetName: my_cool_repl'
