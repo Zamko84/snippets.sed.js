@@ -1,0 +1,158 @@
+module.exports = function (grunt) {
+	
+	var backendModules = ['../backend',  '../backend/vendor/teknisa/pebLibraries'];
+	var devEnvironment = "./config/devEnvironment.json";
+    if(grunt.file.isFile("./config/customEnvironment.json")){
+        devEnvironment = "./config/customEnvironment.json";
+    }
+	grunt.initConfig({
+		buildEnvironment: {
+			development: {
+				configFile: devEnvironment
+			},
+			production: {
+				configFile: "./config/prodEnvironment.json"
+			},
+			test: {
+				configFile: "./config/testEnvironment.json"
+			},
+			srcFolders: ["../backend/config/", "../backend/reports", "./public/metadata/json", "./config", "./", "./src/config"]
+		},
+		zhIdGenerator: {
+	      options: {
+	        jsonPath: ['../'],
+	        menuPath: ["../menu.json"],
+	        replaceIds: false
+	      }
+    	},
+    	zhWords: {
+		    options: {
+		        serverUrl: "https://translate.teknisa.com/backend/index.php",
+		        wordsPath: "./public/metadata/json/words/",
+		        organization: "20",
+		        project: "58844"
+		    }
+		},
+    });
+    
+    function buildFileContent(srcFiles, filePath, directory) {
+        var parts = filePath.split('/');
+        parts.shift();
+        var filename = parts[parts.length - 1];
+        var extension = filename.split('.').pop().toUpperCase();
+        if (extension == 'JSON' || extension == 'XML') {
+            if (directory == 'datasources') {
+                filename = parts.pop();
+                filename = filename.replace(/\.[^/.]+$/, "");
+                if(parts[0] == 'vendor'){
+                    srcFiles[directory][filename] = './../' + parts.join('/');
+                }else{
+                    srcFiles[directory][filename] = './../../' + parts.join('/');
+                }
+            } else {
+                if(parts[0] == 'vendor'){
+                    srcFiles[directory].push('/../../' + parts.join('/'));
+                }else{
+                    srcFiles[directory].push('/../../' + parts.join('/'));
+                }
+            }
+        }
+    }
+    
+    grunt.registerTask('backendStep', 'build backend config files', function () {
+		var srcFiles = {
+			config: [],
+			datasources: {}
+		};
+		var directories = ['config','datasources'];
+		var dest = {
+			config: '../backend/config/servicesMapping.json',
+			datasources: '../backend/config/dataSourcesMapping.json'
+		};
+		directories.forEach(function (directory) {
+			backendModules.forEach(function (module) {
+				var moduleParts = module.split('/');
+				var moduleName = moduleParts[moduleParts.length - 1].toUpperCase();
+				var subModules = grunt.file.expand({
+					filter: 'isDirectory'
+				}, module + '/src/Modules/*');
+
+				subModules.forEach(function (subModule) {
+					grunt.file.expand({
+						filter: 'isFile'
+					}, subModule + '/' + directory + '/**/*').forEach(function (filePath) {
+						buildFileContent(srcFiles, filePath, directory);
+					});
+				});
+				if (directory === 'datasources') {
+					grunt.file.expand({
+						filter: 'isFile'
+					}, module + '/' + directory + '/**/*').forEach(function (filePath) {
+						buildFileContent(srcFiles, filePath, directory);
+					});					
+				} else if (directory === 'config'){
+					grunt.file.expand({
+					    filter: 'isFile'
+					}, module + '/' + directory + '/**/*').forEach(function (filePath) {
+					    // Verifica se o arquivo tem "controllers" ou "services" no nome e termina com .xml, ou "routes" com .json
+					    if (filePath.match(/(controllers|services)\.xml$|routes\.json$/)) {
+					        buildFileContent(srcFiles, filePath, directory);
+					    }
+					});
+				}
+			});
+		});
+		grunt.file.write(dest.config, JSON.stringify(srcFiles.config, null, 2));
+		grunt.file.write(dest.datasources, JSON.stringify(srcFiles.datasources, null, 2));
+	});
+	
+	// task to build translate.properties
+	grunt.registerTask('reportTranslate', 'build translate to BIRT reports', function () {
+		var languages = ['en_us', 'es_cl', 'es_co', 'es_es'];
+		var srcWords = "./public/metadata/json/words/";
+		var srcMessages = "./public/metadata/json/";
+		var srcReport = "../backend/reports/";
+		var reportTrans = grunt.file.readJSON(srcMessages+"messages.json");
+		
+		languages.forEach( lang => {
+			var json = srcWords+lang+".json";
+			if (grunt.file.exists(json)) {
+				var words = grunt.file.readJSON(json);
+				var properties = '';
+				
+				Object.keys(reportTrans).forEach(keyRaiz => {
+					grunt.log.writeln([reportTrans]);
+					grunt.log.writeln([keyRaiz]);
+					if (typeof reportTrans[keyRaiz] === "string") {
+						grunt.log.writeln('entrou no if');	
+						properties += `${keyRaiz}=${unicodeEscape(reportTrans[keyRaiz])}\n`;
+	                } else {
+	                	grunt.log.writeln('entrou no else');
+	                    Object.keys(reportTrans[keyRaiz]).forEach((key) => {
+	                    	if (words[keyRaiz] !== undefined) properties += `${key}=${unicodeEscape(words[keyRaiz][key])}\n`;
+	                    });
+	                }
+				});
+				
+				grunt.file.write(srcReport+lang+".properties", properties);
+			}
+		});
+	});
+
+	function unicodeEscape( stringToEscape ) {
+        var escapedString = '';
+		if(stringToEscape) {
+			escapedString = stringToEscape.replace(/[^0-9|^a-z ]/gi, ( char ) => {
+	          return `\\u${(`000${char.charCodeAt(0).toString(16)}`).substr(-4)}`;
+	        });	
+		}
+		return escapedString;
+    }
+    
+	grunt.loadNpmTasks('grunt-zh-environment-builder');
+    grunt.loadNpmTasks('grunt-zh-id-generator');
+    grunt.loadNpmTasks('grunt-zh-words');
+		
+    grunt.registerTask('default', ['buildEnvironment', 'backendStep', 'zhWords', 'reportTranslate']);
+    grunt.registerTask('mergeBranch', ['zhIdGenerator']);
+};

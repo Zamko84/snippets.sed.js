@@ -1,0 +1,1 @@
+-i '127c\if (words[keyRaiz] !== undefined) properties += `${key}=${unicodeEscape(words[keyRaiz][key])}\n`;'
