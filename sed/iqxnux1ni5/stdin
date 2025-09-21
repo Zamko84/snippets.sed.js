@@ -1,0 +1,20 @@
+sudo add-apt-repository ppa:arter97/zfs
+  177  sudo apt update
+  178  apt list --upgradable 
+  179  cd
+  180  sudo apt upgrade
+  181  sudo apt-get --with-new-pkgs upgrade libnvpair3linux libuutil3linux libzfs4linux libzpool5linux zfs-dracut zfs-zed zfsutils-linux
+  182  sudo apt clean
+  183  sudo apt autoclean
+  184  sudo apt-get -f install
+  185  sudo apt upgrade
+  186  sudo apt-get --with-new-pkgs upgrade libnvpair3linux libuutil3linux libzfs4linux libzpool5linux zfs-dracut zfs-zed zfsutils-linux
+  187  sudo dpkg --configure -a
+  188  sudo apt-get -f install
+  189  sudo apt-get -u dist-upgrade
+  190  zfs -V
+  191  sudo dracut -f
+  192  zfs -V
+  193  reboot
+  194  sudo reboot
+  195  zfs -V
