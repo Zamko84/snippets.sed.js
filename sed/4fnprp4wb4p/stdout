@@ -1,0 +1,2 @@
+script_location = alembic/seeds/${DB_NAME}
+version_locations = alembic/seeds/$(DB_NAME)/versions
