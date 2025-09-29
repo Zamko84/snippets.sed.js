@@ -1,0 +1,13 @@
+image: "platform/sel-accmgmt-barista:PLACEHOLDER"
+port: 9005
+name: sel-accmgmt-barista
+authServiceAPIRoute: "/v1"
+env:
+  logVerbosity: "INFO"
+resources:
+  requests:
+    cpu: 0.1
+    memory: 128M
+  limits:
+    cpu: 0.5
+    memory: 512M

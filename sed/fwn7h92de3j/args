@@ -1,0 +1,1 @@
+--expression='s/^image: &\(\S\+\) .*/\1/p'
