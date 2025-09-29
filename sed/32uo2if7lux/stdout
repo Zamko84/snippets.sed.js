@@ -1,0 +1,14 @@
+debug			true
+log_level		3
+storage_root	/var/dispatcher/work
+api_addr		http://0.0.0.0:8080
+
+dispatcher_unregistered_runners	true
+dispatcher_ignore_job_resources	true
+
+database_backend		postgres
+database_postgres_host	db
+database_postgres_user	dispatcher
+database_postgress_pass	dispatcher
+
+adapter_token	
