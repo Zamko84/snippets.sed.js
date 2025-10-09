@@ -1,0 +1,22 @@
+'
+        # For lines matching COND true
+        /^[[:space:]]*{{\s*COND\s\+true/,/^[[:space:]]*}}/ {
+            # Skip the opening {{ COND true line
+            /^[[:space:]]*{{\s*COND\s\+true/d
+            # Skip the closing }} line
+            /^[[:space:]]*}}/d
+            # Print everything else in this range
+            p
+            # Continue to next line
+            b
+        }
+
+        # For lines matching COND false, delete entire block
+        /^[[:space:]]*{{\s*COND\s\+false/,/^[[:space:]]*}}/ {
+            # Delete the entire range (do nothing, skip to next)
+            d
+        }
+
+        # Print all other lines
+        p
+    '

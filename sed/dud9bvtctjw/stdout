@@ -1,0 +1,41 @@
+type: specs.openrewrite.org/v1beta/recipe
+type: specs.openrewrite.org/v1beta/recipe
+name: com.bpce.mysys.b3c.AddDependenciesToTarget
+name: com.bpce.mysys.b3c.AddDependenciesToTarget
+displayName: Add dependencies for target repository
+displayName: Add dependencies for target repository
+recipeList:
+recipeList:
+  - fr.bpce.rewrite.recipe.qr.AddQrDependencies:
+  - fr.bpce.rewrite.recipe.qr.AddQrDependencies:
+      qrNames: [{{ QR_LIST }}]
+      qrNames: [{{ QR_LIST }}]
+  - org.openrewrite.java.dependencies.AddDependency:
+  - org.openrewrite.java.dependencies.AddDependency:
+      groupId: "fr.bpce.api.bapi"
+      groupId: "fr.bpce.api.bapi"
+      artifactId: "{{ PROJECT_NAME }}-dto"
+      artifactId: "{{ PROJECT_NAME }}-dto"
+  - org.openrewrite.java.dependencies.AddDependency: # fixme : should be conditional
+  - org.openrewrite.java.dependencies.AddDependency: # fixme : should be conditional
+      groupId: fr.bpce.mysys.lib
+      groupId: fr.bpce.mysys.lib
+      artifactId: typology
+      artifactId: typology
+
+
+{{ COND $ENABLE_DEP
+{{ COND $ENABLE_DEP
+  - com.bpce.b3c.contracthelper.common.dependencies
+  - com.bpce.b3c.contracthelper.common.dependencies
+}}
+}}
+
+
+{{ COND $ENABLE_FAKE
+{{ COND $ENABLE_FAKE
+  - com.bpce.b3c.contracthelper.common.fake
+  - com.bpce.b3c.contracthelper.common.fake
+}}
+}}
+
