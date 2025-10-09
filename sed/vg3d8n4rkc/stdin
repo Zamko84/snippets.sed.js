@@ -1,0 +1,12 @@
+aaa
+{{ COND true
+blabla
+}}
+bbb
+
+{{ COND false
+etcetc
+}}
+
+zzz
+zzz
