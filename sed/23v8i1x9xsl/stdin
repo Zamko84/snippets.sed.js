@@ -1,0 +1,27 @@
+{
+    "result": [
+        {
+            "id": "dsdasddadadsadasdsa",
+            "paused": false,
+            "modified_on": "2024-09-25T18:27:39.377032Z",
+            "allowed_modes": [
+                "whitelist",
+                "block",
+                "challenge",
+                "js_challenge",
+                "managed_challenge"
+            ],
+            "mode": "block",
+            "notes": "VISA Block Crimeia ASN",
+            "configuration": {
+                "target": "asn",
+                "value": "AS198669"
+            },
+            "scope": {
+            "id": "0e26755a76d2d3077432fb64a64a6bb5",
+            "type": "organization"
+            },
+             "created_on": "2024-09-25T18:27:39.38875949Z"
+        }
+    ]
+}
