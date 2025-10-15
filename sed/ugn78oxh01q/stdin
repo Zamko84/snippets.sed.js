@@ -1,0 +1,25 @@
+### Bug Fixes
+
+- Add repo syncing for polis ([d9d0564](https://github.com/ory/oathkeeper/commit/d9d0564664f7a3393e49adcff2e2b8aa25cfc614)):
+
+  GitOrigin-RevId: e277a25d594b512b800d39dd18f36ea3d99fcf84
+
+- Copybara script ([e378207](https://github.com/ory/oathkeeper/commit/e378207d6a833fe311a1f089000fa00f82938b6c)):
+
+  GitOrigin-RevId: 14665e01451ac5fcdda148b473b8fc35d4fe21ef
+
+- Deduplicate down migrations ([2a9de87](https://github.com/ory/oathkeeper/commit/2a9de87bd23860bd925c77dc7482b158a2ab108c)):
+
+  GitOrigin-RevId: 94c68daeded4f3b6f42d079d71415d8935a74e69
+
+- **deps:** Update go-x ([596d47f](https://github.com/ory/oathkeeper/commit/596d47f6103aa3d5a4f41bcf36b3316b55f55c67)):
+
+  GitOrigin-RevId: 2d32f7710b9c6111a30f4e0d3cc0abc967d7dfb6
+
+- Escape IPv6 regex string ([1c941f8](https://github.com/ory/oathkeeper/commit/1c941f869ac2626b5ce347973d531222c304a3a1)):
+
+  GitOrigin-RevId: cf04d7cae93aea32950a149527e2b1319af97b39
+
+- Failing CI in OSS repos ([ef037fc](https://github.com/ory/oathkeeper/commit/ef037fc2f3f3d98ecedd8d35b5a3798e0c8f2118)):
+
+  GitOrigin-RevId: 3d1f84b0f0d006971aea9489322b3e0f32a6a7e3
