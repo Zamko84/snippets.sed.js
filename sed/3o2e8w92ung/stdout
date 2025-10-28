@@ -1,0 +1,6 @@
+Oct 27 15:08:29 centengpcitux1-a python3[3486334]: #033[0m[INFO] - ____________________ DELETE ________________________#033[0m
+Oct 27 15:08:29 centengpcitux1-a python3[3486334]: #033[0m[INFO] - halncitux2-r.l.infra.arkea.com#033[0m
+Oct 27 15:08:29 centengpcitux1-a python3[3486334]: #033[0m[INFO] - _____________________________________________________________#033[0m
+Oct 27 15:08:29 centengpcitux1-a python3[3486334]: #033[0m[INFO] - Remove host from database...#033[0m
+Oct 27 15:08:29 centengpcitux1-a python3[3486334]: #033[0m[INFO] - Remove host from history file...#033[0m
+Oct 27 15:08:29 centengpcitux1-a python3[3486334]: #033[0m[INFO] - Remove /opt/centreon/etc/monitoring_hst/halncitux2-r.l.infra.arkea.com.json#033[0m
