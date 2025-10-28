@@ -1,0 +1,9 @@
+<cache-container name="leo-pkg" statistics-enabled="true" marshaller="JBOSS">
+                <transport channel="pkg"/>
+                <invalidation-cache name="api_products">
+                    <expiration max-idle="43200" lifespan="43200"/>
+                </invalidation-cache>
+                <replicated-cache name="ws_product_catalog">
+                    <expiration max-idle="14400" lifespan="28800"/>
+                </replicated-cache>
+            </cache-container>
