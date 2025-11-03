@@ -1,0 +1,21 @@
+<soap:Envelope xmlns:soap="http://schemas.xmlsoap.org/soap/envelope/"><soap:Body><ns2:invokeResponse xmlns:ns2="http://webservice.cg.crif.com/"><return>&lt;CG_RES xmlns="urn:crif-CrifGate:2:1"&gt;
+  &lt;Info&gt;
+    &lt;Status&gt;SS&lt;/Status&gt;
+    &lt;RequestTime&gt;2025-11-02T11:48:10.923Z&lt;/RequestTime&gt;
+    &lt;ResponseTime&gt;2025-11-02T11:48:11.953Z&lt;/ResponseTime&gt;
+  &lt;/Info&gt;
+  &lt;Response&gt;
+    &lt;RequestID&gt;28664518&lt;/RequestID&gt;
+    &lt;Status&gt;SS&lt;/Status&gt;
+    &lt;Detail&gt;
+      &lt;DetailID&gt;28664519&lt;/DetailID&gt;
+      &lt;Status&gt;SS&lt;/Status&gt;
+      &lt;Service&gt;Pipe&lt;/Service&gt;
+      &lt;Process&gt;FLCES01&lt;/Process&gt;
+      &lt;Content&gt;&lt;![CDATA[&lt;CES_ServiceOutput&gt;&lt;CCR_Output&gt;&lt;![CDATA[&lt;CG_CCR_Pipe&gt;&lt;CB_NAE_ProductOutput&gt;&lt;urn:Error Code="" Description="Authentication failed." xmlns:urn="urn:crif-creditbureau:v1"/&gt;&lt;/CB_NAE_ProductOutput&gt;&lt;/CG_CCR_Pipe&gt;]]]]&gt;&gt;&lt;![CDATA[&lt;/CCR_Output&gt;&lt;EnquiryData&gt;&lt;Subject&gt;&lt;Individual&gt;&lt;InvidualData BirthDate="1970-07-25" Gender="F" FirstName="MAURICE" LastName="CREIGHAN"/&gt;&lt;IdentificationData Number="1234567AC" Type="1"/&gt;&lt;Contact Value="+3530871234567" Type="1"/&gt;&lt;Address AddressLine1="" AddressLine2="SCOTSTOWN" City="" County="CORK" PostalCode="" Country="IE" Eircode=""/&gt;&lt;/Individual&gt;&lt;/Subject&gt;&lt;Link Role="B"/&gt;&lt;Application ContractPhase="RQ" ContractRequestDate="2025-10-31" ContractType="31" CreditAmount="3000" Currency="EUR"/&gt;&lt;ApplicationCode CBContractCode="" ProviderApplicationNo="abc123" ProviderContractNo=""/&gt;&lt;/EnquiryData&gt;&lt;AggregatedData&gt;&lt;EnquiryOverview Source="CCR" Access="2025-11-02T11:48:11" FootprintsNo="0"/&gt;&lt;/AggregatedData&gt;&lt;Errors Code="" Description="Authentication failed." Source="CCR"/&gt;&lt;Errors Code="0-006" Description="CALL TO S1 FAILED, ERROR IN THE DECISION ENGINE" Source="Tech"/&gt;&lt;/CES_ServiceOutput&gt;]]&gt;&lt;/Content&gt;
+      &lt;FromArchive&gt;false&lt;/FromArchive&gt;
+      &lt;RequestTime&gt;2025-11-02T11:48:10.946Z&lt;/RequestTime&gt;
+      &lt;ResponseTime&gt;2025-11-02T11:48:11.907Z&lt;/ResponseTime&gt;
+    &lt;/Detail&gt;
+  &lt;/Response&gt;
+&lt;/CG_RES&gt;</return></ns2:invokeResponse></soap:Body></soap:Envelope>
