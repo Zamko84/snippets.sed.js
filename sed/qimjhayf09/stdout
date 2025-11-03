@@ -1,0 +1,16 @@
+(base) [dbrandst@login01 arups]$ ls
+0.00eV.png   ARUPS.in                      ARUPS.out_004_-3.40eV_dE_0.1  ARUPS.out_012_-2.40eV_dE_0.1  expotp           POTCAR
+-0.50eV.png  ARUPS.log                     ARUPS.out_005_-1.50eV_dE_0.1  ARUPS.out_013_-2.30eV_dE_0.1  hdf5.py          PROCAR
+0.50eV.png   arups.out                     ARUPS.out_005_-3.30eV_dE_0.1  ARUPS.out_014_-2.20eV_dE_0.1  IBZKPT           REPORT
+-1.00eV.png  ARUPS.out_000_-1.00eV_dE_0.1  ARUPS.out_006_-1.00eV_dE_0.1  ARUPS.out_015_-2.10eV_dE_0.1  INCAR            slurm.err
+1.00eV.png   ARUPS.out_000_-3.90eV_dE_0.1  ARUPS.out_006_-3.20eV_dE_0.1  ARUPS.out_016_-1.90eV_dE_0.1  job.slrm         slurm.out
+-1.50eV.png  ARUPS.out_000_-4.00eV_dE_0.1  ARUPS.out_007_-0.50eV_dE_0.1  ARUPS.out_017_-1.80eV_dE_0.1  job.slrm.scf     vaspout.h5
+-2.00eV.png  ARUPS.out_001_-0.50eV_dE_0.1  ARUPS.out_007_-3.10eV_dE_0.1  ARUPS_PWFS.out                KPOINTS          vasprun.xml
+-2.50eV.png  ARUPS.out_001_-3.50eV_dE_0.1  ARUPS.out_008_+0.00eV_dE_0.1  arups.py                      LOCPOT           WAVECAR
+-3.00eV.png  ARUPS.out_001_-3.80eV_dE_0.1  ARUPS.out_008_-2.90eV_dE_0.1  CHG                           momentum_map.py  XDATCAR
+-3.50eV.png  ARUPS.out_002_-3.00eV_dE_0.1  ARUPS.out_009_+0.50eV_dE_0.1  CHGCAR                        OSZICAR
+-4.00eV.png  ARUPS.out_002_-3.70eV_dE_0.1  ARUPS.out_009_-2.80eV_dE_0.1  CONTCAR                       out
+ARUPS.check  ARUPS.out_003_-2.50eV_dE_0.1  ARUPS.out_010_+1.00eV_dE_0.1  DOSCAR                        OUTCAR
+arups.err    ARUPS.out_003_-3.60eV_dE_0.1  ARUPS.out_010_-2.70eV_dE_0.1  EIGENVAL                      PCDAT
+arups.hdf5   ARUPS.out_004_-2.00eV_dE_0.1  ARUPS.out_011_-2.60eV_dE_0.1  err                           POSCAR
+(base) [dbrandst@login01 arups]$ vim momentum_map.py 
