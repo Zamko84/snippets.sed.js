@@ -1,0 +1,12 @@
+{
+    "attach": false,
+    "headless": true,
+    "url": "http://127.0.0.1:8001",
+    "user_login": {
+        "username": "user",
+        "password": "12345678"
+    },
+    "frontend_dist": "/mnt/iris/source/client/dist/",
+    "binary": "/mnt/iris/source/server/build/{IRIS_EXECUTABLE}",
+    "library_path": "/mnt/iris/source/server/build"
+}
