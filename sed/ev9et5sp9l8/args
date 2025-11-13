@@ -1,0 +1,1 @@
+"s/#TITLE/$title/g; s/#SUBTITLE/$subtitle/g; s/#DATE/$date/g; s/#TYPE/$postType/g; s/#POST/$postText/g"
