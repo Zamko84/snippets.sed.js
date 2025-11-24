@@ -1,0 +1,126 @@
+name: niobyte_website
+description: Niobyte - Software solutions for you
+
+publish_to: "none" # Remove this line if you wish to publish to pub.dev
+
+version: 1.3.1+2
+
+environment:
+  sdk: "3.9.2"
+
+dependencies:
+  flutter:
+    sdk: flutter
+  flutter_localizations:
+    sdk: flutter
+  flutter_web_plugins:
+    sdk: flutter
+  flutter_native_splash: ^2.3.8
+  flutter_launcher_icons: ^0.14.3
+  provider: ^6.1.1
+  go_router: ^17.0.0
+  flutter_bloc: ^9.0.0
+  hydrated_bloc: ^10.0.0
+  equatable: ^2.0.7
+  path_provider: ^2.1.5
+  web: ^1.1.1
+  package_info_plus: ^9.0.0
+  url_launcher: ^6.3.0
+  matomo_tracker: ^6.0.0
+  video_player: ^2.10.0
+  carousel_slider: ^5.0.0
+  yaml: ^3.1.3
+  flutter_svg: ^2.2.0
+  # niobyte packages
+  estimator:
+    path: packages/estimator
+  honeybrew:
+    # path: ../honeybrew
+    git:
+      url: git@git.niobyte.com:internal/honeybrew.git
+      ref: master
+  nb41:
+    # path: ../nb41
+    git:
+      url: git@git.niobyte.com:internal/nb41.git
+      ref: NB41-39
+  markdownplus:
+    git:
+      url: git@git.niobyte.com:internal/markdownplus.git
+      ref: master
+  http: ^1.4.0
+  bloc: ^9.0.0
+  uuid: ^4.5.1
+  rxdart: ^0.28.0
+  intl: ^0.20.2
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  flutter_lints: ^6.0.0
+  build_runner: ^2.4.8
+
+flutter_launcher_icons:
+  image_path: "assets/favicon/favicon.svg"
+  android: true
+  ios: true
+  remove_alpha_ios: true
+  web:
+    generate: false
+  windows:
+    generate: true
+  macos:
+    generate: true
+
+flutter:
+  uses-material-design: true
+  generate: true
+
+  fonts:
+    - family: LibreBaskerville
+      fonts:
+        - asset: assets/LibreBaskerville/LibreBaskerville-Regular.ttf
+          weight: 100
+        - asset: assets/LibreBaskerville/LibreBaskerville-Regular.ttf
+          weight: 300
+        - asset: assets/LibreBaskerville/LibreBaskerville-Regular.ttf
+          weight: 400
+        - asset: assets/LibreBaskerville/LibreBaskerville-Regular.ttf
+          weight: 500
+        - asset: assets/LibreBaskerville/LibreBaskerville-Bold.ttf
+          weight: 600
+        - asset: assets/LibreBaskerville/LibreBaskerville-Bold.ttf
+          weight: 700
+        - asset: assets/LibreBaskerville/LibreBaskerville-Bold.ttf
+          weight: 900
+    - family: OpenSans
+      fonts:
+        - asset: assets/OpenSans/OpenSans-Light.ttf
+          weight: 100
+        - asset: assets/OpenSans/OpenSans-Light.ttf
+          weight: 300
+        - asset: assets/OpenSans/OpenSans-Regular.ttf
+          weight: 400
+        - asset: assets/OpenSans/OpenSans-Medium.ttf
+          weight: 500
+        - asset: assets/OpenSans/OpenSans-SemiBold.ttf
+          weight: 600
+        - asset: assets/OpenSans/OpenSans-Bold.ttf
+          weight: 700
+        - asset: assets/OpenSans/OpenSans-ExtraBold.ttf
+          weight: 900
+
+  assets:
+    - assets/
+    - assets/about/
+    - assets/customers/
+    - assets/external-logos/
+    - assets/niobyte-logo/
+    - assets/video/
+    - assets/web-services/
+    - assets/icons/
+    - assets/honeybrew/images/
+    - assets/honeybrew/icons/
+
+include:
+  - lib/**

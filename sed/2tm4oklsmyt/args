@@ -1,0 +1,1 @@
+'/^  honeybrew:/,/^[^ ]/ s/^([[:space:]]*)git:.*/\1path: ..\/honeybrew/'
