@@ -1,0 +1,1 @@
+ 's/\(\s+\)ws\([0-9]?\)/\1WS\2\n\1WS\2 duplicated/g'
