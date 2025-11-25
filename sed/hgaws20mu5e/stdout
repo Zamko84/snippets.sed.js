@@ -1,0 +1,6 @@
+nullptr
+nullptr
+MYNULLMACRO
+foo(0)
+foo(nullptr)
+a=nullptr
