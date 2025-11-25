@@ -1,0 +1,6 @@
+NULL
+nullptr
+MYNULLMACRO
+foo(0)
+foo(NULL)
+a=NULL
