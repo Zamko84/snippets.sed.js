@@ -1,0 +1,4 @@
+[DEBUG] (2024-12-01 14:03:22) entering module
+[INFO] (2024-12-01 14:03:25) user login
+[ERROR] (2024-12-01 14:03:30) invalid credentials
+[CRITICAL] (2024-12-01 14:03:35) system failure
