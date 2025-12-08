@@ -1,0 +1,11 @@
+virtual_mailbox_domains = /etc/postfix/vhost, ldap:/etc/postfix/ldap-domains.cf
+# Populated during startup in: scripts/helpers/aliases.sh
+virtual_alias_maps = ldap:/etc/postfix/ldap-aliases.cf, ldap:/etc/postfix/ldap-groups.cf
+
+
+virtual_mailbox_maps = ldap:/etc/postfix/ldap-users.cf
+
+
+smtpd_sender_login_maps = ldap:/etc/postfix/ldap-senders.cf
+
+==> ldap:/etc/postfix/  hash:/tmp/docker-mailserver/hash/
