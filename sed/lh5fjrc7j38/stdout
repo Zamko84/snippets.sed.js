@@ -1,0 +1,12 @@
+{
+  "packageDirectories": [
+    {
+      "path": "deltapackagePath/force-app",
+      "default": true
+    }
+  ],
+  "name": "BCPUBHEALTH",
+  "namespace": "",
+  "sfdcLoginUrl": "https://login.salesforce.com",
+  "sourceApiVersion": "62.0"
+}
