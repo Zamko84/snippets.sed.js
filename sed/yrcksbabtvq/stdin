@@ -1,0 +1,26 @@
+    <repositories>
+        <repository>
+            <id>nexus</id>
+            <url>http://artifact-repo.hq.local/nexus/content/groups/public</url>
+        </repository>
+    </repositories>
+
+    <pluginRepositories>
+        <pluginRepository>
+            <id>nexus</id>
+            <url>http://artifact-repo.hq.local/nexus/content/groups/public</url>
+        </pluginRepository>
+    </pluginRepositories>
+
+    <distributionManagement>
+        <snapshotRepository>
+            <id>nexus-deployment</id>
+            <name>Nexus Internal Snapshot</name>
+            <url>http://artifact-repo.hq.local/nexus/content/repositories/snapshots/</url>
+        </snapshotRepository>
+        <repository>
+            <id>nexus-deployment</id>
+            <name>Nexus Internal Release</name>
+            <url>http://artifact-repo.hq.local/nexus/content/repositories/releases/</url>
+        </repository>
+    </distributionManagement>
