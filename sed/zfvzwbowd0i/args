@@ -1,0 +1,1 @@
+'s;^#define\s*\(VERSION_STRING_[^\s]\+\)[[:blank:]]\+"[0-9\.]\+";#define \1 "'"00.00.01.000"'";'
