@@ -1,0 +1,1 @@
+'s,\(^\| \|:\|\"\)/\(usr\|opt\)/\(.*/include.*\|.*include/.*\|.*include[: \"]\|.*include$\),\1/opt/DBSP/share/dep34-debian5-buildenv/\2/\3,g'
