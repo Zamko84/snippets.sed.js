@@ -1,0 +1,1 @@
+'s/CC=@CC@/CC=@CC@\nLD=@LD@\nAR=@AR@\nRANLIB=@RANLIB@/'
