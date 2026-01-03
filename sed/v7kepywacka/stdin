@@ -1,0 +1,4 @@
+  url: {{baseUrl}}/docker/:environmentId/containers/image_status/clear
+    url: {{baseUrl}}/docker/:environmentId/containers/image_status/clear
+    url: {{baseUrl}}/docker/:environmentId/containers/image_status/clear
+    url: {{baseUrl}}/docker/:environmentId/containers/image_status/clear
