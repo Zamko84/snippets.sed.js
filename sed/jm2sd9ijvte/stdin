@@ -1,0 +1,5 @@
+create_ecr_runner = false
+enable_karpenter  = true
+enable_argocd     = false
+enable_k8s_lb     = false
+enable_ebs_csi    = false
