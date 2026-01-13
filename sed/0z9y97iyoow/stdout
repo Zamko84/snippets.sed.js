@@ -1,0 +1,14 @@
+        make_args = os.environ.get("LIBSODIUM_MAKE_ARGS", "").split()
+        # Build the library
+        subprocess.check_call([make_command] + make_args, cwd=build_temp)
+
+        # Check the build library
+        subprocess.check_call(
+            [make_command, "check"] + make_args, cwd=build_temp
+        )
+
+        # Install the built library
+        subprocess.check_call(
+            [make_command, "install"] + make_args, cwd=build_temp
+        )
+
