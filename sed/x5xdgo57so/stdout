@@ -1,0 +1,15 @@
+"wise-national-jobserver": {"version": {"major": "Independent", "minor": "1.3.0"}, "rpm": "wise-national-jobserver-1.3.0-0.noarch"}
+"wise-wise4all-ws": {"version": {"major": "Independent", "minor": "10.9.0"}, "rpm": "wise-wise4all-ws-10.9.0-0.noarch"}
+"wise-bxmdb": {"version": {"major": "8.0.3", "minor": "001093000"}, "rpm": "wise-bxmdb-8.0.3-001093000.noarch"}
+"wise-bxmas": {"version": {"major": "8.0.3", "minor": "000112000"}, "rpm": "wise-bxmas-8.0.3-000112000.noarch"}
+"wise-tools": {"version": {"major": "Independent", "minor": "9.31.0"}, "rpm": "wise-tools-9.31.0-0.noarch"}
+"wise-environment-data-service": {"version": {"major": "Independent", "minor": "0.25.0"}, "rpm": "wise-environment-data-service-0.25.0-0.noarch"}
+"wise-bxmcgi-tools": {"version": {"major": "Independent", "minor": "7.11.0"}, "rpm": "wise-bxmcgi-tools-7.11.0-0.noarch"}
+"wise-ill-connector": {"version": {"major": "8.0.3", "minor": "000002000"}, "rpm": "wise-ill-connector-8.0.3-000002000.noarch"}
+"wise-configurator-api": {"version": {"major": "8.0.2", "minor": "000042000"}, "rpm": "wise-configurator-api-8.0.2-000042000.noarch"}
+"wise-guest-endpoint": {"version": {"major": "8.0.3", "minor": "000003000"}, "rpm": "wise-guest-endpoint-8.0.3-000003000.noarch"}
+"wise-guest-endpoint": {"version": {"major": "SNAPSHOT", "minor": "0.24.1-SNAPSHOT"}, "rpm": "wise-guest-endpoint-0.24.1-SNAPSHOT.noarch"}
+"wise-bxmgwt2": {"version": {"major": "SNAPSHOT", "minor": "0.24.1-SNAPSHOT"}, "rpm": "wise-bxmgwt2-0.24.1-SNAPSHOT.noarch"}
+"wise-jobserver": {"version": {"major": "SNAPSHOT", "minor": "8.0.2_WISEUS_11741-SNAPSHOT"}, "rpm": "wise-jobserver-8.0.2_WISEUS_11741-SNAPSHOT.noarch"}
+"wise-jobserver": {"version": {"major": "SNAPSHOT", "minor": "8.0.4_PR_597-SNAPSHOT"}, "rpm": "wise-jobserver-8.0.4_PR_597-SNAPSHOT.noarch"}
+"wise-solr": {"version": {"major": "SNAPSHOT", "minor": "0.36.0-SNAPSHOT"}, "rpm": "wise-solr-0.36.0-SNAPSHOT.noarch"}
