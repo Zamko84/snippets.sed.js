@@ -1,0 +1,6 @@
+archive_system: archive_python
+python_version: 3.9
+handler_path: aws_lambda/handlers.py
+data_files:
+   - disco
+   - test_integ/
