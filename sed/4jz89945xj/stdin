@@ -1,0 +1,12 @@
+postgres:
+  password: "asdfasdf"
+  custom_queries:
+    - columns:
+        - name: "custom_query.DataFeedRestarter_acawebTOM"
+          type: "gauge"
+      query: "select count(*) from datafeed_restarter_events where is_current_entry = 1;"
+      metric_prefix: "autochartist"
+  dbname: "tom"
+  port: 5432
+  host: "localhost"
+  username: "datadog"
