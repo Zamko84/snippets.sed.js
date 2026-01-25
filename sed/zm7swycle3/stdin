@@ -1,0 +1,39 @@
+;= Database configuration
+;
+; Normally only the database name, user and password parameters must
+; be changed. The driver class and renderer class are selected from
+; the JDBC name.
+
+; Database.name - specifies the JDBC name for the database to use.
+;
+;Database.name = jdbc:oracle:thin:@//localhost:1521/CMDB
+;Database.name = jdbc:postgresql://localhost:5432/cmdb
+;Database.name = jdbc:sqlserver://localhost:1433;databaseName=CMDB;encrypt=false;trustServerCertificate=true;useBulkCopyForBatchInsert=true
+;Database.name = jdbc:mysql://localhost:3306/CMDB?permitMysqlScheme=true&allowPublicKeyRetrieval=true&sessionVariables=transaction_isolation='READ-COMMITTED'
+;Database.name = jdbc:mariadb://localhost:3306/CMDB?sessionVariables=tx_isolation='READ-COMMITTED'
+;Database.name = jdbc:sqlite:/opt/cm/server/db/cmdb.sqlite
+
+;Database.name =
+
+; Database.inittimeout - specifies the time in seconds to keep trying to
+; connect to the database, at startup, until giving up.
+;
+Database.inittimeout = 10
+
+; Database.user - specifies the username to use for database logon.
+; For MSSQL on Windows, in order to logon with the service user,
+; remove or comment this field.
+;
+;Database.user =
+
+; Database.password - the database password for the specified user.
+;
+;Database.password =
+
+; Database.connections - specifies the number of database connections
+; that CF should use.
+;
+Database.connections = 20
+
+; Database.driver - specifies the name of the JDBC database driver.
+; Optional, the driver class is selected by the JDBC name.

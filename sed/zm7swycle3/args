@@ -1,0 +1,1 @@
+'1h;1!H;$!d;g;s/\(.*\);\?Database\.name =.*/\1Database.name = jdbc:postgresql:\/\/localhost:5432\/cmdb/'
