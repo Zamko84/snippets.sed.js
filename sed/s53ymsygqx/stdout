@@ -1,0 +1,16 @@
+;= Database configuration
+;
+; Normally only the database name, user and password parameters must
+; be changed. The driver class and renderer class are selected from
+; the JDBC name.
+
+; Database.name - specifies the JDBC name for the database to use.
+;
+;Database.name = jdbc:oracle:thin:@//localhost:1521/CMDB
+;Database.name = jdbc:postgresql://localhost:5432/cmdb
+;Database.name = jdbc:sqlserver://localhost:1433;databaseName=CMDB;encrypt=false;trustServerCertificate=true;useBulkCopyForBatchInsert=true
+;Database.name = jdbc:mysql://localhost:3306/CMDB?permitMysqlScheme=true&allowPublicKeyRetrieval=true&sessionVariables=transaction_isolation='READ-COMMITTED'
+;Database.name = jdbc:mariadb://localhost:3306/CMDB?sessionVariables=tx_isolation='READ-COMMITTED'
+;Database.name = jdbc:sqlite:/opt/cm/server/db/cmdb.sqlite
+
+;Database.name = jdbc:postgresql://localhost:5432/cmdb
