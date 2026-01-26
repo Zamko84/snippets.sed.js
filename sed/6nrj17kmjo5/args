@@ -1,0 +1,1 @@
+-e 's/\(HOOKS=(base udev \)\(akshara.*\)/\1plymouth \2/'
