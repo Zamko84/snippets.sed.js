@@ -1,0 +1,1 @@
+-r 's/^(DAT_MODULES=")(")$/\1test\2/'

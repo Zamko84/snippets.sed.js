@@ -1,0 +1,7 @@
+#!/bin/bash
+
+echo hi
+
+DAT_MODULES=""
+
+echo $DAT_MODULES
