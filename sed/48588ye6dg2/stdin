@@ -1,0 +1,4 @@
+const Luckytap = eyecon.require("games.luckytap.LuckyTap");
+const action = "lucky-tap.play";
+const action2 = "lucky-tap.LuckyTap.Luckytap.luckytap.launch";
+const action3 = "luckytap.LUCKY_TAP.TYPE";

@@ -1,0 +1,4 @@
+const Clickawin = eyecon.require("games.clickawin.ClickAWin");
+const action = "click-a-win.play";
+const action2 = "click-a-win.ClickAWin.Clickawin.clickawin.launch";
+const action3 = "clickawin.CLICK_A_WIN.TYPE";
