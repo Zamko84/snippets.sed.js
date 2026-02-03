@@ -1,0 +1,1 @@
+-e 's/LuckyTap/ClickAWin/g' -e 's/LUCKY_TAP/CLICK_A_WIN/g' -e 's/Luckytap/Clickawin/g' -e 's/luckytap/clickawin/g' -e 's/luckyTap/clickAWin/g' -e 's/lucky-tap/click-a-win/g'
