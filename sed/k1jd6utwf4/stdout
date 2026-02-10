@@ -1,0 +1,4 @@
+services:
+  streamlit:
+    image: siemens.com/myapp:VERSION
+    restart: unless-stopped
