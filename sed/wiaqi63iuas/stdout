@@ -1,0 +1,22 @@
+(Apache-2.0 OR ISC) AND ISC (1): aws-lc-rs
+(Apache-2.0 OR ISC) AND ISC AND OpenSSL (1): aws-lc-sys
+(Apache-2.0 OR MIT) AND Unicode-3.0 (1): unicode-ident
+0BSD OR Apache-2.0 OR MIT (1): adler2
+Apache-2.0 (1): sync_wrapper
+Apache-2.0 AND ISC (1): ring
+Apache-2.0 OR Apache-2.0 WITH LLVM-exception OR MIT (3): wasi, wasip2, wit-bindgen
+Apache-2.0 OR BSD-2-Clause OR MIT (2): zerocopy, zerocopy-derive
+Apache-2.0 OR BSL-1.0 (1): ryu
+Apache-2.0 OR ISC OR MIT (3): hyper-rustls, rustls, rustls-native-certs
+Apache-2.0 OR LGPL-2.1-or-later OR MIT (1): r-efi
+Apache-2.0 OR MIT (137): atomic-waker, base64, bit-vec, bit_field, bitflags, bitflags, bumpalo, cesu8, cfg-if, clap, clap_lex, core-foundation, core-foundation-sys, crc32fast, crossbeam-deque, crossbeam-epoch, crossbeam-utils, either, encode_unicode, env_logger, equivalent, fdeflate, flate2, form_urlencoded, futures-channel, futures-core, futures-io, futures-sink, futures-task, futures-util, getrandom, getrandom, gif, half, hashbrown, hashbrown, hermit-abi, http, httparse, humantime, idna, idna_adapter, image, indexmap, indexmap, ipnet, iri-string, itoa, jni, jni-sys, jpeg-decoder, js-sys, lazy_static, log, num-traits, once_cell, openssl-probe, os_str_bytes, percent-encoding, pin-project-lite, pin-utils, png, portable-atomic, ppv-lite86, proc-macro-error-attr, qoi, quinn, quinn-proto, quinn-udp, rand, rand_chacha, rand_core, rayon, rayon-core, regex, regex-automata, regex-syntax, reqwest, rustc-hash, rustls-pki-types, rustls-platform-verifier, rustls-platform-verifier-android, security-framework, security-framework-sys, serde_core, smallvec, socket2, stable_deref_trait, thiserror-impl, thiserror-impl, tokio-rustls, unicode-width, url, utf8_iter, wasm-bindgen, wasm-bindgen-futures, wasm-bindgen-macro, wasm-bindgen-shared, web-sys, web-time, weezl, winapi, winapi-i686-pc-windows-gnu, winapi-x86_64-pc-windows-gnu, windows-link, windows-sys, windows-sys, windows-sys, windows-sys, windows-sys, windows-targets, windows-targets, windows-targets, windows_aarch64_gnullvm, windows_aarch64_gnullvm, windows_aarch64_gnullvm, windows_aarch64_msvc, windows_aarch64_msvc, windows_aarch64_msvc, windows_i686_gnu, windows_i686_gnu, windows_i686_gnu, windows_i686_gnullvm, windows_i686_gnullvm, windows_i686_msvc, windows_i686_msvc, windows_i686_msvc, windows_x86_64_gnu, windows_x86_64_gnu, windows_x86_64_gnu, windows_x86_64_gnullvm, windows_x86_64_gnullvm, windows_x86_64_gnullvm, windows_x86_64_msvc, windows_x86_64_msvc, windows_x86_64_msvc, zeroize
+Apache-2.0 OR MIT OR Zlib (6): bytemuck, lru-slab, miniz_oxide, tinyvec, tinyvec_macros, zune-inflate
+BSD-3-Clause (3): exr, lebe, subtle
+CDLA-Permissive-2.0 (1): webpki-root-certs
+EPL-2.0 (1): bdf-reader
+ISC (2): rustls-webpki, untrusted
+MIT (33): atty, bytes, color_quant, combine, console, crunchy, http-body, http-body-util, hyper, hyper-util, image-to-ascii, indicatif, indicatif, mio, number_prefix, schannel, simd-adler32, slab, strsim, textwrap, tiff, tokio, tower, tower-http, tower-layer, tower-service, tracing, tracing-core, try-lock, unit-prefix, unsafe-libyaml, want, zmij
+MIT OR Unlicense (5): aho-corasick, byteorder, memchr, termcolor, winapi-util
+MPL-2.0 (1): colored
+N/A (3): anode, anode-macros, pat-the-niko
+Unicode-3.0 (18): icu_collections, icu_locale_core, icu_normalizer, icu_normalizer_data, icu_properties, icu_properties_data, icu_provider, litemap, potential_utf, tinystr, writeable, yoke, yoke-derive, zerofrom, zerofrom-derive, zerotrie, zerovec, zerovec-derive
