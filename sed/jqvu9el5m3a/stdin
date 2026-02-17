@@ -1,0 +1,159 @@
+// Uses Typst 0.14.2
+
+// TODO: Set these
+#let last_meeting_date = datetime(year: 2026, month: 1, day: 28)
+#let meeting_date = datetime(year: 2026, month: 2, day: 17, hour: 6, minute: 15, second: 0)
+#let wrap_meeting_date = true // Change to false if meeting is before 9 am
+#let meeting_type = "Committee" // "Annual/Special General"
+#let location = "on Discord (Online)" // "in Centenary 355"
+
+
+// Import agenda layout
+#import "/2025-2026/Templates/Structure.typ": *
+#show: it => agenda(meeting_date, wrap_meeting_date, meeting_type, location, it)
+
+
+= Introductory Items
+
+== Attendance
+Take attendance.\
+Ensure attendance requirements are met.
+
+== Apologies
+Read out apologies.
+
+
+= Minutes and Matters Arising
+
+== Amendments for Last #meeting_type Meeting
+// TODO: List any changes made to the minutes for the last meeting
+Nil.
+
+== Minutes for Last #meeting_type Meeting #appendix[A]
+Date of relevant minutes: #get_formatted_date(last_meeting_date)
+
+== Matters Arising
+/* TODO: Add matters being continued from a previous meeting as follows
+Some matter, see @some_matter\
+⋮
+Final matter, see @final_matter */
+Nil.
+
+
+= Correspondence
+
+== Inward Correspondence #appendix[B]
+#received_email("Cassie Breen", "New year, new builds: Hackathons for students", datetime(year: 2026, month: 1, day: 30))
+#received_email("noreply-apps-scripts-notifications@google.com", "Summary of failures for Google Apps Script: Email Discord Routing", datetime(year: 2026, month: 1, day: 31))
+#received_email("Tasmania University Student Association", "Your form has been submitted", datetime(year: 2026, month: 2, day: 3))
+#received_email("Tasmania University Student Association", "Your form has been submitted", datetime(year: 2026, month: 2, day: 3))
+#received_email("noreply-apps-scripts-notifications@google.com", "Summary of failures for Google Apps Script: Email Discord Routing", datetime(year: 2026, month: 2, day: 4))
+#received_email("Ming Wong", "Programming Club Meeting", datetime(year: 2026, month: 2, day: 4))
+#received_email("Ming Wong", "Re: Orientation Week Room Bookings", datetime(year: 2026, month: 2, day: 4))
+#received_email("Ming Wong", "FW: Programming Club Meeting", datetime(year: 2026, month: 2, day: 4))
+#received_email("noreply-apps-scripts-notifications@google.com", "Summary of failures for Google Apps Script: Email Discord Routing", datetime(year: 2026, month: 2, day: 5))
+#received_email("Ming Wong", "Re: Room Bookings", datetime(year: 2026, month: 2, day: 6))
+#received_email("Tasmania University Student Association", "Your form has been submitted", datetime(year: 2026, month: 2, day: 8))
+#received_email("Jessica | Dream Big Australia", "Encourage students to sign up for free career development over the break", datetime(year: 2026, month: 2, day: 10))
+#received_email("Rubric Team", "Editable Submission Emails for Forms", datetime(year: 2026, month: 2, day: 10))
+#received_email("Tasmania University Student Association", "Event Application Form Update", datetime(year: 2026, month: 2, day: 10))
+#received_email("noreply-apps-scripts-notifications@google.com", "Summary of failures for Google Apps Script: Email Discord Routing", datetime(year: 2026, month: 2, day: 11))
+#received_email("TUSA Clubs & Societies", "Agenda - C+S Meeting #1 Monday, 16th February 2026 - 5:30pm - for Hobart + Statewide Based attending", datetime(year: 2026, month: 2, day: 12))
+#received_email("Zapier Alerts", "[ALERT] Possible error on your Alert on discord when email received Zap", datetime(year: 2026, month: 2, day: 12))
+#received_email("TUSA Clubs & Societies", "Agenda - C+S Meeting #1 Monday, 16th February 2026 - 5:30pm - for Launceston + Statewide Based atten", datetime(year: 2026, month: 2, day: 13))
+#received_email("Zapier Alerts", "[ALERT] Possible error on your Alert on discord when email received Zap", datetime(year: 2026, month: 2, day: 13))
+#received_email("noreply-apps-scripts-notifications@google.com", "Summary of failures for Google Apps Script: Email Discord Routing", datetime(year: 2026, month: 2, day: 14))
+#received_email("Ming Wong", "Re: Room Bookings", datetime(year: 2026, month: 2, day: 16))
+#received_email("Rubric Team", "Weekly update for Programming Club", datetime(year: 2026, month: 2, day: 16))
+#received_email("noreply-apps-scripts-notifications@google.com", "Summary of failures for Google Apps Script: Email Discord Routing", datetime(year: 2026, month: 2, day: 17))
+#received_email("noreply-apps-scripts-notifications@google.com", "Summary of failures for Google Apps Script: Email Discord Routing", datetime(year: 2026, month: 2, day: 17))
+#received_email("TUSA Clubs & Societies", "Meeting Minutes - from C&S Meeting #1 - 16.02.26 at 5:30 pm - for Hobart & Statewide C&S attending H", datetime(year: 2026, month: 2, day: 17))
+#received_email("TUSA Clubs & Societies", "Meeting Minutes - from C&S Meeting #1 - 16.02.26 at 5:30 pm - for Hobart & Statewide C&S attending H", datetime(year: 2026, month: 2, day: 17))
+
+== Outward Correspondence #appendix[C]
+#sent_email("Cameron Munro", "Ming Wong", "Orientation Week Room Bookings", datetime(year: 2026, month: 3, day: 2))
+#sent_email("Cameron Munro", "Ming Wong", "Room Bookings", datetime(year: 2026, month: 5, day: 2))
+#sent_email("Cameron Munro", "Ming Wong", "Re: Room Bookings", datetime(year: 2026, month: 5, day: 2))
+#sent_email("Cameron Munro", "TUSA Clubs & Societies\"", "Room Meetup Bookings", datetime(year: 2026, month: 8, day: 2))
+#sent_email("Cameron Munro", "Ming Wong", "Re: Room Bookings", datetime(year: 2026, month: 8, day: 2))
+
+= Matters for Discussion
+
+== 2025 Memberships
+2025 memberships have now been retired as of the 14th.
+
+== Club Event Applications
+The 19th and 20th orientation week meetups have been booked along with week 1 and week 2 in Hobart. 
+
+== Smaller Meeting Format
+A smaller new meeting format will start to be used within the coming semester to try and cut down on meeting times and decrease response time to important items.
+
+== Bank Signatories
+The sinatories for the #PC's bank account have to be switched over which may only need #amari to attend as a new executive officer to sign on or require #cameron and #lachlan to also be present. This needs to be investigated.
+
+TUSA has recently changed their address making our recent attempts to update to their previous address irrelevant. We now need to call an SGM to update our constitution and then inform CBA who will need to see the signed minutes for that event. We already have to do this with the 2025 AGM minutes to changing bank signatories so should try to do both at once.
+
+== Beginner Tutorials
+#cameron and #joshua have been working on the beginner tutorials to host at the start of semester to heopfully help out and draw in new students. The first one is almost complete, and there are 3 more waiting for steps to be written.
+===
+== New Logo
+The club has decided to change logos and the winner will be voted on during the meeting.
+
+== Club Activity Startup for 2026
+The announcement has been made as of the 15th announcing our plans for the start of the year.
+
+C&S booking has been confirmed and we now know where we are going to be required. 
+
+== Club Account Handover
+Club accounts still need to be handed over to new committee officers including changing all the passwords and removing access for old 2025 committee officers.
+
+== ACS Funding
+The #PC needs to enquire about the status of the potential ACS funding that #luke was in talks with them about.
+
+== Competetive Programming Event
+We are waiting on Lindsays response to helping run this event. If it goes through we agreed we would try and assist.
+
+== Missing Club Chest
+#joshua, #cameron and #amari have found the club chest items and they are currently stored at #joshua's house. We will have to find a more permanent place for it but not sure how hard that will be.
+
+== Poster Advertisement for Orientation
+We will be using a poster located near the exit of each venue for advertising the club during the ICT student orientation event. Hopefully this will give students more opportunity to access the clubs rubric and discord where we can get in contact while also reducing printing.
+
+== Project Licensing
+The terms and conditions of memberships was edited to remove the section related to club project code ownership: "Any contributions to projects run by the club are the property of the Programming Club". This is to ensure the club isn't making any legal claims to things it can't as we are still unsure over the logistics of code ownership seeing as we aren't incorperated in any way.
+
+== Website Domain
+We are unable to renew the current domain we hold (.com.au) as we are no longer going to be a business as per TUSA's rework on their clubs system. We are unsure as to what we will do when the domain expires.
+
+== Small Items
+- Both the current and new email forwarding systems have reported a number of failures recently with the new one failing for 2 days recently due to a malformed email.
+- Late last year we were emailed by Linktree about changes to their Privacy Policy, since we don't use the account should we try to cancel it? At a minimum we should document how to access it.
+- Google emailed us about changes to their date collection for Play, while no one should be using it, it is possible that they collect data from connected accounts if logged in on a phone so as much collection should be disabled as possible.
+- We were recently emailed about Dream Big Australia's STEAM Ahead Program to help mentor women and non binary students on finding work after graduating, previous attempts to advertise have be made too late to be useful. Do we wish to advertise the program this year?
+
+
+= Matters for Noting
+
+== President's Report
+Nil.
+
+== Treasurer's Report
+Nil.
+
+== Subcommittee and Other Reports (if applicable)
+Nil.
+
+
+#pagebreak()
+#set heading(numbering: "A", supplement: "Appendix")
+#counter(heading).update(0)
+
+= Last #meeting_type Meeting Minutes
+// TODO: Compress last meeting minutes with https://www.ilovepdf.com/compress_pdf and then upload to an "Appendix A" subfolder and embed as follows:
+#display_pdf("/2025-2026/20260217 CM/Appendix A/20260128 PC Committee Meeting Minutes.pdf", 9)
+
+= Inward Correspondence
+https://drive.google.com/drive/folders/1DZoVG_nWtjTYVH1lPfq4gdIYeS7ZNcxH?usp=sharing
+
+= Outward Correspondence
+https://drive.google.com/drive/folders/1-enQM3xDSn3sKit6WwNOGkFlGzAk2VVD?usp=sharing
