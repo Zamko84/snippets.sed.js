@@ -1,0 +1,61 @@
+Feb 19 08:35:03 xray[415645]: 2026/02/19 08:35:03.638448 from 109.252.186.54:1594 accepted tcp:one.one.one.one:443 [reality-in >> direct] email: kate
+Feb 19 08:35:04 xray[415645]: 2026/02/19 08:35:04.726082 from 109.252.186.54:1595 accepted tcp:17.57.146.28:5223 [reality-in >> direct] email: kate
+Feb 19 08:36:36 xray[415645]: 2026/02/19 08:36:36.224340 from 109.252.186.54:1539 accepted tcp:one.one.one.one:443 [reality-in >> direct] email: kate
+Feb 19 08:36:37 xray[415645]: 2026/02/19 08:36:37.318296 from 109.252.186.54:1540 accepted tcp:17.57.146.58:5223 [reality-in >> direct] email: kate
+Feb 19 08:36:56 xray[415645]: 2026/02/19 08:36:56.431278 from 109.252.186.54:1545 accepted tcp:one.one.one.one:443 [reality-in >> direct] email: kate
+Feb 19 08:37:38 xray[415645]: 2026/02/19 08:37:38.997384 from 109.252.186.54:1553 accepted tcp:17.57.146.57:5223 [reality-in >> direct] email: kate
+Feb 19 08:38:39 xray[415645]: 2026/02/19 08:38:39.470858 from 109.252.186.54:1560 accepted tcp:one.one.one.one:443 [reality-in >> direct] email: kate
+Feb 19 08:38:40 xray[415645]: 2026/02/19 08:38:40.218216 from 109.252.186.54:1561 accepted tcp:17.57.146.54:5223 [reality-in >> direct] email: kate
+Feb 19 08:39:06 xray[415645]: 2026/02/19 08:39:06.294383 from 109.252.186.54:1564 accepted tcp:one.one.one.one:443 [reality-in >> direct] email: kate
+Feb 19 08:40:13 xray[415645]: 2026/02/19 08:40:13.299931 from 109.252.186.54:1577 accepted tcp:one.one.one.one:443 [reality-in >> direct] email: kate
+Feb 19 08:40:14 xray[415645]: 2026/02/19 08:40:14.697838 from 109.252.186.54:1578 accepted tcp:17.57.146.58:5223 [reality-in >> direct] email: kate
+Feb 19 08:41:15 xray[415645]: 2026/02/19 08:41:15.926993 from 109.252.186.54:1582 accepted tcp:one.one.one.one:443 [reality-in >> direct] email: kate
+Feb 19 08:41:17 xray[415645]: 2026/02/19 08:41:17.143824 from 109.252.186.54:1583 accepted tcp:17.57.146.58:5223 [reality-in >> direct] email: kate
+Feb 19 08:42:17 xray[415645]: 2026/02/19 08:42:17.552177 from 109.252.186.54:1545 accepted tcp:one.one.one.one:443 [reality-in >> direct] email: kate
+Feb 19 08:42:19 xray[415645]: 2026/02/19 08:42:19.030332 from 109.252.186.54:1546 accepted tcp:17.57.146.55:5223 [reality-in >> direct] email: kate
+Feb 19 08:42:27 xray[415645]: 2026/02/19 08:42:27.007252 from 109.252.186.54:1547 accepted tcp:one.one.one.one:443 [reality-in >> direct] email: kate
+Feb 19 08:43:18 xray[415645]: 2026/02/19 08:43:18.358562 from 109.252.186.54:1555 accepted tcp:one.one.one.one:443 [reality-in >> direct] email: kate
+Feb 19 08:43:50 xray[415645]: 2026/02/19 08:43:50.560047 from 109.252.186.54:1560 accepted tcp:17.57.146.25:5223 [reality-in >> direct] email: kate
+Feb 19 08:44:48 xray[415645]: 2026/02/19 08:44:48.505242 from 109.252.186.54:1565 accepted tcp:one.one.one.one:443 [reality-in >> direct] email: kate
+Feb 19 08:44:51 xray[415645]: 2026/02/19 08:44:51.926828 from 109.252.186.54:1567 accepted tcp:17.57.146.59:5223 [reality-in >> direct] email: kate
+Feb 19 08:45:52 xray[415645]: 2026/02/19 08:45:52.937235 from 109.252.186.54:1577 accepted tcp:one.one.one.one:443 [reality-in >> direct] email: kate
+Feb 19 08:45:54 xray[415645]: 2026/02/19 08:45:54.077967 from 109.252.186.54:1579 accepted tcp:17.57.146.26:5223 [reality-in >> direct] email: kate
+Feb 19 08:46:54 xray[415645]: 2026/02/19 08:46:54.451541 from 109.252.186.54:1585 accepted tcp:one.one.one.one:443 [reality-in >> direct] email: kate
+Feb 19 08:46:55 xray[415645]: 2026/02/19 08:46:55.610838 from 109.252.186.54:1586 accepted tcp:17.57.146.22:5223 [reality-in >> direct] email: kate
+Feb 19 08:47:03 xray[415645]: 2026/02/19 08:47:03.049139 from 109.252.186.54:1589 accepted tcp:one.one.one.one:443 [reality-in >> direct] email: kate
+Feb 19 08:47:58 xray[415645]: 2026/02/19 08:47:58.423360 from 109.252.186.54:1593 accepted tcp:one.one.one.one:443 [reality-in >> direct] email: kate
+Feb 19 08:48:00 xray[415645]: 2026/02/19 08:48:00.056163 from 109.252.186.54:1594 accepted tcp:17.57.146.28:5223 [reality-in >> direct] email: kate
+Feb 19 08:51:09 xray[415645]: 2026/02/19 08:51:09.193450 from tcp:109.252.186.54:1996 accepted udp:1.1.1.1:53 [reality-in >> direct] email: kate
+Feb 19 08:51:09 xray[415645]: 2026/02/19 08:51:09.647132 from 109.252.186.54:1997 accepted tcp:one.one.one.one:443 [reality-in >> direct] email: kate
+Feb 19 08:51:10 xray[415645]: 2026/02/19 08:51:10.402810 from 109.252.186.54:2001 accepted tcp:one.one.one.one:443 [reality-in >> direct] email: kate
+Feb 19 08:51:10 xray[415645]: 2026/02/19 08:51:10.616542 from 109.252.186.54:2002 accepted tcp:one.one.one.one:853 [reality-in >> direct] email: kate
+Feb 19 08:51:10 xray[415645]: 2026/02/19 08:51:10.903506 from 109.252.186.54:2007 accepted tcp:17.242.218.132:5223 [reality-in >> direct] email: kate
+Feb 19 08:53:06 xray[415645]: 2026/02/19 08:53:06.308873 from 109.252.186.54:2035 accepted tcp:one.one.one.one:443 [reality-in >> direct] email: kate
+Feb 19 08:53:14 xray[415645]: 2026/02/19 08:53:14.964487 from 109.252.186.54:2041 accepted tcp:17.57.146.57:5223 [reality-in >> direct] email: kate
+Feb 19 08:54:14 xray[415645]: 2026/02/19 08:54:14.977091 from 109.252.186.54:1999 accepted tcp:17.57.146.56:5223 [reality-in >> direct] email: kate
+Grover Cleveland, 1885-1889
+Benjamin Harrison, 1889-1893
+Grover Cleveland, 1893-1897
+William McKinley, 1897-1901
+Theodore Roosevelt, 1901-1909
+William Howard Taft, 1909-1913
+Woodrow Wilson, 1913-1921
+Warren Gamaliel Harding, 1921-1923
+Calvin Coolidge, 1923-1929
+Herbert Clark Hoover, 1929-1933
+Franklin Delano Roosevelt, 1933-1945
+Harry S. Truman, 1945-1953
+Dwight David Eisenhower, 1953-1961
+John Fitzgerald Kennedy, 1961-1963
+Lyndon Baines Johnson, 1963-1969
+Richard Milhous Nixon, 1969-1974
+Gerald Rudolph Ford, 1974-1977
+James Earl Carter, Jr., 1977-1981
+Ronald Wilson Reagan, 1981-1989
+George Herbert Walker Bush, 1989-1993
+William Jefferson Clinton, 1993-2001
+George Walker Bush, 2001-2009
+Barack Obama, 2009-2017
+Donald Trump, 2017-2021
+Joe Biden, 2021-2025
+Donald Trump, 2025-
