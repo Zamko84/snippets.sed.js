@@ -1,0 +1,1585 @@
+[Event "?"]
+[Site "?"]
+[Date "2020.04.05"]
+[Round "?"]
+[White "1, draw"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "2b3K1/8/4Pkp1/8/8/7P/8/8 w - - 0 1"]
+[PlyCount "10"]
+[EventDate "2020.??.??"]
+
+
+
+
+[Event "?"]
+[Site "?"]
+[Date "2020.04.05"]
+[Round "?"]
+[White "2, draw"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "2R4K/7b/8/8/4k2p/6p1/8/8 w - - 0 1"]
+[PlyCount "12"]
+[EventDate "2020.??.??"]
+
+
+
+
+[Event "?"]
+[Site "?"]
+[Date "2020.04.05"]
+[Round "?"]
+[White "3, win"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "8/kp6/8/3P4/3N4/1P6/8/1b1K4 w - - 0 1"]
+[PlyCount "9"]
+[EventDate "2020.??.??"]
+
+
+
+
+
+[Event "?"]
+[Site "?"]
+[Date "2020.04.05"]
+[Round "?"]
+[White "4, draw"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "3b4/8/k7/1bK1B3/1Pn5/7R/q7/4R3 w - - 0 1"]
+[PlyCount "14"]
+[EventDate "2020.??.??"]
+
+
+
+
+[Event "?"]
+[Site "?"]
+[Date "2020.04.07"]
+[Round "?"]
+[White "5, win"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "8/3p4/6P1/8/b4R2/8/K2p2Pk/8 w - - 0 1"]
+[PlyCount "21"]
+[EventDate "2020.??.??"]
+
+
+
+
+
+[Event "?"]
+[Site "?"]
+[Date "2020.04.07"]
+[Round "?"]
+[White "6, draw"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "k1K5/8/8/8/2P1p1R1/8/1p2Bb2/8 w - - 0 1"]
+[PlyCount "12"]
+[EventDate "2020.??.??"]
+
+
+
+
+[Event "?"]
+[Site "?"]
+[Date "2020.04.07"]
+[Round "?"]
+[White "7, win"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "r2k1B2/7R/p7/8/8/8/8/4K3 w - - 0 1"]
+[PlyCount "13"]
+[EventDate "2020.??.??"]
+
+
+
+
+[Event "?"]
+[Site "?"]
+[Date "2020.04.07"]
+[Round "?"]
+[White "8, draw"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "8/8/Pk2N3/4n3/1B6/1P1p4/K4p2/8 w - - 0 1"]
+[PlyCount "12"]
+[EventDate "2020.??.??"]
+
+
+
+
+[Event "?"]
+[Site "?"]
+[Date "2020.04.07"]
+[Round "?"]
+[White "9, win"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "8/8/P7/3p3r/3k3B/3P4/5K2/8 w - - 0 1"]
+[PlyCount "9"]
+[EventDate "2020.??.??"]
+
+
+
+
+[Event "?"]
+[Site "?"]
+[Date "2020.04.07"]
+[Round "?"]
+[White "10, draw"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "2k2N2/p4R2/2KP4/b7/8/p2q4/P7/8 w - - 0 1"]
+[PlyCount "12"]
+[EventDate "2020.??.??"]
+
+
+
+
+[Event "?"]
+[Site "?"]
+[Date "2020.04.08"]
+[Round "?"]
+[White "11, win"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "B7/P6b/k5p1/2K5/8/4N3/8/8 w - - 0 1"]
+[PlyCount "11"]
+[EventDate "2020.??.??"]
+
+
+
+
+
+[Event "?"]
+[Site "?"]
+[Date "2020.04.08"]
+[Round "?"]
+[White "12, win"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "R7/3p3p/8/3P2P1/3k4/1p5p/1P1NKP1P/7q w - - 0 1"]
+[PlyCount "11"]
+[EventDate "2020.??.??"]
+
+
+
+
+
+[Event "?"]
+[Site "?"]
+[Date "2020.04.08"]
+[Round "?"]
+[White "13, draw"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "8/k2p3R/P7/8/1K6/8/1p1B4/6b1 w - - 0 1"]
+[PlyCount "13"]
+[EventDate "2020.??.??"]
+
+
+
+
+
+[Event "?"]
+[Site "?"]
+[Date "2020.04.09"]
+[Round "?"]
+[White "14, win"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "q4k2/p2pp2K/8/2R1P3/4N3/3P4/P7/8 w - - 0 1"]
+[PlyCount "9"]
+[EventDate "2020.??.??"]
+
+
+
+
+
+[Event "?"]
+[Site "?"]
+[Date "2020.04.09"]
+[Round "?"]
+[White "15, draw"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "8/k1p5/Pb3p2/8/2R4K/7P/4b3/8 w - - 0 1"]
+[PlyCount "14"]
+[EventDate "2020.??.??"]
+
+
+
+
+[Event "?"]
+[Site "?"]
+[Date "2020.04.09"]
+[Round "?"]
+[White "16, draw"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "4k1B1/8/4P2p/3K4/7P/6np/8/8 w - - 0 1"]
+[PlyCount "14"]
+[EventDate "2020.??.??"]
+
+
+
+
+
+[Event "?"]
+[Site "?"]
+[Date "2020.04.09"]
+[Round "?"]
+[White "17, win"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "4krN1/4p3/5P2/5p2/8/7R/7p/7K w - - 0 1"]
+[PlyCount "15"]
+[EventDate "2020.??.??"]
+
+
+
+
+
+[Event "?"]
+[Site "?"]
+[Date "2020.04.09"]
+[Round "?"]
+[White "18, win"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "1k6/2p5/3r4/4p3/8/1K1P2R1/2Np2B1/8 w - - 0 1"]
+[PlyCount "11"]
+[EventDate "2020.??.??"]
+
+
+
+
+[Event "?"]
+[Site "?"]
+[Date "2020.04.09"]
+[Round "?"]
+[White "19, draw"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "8/2p4q/5p2/5p2/k1K5/8/8/1B2R3 w - - 0 1"]
+[PlyCount "14"]
+[EventDate "2020.??.??"]
+
+
+
+
+[Event "?"]
+[Site "?"]
+[Date "2020.04.09"]
+[Round "?"]
+[White "20, draw"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "B6k/6p1/2K3PP/8/4p3/8/6b1/8 w - - 0 1"]
+[PlyCount "14"]
+[EventDate "2020.??.??"]
+
+
+
+
+[Event "?"]
+[Site "?"]
+[Date "2020.04.10"]
+[Round "?"]
+[White "21, draw"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "3K4/nP3p2/P4P2/8/7k/5P2/2bb4/8 w - - 0 1"]
+[PlyCount "18"]
+[EventDate "2020.??.??"]
+
+
+
+
+
+[Event "?"]
+[Site "?"]
+[Date "2020.04.10"]
+[Round "?"]
+[White "22, draw"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "8/6B1/1r1P4/8/4K3/8/7b/2k5 w - - 0 1"]
+[PlyCount "16"]
+[EventDate "2020.??.??"]
+
+
+
+
+
+
+[Event "?"]
+[Site "?"]
+[Date "2020.04.10"]
+[Round "?"]
+[White "23, draw"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "7b/8/kq6/8/8/1N2R3/K2P4/8 w - - 0 1"]
+[PlyCount "10"]
+[EventDate "2020.??.??"]
+
+
+
+
+
+[Event "?"]
+[Site "?"]
+[Date "2020.04.10"]
+[Round "?"]
+[White "24, win"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "k2r1q2/2b2p1Q/7R/pK6/2N5/1P6/8/8 w - - 0 1"]
+[PlyCount "11"]
+[EventDate "2020.??.??"]
+
+
+
+
+
+[Event "?"]
+[Site "?"]
+[Date "2020.04.10"]
+[Round "?"]
+[White "25, draw"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "2k5/3p4/P7/Pp6/8/4K3/8/8 w - - 0 1"]
+[PlyCount "16"]
+[EventDate "2020.??.??"]
+
+
+
+
+[Event "?"]
+[Site "?"]
+[Date "2020.04.10"]
+[Round "?"]
+[White "26, win"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "1N6/8/K7/3k4/3p3B/p7/2PP4/8 w - - 0 1"]
+[PlyCount "11"]
+[EventDate "2020.??.??"]
+
+
+
+
+[Event "?"]
+[Site "?"]
+[Date "2020.04.10"]
+[Round "?"]
+[White "27, draw"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "8/3n3B/3Pp3/k7/1b1K4/8/8/8 w - - 0 1"]
+[PlyCount "16"]
+[EventDate "2020.??.??"]
+
+
+
+
+
+[Event "?"]
+[Site "?"]
+[Date "2020.04.10"]
+[Round "?"]
+[White "28, draw"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "2k5/8/KpP5/4R3/8/4n3/3p4/8 w - - 0 1"]
+[PlyCount "14"]
+[EventDate "2020.??.??"]
+
+
+
+
+
+
+[Event "?"]
+[Site "?"]
+[Date "2020.04.10"]
+[Round "?"]
+[White "29, draw"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "5K2/8/5p1r/8/5P2/6Pb/3k2B1/8 w - - 0 1"]
+[PlyCount "16"]
+[EventDate "2020.??.??"]
+
+
+
+
+
+
+[Event "?"]
+[Site "?"]
+[Date "2020.04.10"]
+[Round "?"]
+[White "30, draw"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "8/8/7b/8/4k1P1/8/1p2B2K/5N2 w - - 0 1"]
+[PlyCount "12"]
+[EventDate "2020.??.??"]
+
+
+
+
+[Event "?"]
+[Site "?"]
+[Date "2020.04.10"]
+[Round "?"]
+[White "31, win"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "R7/3k1p2/b7/8/4Nrp1/2p5/2K5/4B3 w - - 0 1"]
+[PlyCount "17"]
+[EventDate "2020.??.??"]
+
+
+
+
+
+
+
+[Event "?"]
+[Site "?"]
+[Date "2020.04.10"]
+[Round "?"]
+[White "32, draw"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "8/2k2b2/2p5/2pP4/8/2P5/PP6/2K5 w - - 0 1"]
+[PlyCount "14"]
+[EventDate "2020.??.??"]
+
+
+
+
+[Event "?"]
+[Site "?"]
+[Date "2020.04.10"]
+[Round "?"]
+[White "33, draw"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "1k6/8/bN6/4p3/3p4/N7/p3PB2/5K2 w - - 0 1"]
+[PlyCount "16"]
+[EventDate "2020.??.??"]
+
+
+
+
+
+[Event "?"]
+[Site "?"]
+[Date "2020.04.10"]
+[Round "?"]
+[White "34, win"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "1n6/7k/8/b7/8/4R3/6P1/3K4 w - - 0 1"]
+[PlyCount "9"]
+[EventDate "2020.??.??"]
+
+
+
+
+
+[Event "?"]
+[Site "?"]
+[Date "2020.04.10"]
+[Round "?"]
+[White "35, draw"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "7k/3p4/3nP2K/2R3p1/5n2/4r3/7B/8 w - - 0 1"]
+[PlyCount "12"]
+[EventDate "2020.??.??"]
+
+
+
+
+
+
+[Event "?"]
+[Site "?"]
+[Date "2020.04.10"]
+[Round "?"]
+[White "36, win"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "8/2B5/1p2p1B1/1P6/2K5/8/2p1pP2/2k5 w - - 0 1"]
+[PlyCount "13"]
+[EventDate "2020.??.??"]
+
+
+
+
+
+[Event "?"]
+[Site "?"]
+[Date "2020.04.10"]
+[Round "?"]
+[White "37, win"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "8/6pk/1pp1p3/1R4P1/1K3N2/8/2Pp4/8 w - - 0 1"]
+[PlyCount "15"]
+[EventDate "2020.??.??"]
+
+
+
+
+[Event "?"]
+[Site "?"]
+[Date "2020.04.10"]
+[Round "?"]
+[White "38, draw"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "k7/8/P7/N1p5/8/R1P1P3/1K5p/5b2 w - - 0 1"]
+[PlyCount "16"]
+[EventDate "2020.??.??"]
+
+
+
+
+
+[Event "?"]
+[Site "?"]
+[Date "2020.04.10"]
+[Round "?"]
+[White "39, win"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "1k4b1/2p1n2p/8/N1R5/8/8/8/K7 w - - 0 1"]
+[PlyCount "11"]
+[EventDate "2020.??.??"]
+
+
+
+
+
+[Event "?"]
+[Site "?"]
+[Date "2020.04.10"]
+[Round "?"]
+[White "40, win"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "3N1q2/4p3/pk2p3/1p6/1B3P2/8/1P6/1K6 w - - 0 1"]
+[PlyCount "15"]
+[EventDate "2020.??.??"]
+
+
+
+
+
+[Event "?"]
+[Site "?"]
+[Date "2020.04.11"]
+[Round "?"]
+[White "41, win"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "3N4/2p1N3/2P5/7k/1p1q2p1/1P4P1/4BPP1/5K2 w - - 0 1"]
+[PlyCount "11"]
+[EventDate "2020.??.??"]
+
+
+
+
+[Event "?"]
+[Site "?"]
+[Date "2020.04.11"]
+[Round "?"]
+[White "42, draw"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "8/8/4q3/4p1pp/B4k2/3R4/4K1P1/8 w - - 0 1"]
+[PlyCount "14"]
+[EventDate "2020.??.??"]
+
+
+
+
+
+
+
+[Event "?"]
+[Site "?"]
+[Date "2020.04.11"]
+[Round "?"]
+[White "43, draw"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "8/2p5/5pp1/2kPP3/5P2/5Pp1/7n/7K w - - 0 1"]
+[PlyCount "14"]
+[EventDate "2020.??.??"]
+
+
+
+
+[Event "?"]
+[Site "?"]
+[Date "2020.04.11"]
+[Round "?"]
+[White "44, win"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "2K2k2/5B2/5pP1/4p2p/8/7P/8/8 w - - 0 1"]
+[PlyCount "17"]
+[EventDate "2020.??.??"]
+
+
+
+
+
+[Event "?"]
+[Site "?"]
+[Date "2020.04.11"]
+[Round "?"]
+[White "45, draw"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "8/k1p1p3/3P2R1/K7/8/b7/2pP4/8 w - - 0 1"]
+[PlyCount "12"]
+[EventDate "2020.??.??"]
+
+
+
+
+[Event "?"]
+[Site "?"]
+[Date "2020.04.11"]
+[Round "?"]
+[White "46, draw"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "8/B3k2r/1PP5/8/4b3/8/3pn3/3K4 w - - 0 1"]
+[PlyCount "13"]
+[EventDate "2020.??.??"]
+
+
+
+
+
+[Event "?"]
+[Site "?"]
+[Date "2020.04.11"]
+[Round "?"]
+[White "47, win"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "2K2B2/P7/1kpN4/8/qP6/8/2P5/8 w - - 0 1"]
+[PlyCount "11"]
+[EventDate "2020.??.??"]
+
+
+
+
+[Event "?"]
+[Site "?"]
+[Date "2020.04.11"]
+[Round "?"]
+[White "48, win"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "8/4q3/2p5/2n2Q2/p5N1/7k/8/1K6 w - - 0 1"]
+[PlyCount "17"]
+[EventDate "2020.??.??"]
+
+
+
+
+
+[Event "?"]
+[Site "?"]
+[Date "2020.04.11"]
+[Round "?"]
+[White "49, draw"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "6n1/8/2p4P/8/8/r1p3K1/B7/4B1k1 w - - 0 1"]
+[PlyCount "16"]
+[EventDate "2020.??.??"]
+
+
+
+
+
+[Event "?"]
+[Site "?"]
+[Date "2020.04.11"]
+[Round "?"]
+[White "50, win"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "3k4/1p4pP/4Rp2/3p3q/3N4/8/K2PP1PP/8 w - - 0 1"]
+[PlyCount "17"]
+[EventDate "2020.??.??"]
+
+
+
+
+
+[Event "?"]
+[Site "?"]
+[Date "2020.04.11"]
+[Round "?"]
+[White "51, win"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "5n2/8/p7/1r4p1/3p4/7k/1PB2P1P/1K2R3 w - - 0 1"]
+[PlyCount "9"]
+[EventDate "2020.??.??"]
+
+
+
+
+
+
+
+[Event "?"]
+[Site "?"]
+[Date "2020.04.11"]
+[Round "?"]
+[White "52, draw"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "8/5pb1/8/3qk1pK/8/B1P2RP1/6P1/8 w - - 0 1"]
+[PlyCount "12"]
+[EventDate "2020.??.??"]
+
+
+
+
+[Event "?"]
+[Site "?"]
+[Date "2020.04.11"]
+[Round "?"]
+[White "53, win"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "q4kn1/4p3/2p1R3/6Q1/2PP1P1p/p5b1/2PK4/8 w - - 0 1"]
+[PlyCount "15"]
+[EventDate "2020.??.??"]
+
+
+
+
+
+[Event "?"]
+[Site "?"]
+[Date "2020.04.11"]
+[Round "?"]
+[White "54, win"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "5nq1/1p1p2p1/8/B3p3/k7/5K2/2P2PP1/3Q4 w - - 0 1"]
+[PlyCount "13"]
+[EventDate "2020.??.??"]
+
+
+
+
+
+[Event "?"]
+[Site "?"]
+[Date "2020.04.11"]
+[Round "?"]
+[White "55, draw"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "4B1k1/b7/1p2P3/1P6/4P3/K7/6b1/8 w - - 0 1"]
+[PlyCount "16"]
+[EventDate "2020.??.??"]
+
+
+
+
+[Event "?"]
+[Site "?"]
+[Date "2020.04.11"]
+[Round "?"]
+[White "56, draw"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "8/5r1b/7K/4P3/3N3k/8/8/8 w - - 0 1"]
+[PlyCount "12"]
+[EventDate "2020.??.??"]
+
+
+
+
+[Event "?"]
+[Site "?"]
+[Date "2020.04.11"]
+[Round "?"]
+[White "57, win"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "q7/B3p3/2p1N3/p5p1/1k1P4/3P2P1/PK6/8 w - - 0 1"]
+[PlyCount "13"]
+[EventDate "2020.??.??"]
+
+
+
+
+
+[Event "?"]
+[Site "?"]
+[Date "2020.04.11"]
+[Round "?"]
+[White "58, win"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "8/8/1p4p1/6pk/P1P3p1/8/8/6K1 w - - 0 1"]
+[PlyCount "13"]
+[EventDate "2020.??.??"]
+
+
+
+
+
+[Event "?"]
+[Site "?"]
+[Date "2020.04.11"]
+[Round "?"]
+[White "59, win"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "8/8/1p1K4/Pp6/2k1p3/8/1P6/8 w - - 0 1"]
+[PlyCount "13"]
+[EventDate "2020.??.??"]
+
+
+
+
+[Event "?"]
+[Site "?"]
+[Date "2020.04.11"]
+[Round "?"]
+[White "60, win"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "2K4B/1p6/2k1p3/P3P3/pP1p4/8/2PP4/8 w - - 0 1"]
+[PlyCount "15"]
+[EventDate "2020.??.??"]
+
+
+
+
+
+[Event "?"]
+[Site "?"]
+[Date "2020.04.12"]
+[Round "?"]
+[White "61, draw"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "1k1K2n1/2p5/2PP1P2/bP6/P7/2n5/8/8 w - - 0 1"]
+[PlyCount "14"]
+[EventDate "2020.??.??"]
+
+
+
+
+[Event "?"]
+[Site "?"]
+[Date "2020.04.12"]
+[Round "?"]
+[White "62, win"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "8/8/1K6/2r2p2/1k3P2/5P2/2P5/1N6 w - - 0 1"]
+[PlyCount "11"]
+[EventDate "2020.??.??"]
+
+
+
+
+
+
+[Event "?"]
+[Site "?"]
+[Date "2020.04.12"]
+[Round "?"]
+[White "63, win"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "4R3/2p5/2Pk4/6N1/8/r1p4B/1p2bP2/1K6 w - - 0 1"]
+[PlyCount "13"]
+[EventDate "2020.??.??"]
+
+
+
+
+
+[Event "?"]
+[Site "?"]
+[Date "2020.04.14"]
+[Round "?"]
+[White "64, win"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "8/k7/3p4/K4R1n/8/8/4ppB1/8 w - - 0 1"]
+[PlyCount "17"]
+[EventDate "2020.??.??"]
+
+
+
+
+
+
+[Event "?"]
+[Site "?"]
+[Date "2020.04.15"]
+[Round "?"]
+[White "65, win"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "8/k2p4/8/2PKB3/8/8/4n3/8 w - - 0 1"]
+[PlyCount "13"]
+[EventDate "2020.??.??"]
+
+
+
+
+
+[Event "?"]
+[Site "?"]
+[Date "2020.04.19"]
+[Round "?"]
+[White "66, win"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "2R5/8/p2r4/5r2/Pk3p2/3p4/1P6/K1R5 w - - 0 1"]
+[PlyCount "11"]
+[EventDate "2020.??.??"]
+
+
+
+
+
+[Event "?"]
+[Site "?"]
+[Date "2020.04.19"]
+[Round "?"]
+[White "67, win"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "8/4p3/1pkP3Q/5p2/1K3p2/5Pq1/8/8 w - - 0 1"]
+[PlyCount "11"]
+[EventDate "2020.??.??"]
+
+
+
+
+
+
+[Event "?"]
+[Site "?"]
+[Date "2020.04.20"]
+[Round "?"]
+[White "68, win"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "3k4/1p1p2rp/3p2N1/1p6/4K1R1/8/7B/8 w - - 0 1"]
+[PlyCount "11"]
+[EventDate "2020.??.??"]
+
+
+
+
+
+[Event "?"]
+[Site "?"]
+[Date "2020.04.26"]
+[Round "?"]
+[White "69, draw"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "5R2/3p1P2/1p3k2/3K4/4P3/1B1b4/4p3/r7 w - - 0 1"]
+[PlyCount "18"]
+[EventDate "2020.??.??"]
+
+
+
+
+[Event "?"]
+[Site "?"]
+[Date "2020.04.30"]
+[Round "?"]
+[White "70, win"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "6n1/3p4/8/1P2k1n1/4P3/B5K1/3P4/8 w - - 0 1"]
+[PlyCount "15"]
+[EventDate "2020.??.??"]
+
+
+
+
+[Event "?"]
+[Site "?"]
+[Date "2020.04.30"]
+[Round "?"]
+[White "71, win"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "5b2/p2p4/B1N5/1K1kB3/8/8/8/8 w - - 0 1"]
+[PlyCount "13"]
+[EventDate "2020.??.??"]
+
+
+
+
+[Event "?"]
+[Site "?"]
+[Date "2020.04.30"]
+[Round "?"]
+[White "72, win"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "8/2Bpk3/8/3p4/8/8/3p4/3n2KR w - - 0 1"]
+[PlyCount "11"]
+[EventDate "2020.??.??"]
+
+
+
+
+
+
+[Event "?"]
+[Site "?"]
+[Date "2020.05.01"]
+[Round "?"]
+[White "73, win"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "3N4/7n/k5K1/6b1/B7/7b/N7/6B1 w - - 0 1"]
+[PlyCount "11"]
+[EventDate "2020.??.??"]
+
+
+
+
+
+
+[Event "?"]
+[Site "?"]
+[Date "2020.05.01"]
+[Round "?"]
+[White "74, draw"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "8/8/5Nq1/3Nk3/8/K3BB2/3n4/4bn2 w - - 0 1"]
+[PlyCount "21"]
+[EventDate "2020.??.??"]
+
+
+
+
+
+[Event "?"]
+[Site "?"]
+[Date "2020.05.01"]
+[Round "?"]
+[White "75, draw"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "2n1b3/8/2r5/3k3n/8/3B4/1R5K/8 w - - 0 1"]
+[PlyCount "13"]
+[EventDate "2020.??.??"]
+
+
+
+
+
+[Event "?"]
+[Site "?"]
+[Date "2020.05.01"]
+[Round "?"]
+[White "76, win"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "8/b7/p7/P1P1P3/4P3/8/3k4/4nK2 w - - 0 1"]
+[PlyCount "13"]
+[EventDate "2020.??.??"]
+
+
+
+
+
+[Event "?"]
+[Site "?"]
+[Date "2020.05.01"]
+[Round "?"]
+[White "77, draw"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "5k2/8/7K/8/5B2/2p1pP2/2P2b2/8 w - - 0 1"]
+[PlyCount "14"]
+[EventDate "2020.??.??"]
+
+
+
+
+[Event "?"]
+[Site "?"]
+[Date "2020.05.02"]
+[Round "?"]
+[White "78, win"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "3n4/p2pp1q1/K2k1n2/3p1P2/5P2/4Q3/7B/8 w - - 0 1"]
+[PlyCount "11"]
+[EventDate "2020.??.??"]
+
+
+
+
+[Event "?"]
+[Site "?"]
+[Date "2020.05.02"]
+[Round "?"]
+[White "79, win"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "7K/8/2b5/8/6kP/8/5R2/8 w - - 0 1"]
+[PlyCount "11"]
+[EventDate "2020.??.??"]
+
+
+
+
+
+
+[Event "?"]
+[Site "?"]
+[Date "2020.05.02"]
+[Round "?"]
+[White "80, win"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "k7/bRKp4/2n5/8/3p4/3PN3/8/8 w - - 0 1"]
+[PlyCount "13"]
+[EventDate "2020.??.??"]
+
+
+
+
+[Event "?"]
+[Site "?"]
+[Date "2020.05.02"]
+[Round "?"]
+[White "81, draw"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "5K2/1p6/1P6/P7/1P2r3/8/6k1/8 w - - 0 1"]
+[PlyCount "18"]
+[EventDate "2020.??.??"]
+
+
+
+
+
+
+[Event "?"]
+[Site "?"]
+[Date "2020.05.02"]
+[Round "?"]
+[White "82, draw"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "6R1/4p3/8/4r3/3KPb2/8/1k2P3/8 w - - 0 1"]
+[PlyCount "18"]
+[EventDate "2020.??.??"]
+
+
+
+
+
+[Event "?"]
+[Site "?"]
+[Date "2020.05.02"]
+[Round "?"]
+[White "83, win"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "8/2p1p3/1p2R3/1B4pk/8/1P5q/2P4P/4K3 w - - 0 1"]
+[PlyCount "13"]
+[EventDate "2020.??.??"]
+
+
+
+
+[Event "?"]
+[Site "?"]
+[Date "2020.05.02"]
+[Round "?"]
+[White "84, win"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "6R1/k7/8/q4p1K/8/5R2/8/2b5 w - - 0 0"]
+[PlyCount "14"]
+
+
+
+
+
+
+[Event "?"]
+[Site "?"]
+[Date "2020.05.02"]
+[Round "?"]
+[White "85, win"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "5k2/4pp2/1b6/6N1/2pq4/5P2/1P2R1R1/1K6 w - - 0 1"]
+[PlyCount "11"]
+[EventDate "2020.??.??"]
+
+
+
+
+[Event "?"]
+[Site "?"]
+[Date "2020.05.02"]
+[Round "?"]
+[White "86, win"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "N7/p7/8/q1p5/1p6/k7/8/1K1Q4 w - - 0 1"]
+[PlyCount "11"]
+[EventDate "2020.??.??"]
+
+
+
+
+
+[Event "?"]
+[Site "?"]
+[Date "2020.05.02"]
+[Round "?"]
+[White "87, draw"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "8/8/8/7n/8/7N/3kp1K1/5n2 w - - 0 1"]
+[PlyCount "14"]
+[EventDate "2020.??.??"]
+
+
+
+
+
+[Event "?"]
+[Site "?"]
+[Date "2020.05.03"]
+[Round "?"]
+[White "88, draw"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "NB6/8/1p4b1/2k4n/7K/8/8/3n4 w - - 0 1"]
+[PlyCount "13"]
+[EventDate "2020.??.??"]
+
+
+
+
+[Event "?"]
+[Site "?"]
+[Date "2020.05.03"]
+[Round "?"]
+[White "89, win"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "8/5pq1/p4p2/Bk6/1P3P2/3P1B2/P7/2K5 w - - 0 1"]
+[PlyCount "11"]
+[EventDate "2020.??.??"]
+
+
+
+
+
+[Event "?"]
+[Site "?"]
+[Date "2020.05.03"]
+[Round "?"]
+[White "90, draw"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "1b4N1/3p3k/7P/6R1/4K2n/8/6n1/6r1 w - - 0 1"]
+[PlyCount "15"]
+[EventDate "2020.??.??"]
+
+
+
+
+
+
+[Event "?"]
+[Site "?"]
+[Date "2020.05.03"]
+[Round "?"]
+[White "91, win"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "3k4/1p1Np1r1/6p1/8/8/8/6K1/3R4 w - - 0 1"]
+[PlyCount "7"]
+[EventDate "2020.??.??"]
+
+
+
+
+
+[Event "?"]
+[Site "?"]
+[Date "2020.05.03"]
+[Round "?"]
+[White "92, draw"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "2R4B/8/1kn5/8/8/2K1Nb2/5p1p/8 w - - 0 1"]
+[PlyCount "18"]
+[EventDate "2020.??.??"]
+
+
+
+
+
+[Event "?"]
+[Site "?"]
+[Date "2020.05.03"]
+[Round "?"]
+[White "93, win"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "6k1/p4pr1/1N3p2/1R4P1/8/8/3K4/8 w - - 0 1"]
+[PlyCount "13"]
+[EventDate "2020.??.??"]
+
+
+
+
+
+[Event "?"]
+[Site "?"]
+[Date "2020.05.03"]
+[Round "?"]
+[White "94, win"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "8/1p1q4/1P2p1Np/1Q1b3p/8/2P1kp2/8/4K3 w - - 0 1"]
+[PlyCount "13"]
+[EventDate "2020.??.??"]
+
+
+
+
+
+[Event "?"]
+[Site "?"]
+[Date "2020.05.03"]
+[Round "?"]
+[White "95, win"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "2N5/K1k5/B7/8/2p5/1p6/8/8 w - - 0 1"]
+[PlyCount "15"]
+[EventDate "2020.??.??"]
+
+
+
+
+
+[Event "?"]
+[Site "?"]
+[Date "2020.05.03"]
+[Round "?"]
+[White "96, win"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "8/8/1q1p4/1ppp4/8/5N1K/5k2/3Q4 w - - 0 1"]
+[PlyCount "13"]
+[EventDate "2020.??.??"]
+
+
+
+
+
+
+[Event "?"]
+[Site "?"]
+[Date "2020.05.04"]
+[Round "?"]
+[White "97, win"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "4n3/4P1Bp/N2p3K/p1P1p3/4k3/5p2/8/8 w - - 0 1"]
+[PlyCount "15"]
+[EventDate "2020.??.??"]
+
+
+
+
+
+
+
+[Event "?"]
+[Site "?"]
+[Date "2020.05.04"]
+[Round "?"]
+[White "98, draw"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "8/4N3/1B6/2p1n1K1/1k1n4/8/2P4b/8 w - - 0 1"]
+[PlyCount "11"]
+[EventDate "2020.??.??"]
+
+
+
+
+
+[Event "?"]
+[Site "?"]
+[Date "2020.05.04"]
+[Round "?"]
+[White "99, win"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "7Q/5k2/q3pp2/p5p1/2p5/8/4B3/4K3 w - - 0 1"]
+[PlyCount "15"]
+[EventDate "2020.??.??"]
+
+
+
+
+[Event "?"]
+[Site "?"]
+[Date "2020.05.04"]
+[Round "?"]
+[White "100, win"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "1K6/3k3N/1P6/8/p7/8/8/8 w - - 0 1"]
+[PlyCount "13"]
+[EventDate "2020.??.??"]
+
+
+
+
+
