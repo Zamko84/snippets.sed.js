@@ -1,0 +1,128 @@
+ 
+      containers:
+        - name: intra-api
+          image: git.belki.be/belki/belki-intra-api:0.5.0 # {image-tag} 
+          ports:
+            - containerPort: 3000
+
+          env:
+            - name: DEPLOYMENT_MODE
+              value: "production"
+            - name: NODE_NAME
+              valueFrom:
+                fieldRef:
+                  fieldPath: spec.nodeName
+            - name: HOSTNAME
+              valueFrom:
+                fieldRef:
+                  fieldPath: metadata.name
+            - name: SERVER_ADDRESS
+              value: "0.0.0.0:3000"
+            - name: BASE_DOMAIN
+              value: "belki.be"
+            - name: CORS_ORIGINS
+              value: "https://link.belki.be,http://localhost:5174,http://localhost:3000"
+            - name: JWT_EXPIRE_MINUTES
+              value: "60"
+            - name: COOKIE_EXPIRE_MINUTES
+              value: "10080"
+            - name: SMTP_HOST
+              value: "email.belki.be"
+            - name: FROM_EMAIL
+              value: "no-reply@belki.be"
+            - name: FROM_NAME
+              value: "Belki IntraNET"
+            - name: REPLY_TO_EMAIL
+              value: "no-reply@belki.be"
+            - name: REPLY_TO_NAME
+              value: "Belki IntraNET"
+            - name: DATABASE_URL
+              valueFrom:
+                secretKeyRef:
+                  name: intra-api-secrets
+                  key: DATABASE_URL
+            - name: JWT_SECRET
+              valueFrom:
+                secretKeyRef:
+                  name: intra-api-secrets
+                  key: JWT_SECRET
+            - name: COOKIE_KEY
+              valueFrom:
+                secretKeyRef:
+                  name: intra-api-secrets
+                  key: COOKIE_KEY
+            - name: SMTP_USERNAME
+              valueFrom:
+                secretKeyRef:
+                  name: intra-api-secrets
+                  key: SMTP_USERNAME
+            - name: SMTP_PASSWORD
+              valueFrom:
+                secretKeyRef:
+                  name: intra-api-secrets
+                  key: SMTP_PASSWORD
+          
+          startupProbe:
+            httpGet:
+              path: /health
+              port: 3000
+              httpHeaders:
+                - name: X-Real-IP
+                  value: "127.0.0.1"
+                - name: User-Agent
+                  value: "kube-probe/1.0"
+            initialDelaySeconds: 0
+            periodSeconds: 10
+            failureThreshold: 6
+          
+          livenessProbe:
+            httpGet:
+              path: /health
+              port: 3000
+              httpHeaders:
+                - name: X-Real-IP
+                  value: "127.0.0.1"
+                - name: User-Agent
+                  value: "kube-probe/1.0"
+            initialDelaySeconds: 0
+            periodSeconds: 30
+            failureThreshold: 3
+
+          readinessProbe:
+            httpGet:
+              path: /health
+              port: 3000
+              httpHeaders:
+                - name: X-Real-IP
+                  value: "127.0.0.1"
+                - name: User-Agent
+                  value: "kube-probe/1.0"
+            initialDelaySeconds: 0
+            periodSeconds: 5
+            successThreshold: 1
+            failureThreshold: 3
+          
+          resources:
+            requests:
+              memory: "128Mi"
+              cpu: "100m"
+            limits:
+              memory: "512Mi"
+              cpu: "500m"
+
+  strategy:
+    blueGreen:
+      # Active service receives all production traffic
+      activeService: intra-api-active
+      # Preview service receives no traffic until promotion
+      previewService: intra-api-preview
+      # Automatically promote once preview pods are healthy
+      autoPromotionEnabled: true
+      # Wait 30s after preview is ready before promoting
+      # Gives you a window to catch issues before cutover
+      autoPromotionSeconds: 30
+      # Keep old (blue) pods running for 60s after promotion
+      # so in-flight requests can finish
+      scaleDownDelaySeconds: 60
+      # Don't route any public traffic to preview pods
+      previewReplicaCount: 1

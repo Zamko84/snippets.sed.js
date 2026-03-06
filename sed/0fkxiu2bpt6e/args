@@ -1,0 +1,1 @@
+"s|belki-intra-api:[^ ]* # {image-tag}|belki-intra-api:${NEW_VERSION} # {image-tag}|"
