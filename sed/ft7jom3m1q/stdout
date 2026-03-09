@@ -1,0 +1,134 @@
+[
+  {
+    "directory": "/home/hmarquez/SOURCES/SoC_SW/sdk_core",
+    "file": "hw/irq_ctrl/drv/test/int_test/test_irq_ctrl_it.c",
+    "command": "gcc --coverage -I\"humberto\" -I\"hw/irq_ctrl/drv/inc\" -I\"hw/irq_ctrl/ral/inc\" -I\"hw/irq_ctrl/ral/inc/platform\" -I\"hw/lf_timer/ral/inc\" -I\"hw/lf_timer/ral/inc/platform\" -I\"hw/spis/ral/inc\" -I\"hw/spis/ral/inc/platform\" -I\"hw/spis/core/inc\" -I\"common/inc\" -I\"build/vendor/unity/src\" -I\"build/vendor/cmock/src\" -D\"TEST\" -D\"IRQ_CTRL_INVERT_MASK_REGISTER=1\" -D\"UNITY_EXCLUDE_FLOAT\" -D\"UNITY_USE_COMMAND_LINE_ARGS\" -DGNU_COMPILER -g -c \"hw/irq_ctrl/drv/test/int_test/test_irq_ctrl_it.c\" -o \"build/gcov/out/test_irq_ctrl_it/test_irq_ctrl_it.o\" -MMD -MF \"build/test/dependencies/test_irq_ctrl_it.d\"",
+    "output": "build/gcov/out/test_irq_ctrl_it/test_irq_ctrl_it.o"
+  },
+  {
+    "directory": "/home/hmarquez/SOURCES/SoC_SW/sdk_core",
+    "file": "hw/irq_ctrl/drv/src/irq_ctrl.c",
+    "command": "gcc --coverage -g -fprofile-arcs -ftest-coverage -I\"humberto\" -I\"hw/irq_ctrl/drv/inc\" -I\"hw/irq_ctrl/ral/inc\" -I\"hw/irq_ctrl/ral/inc/platform\" -I\"hw/lf_timer/ral/inc\" -I\"hw/lf_timer/ral/inc/platform\" -I\"hw/spis/ral/inc\" -I\"hw/spis/ral/inc/platform\" -I\"hw/spis/core/inc\" -I\"common/inc\" -I\"build/vendor/unity/src\" -I\"build/vendor/cmock/src\" -D\"TEST\" -D\"UNITY_EXCLUDE_FLOAT\" -D\"UNITY_USE_COMMAND_LINE_ARGS\" -DGCOV_COMPILER -DCODE_COVERAGE -c \"hw/irq_ctrl/drv/src/irq_ctrl.c\" -o \"build/gcov/out/test_irq_ctrl_ut/irq_ctrl.o\" -MMD -MF \"build/test/dependencies/irq_ctrl.d\"",
+    "output": "build/gcov/out/test_irq_ctrl_ut/irq_ctrl.o"
+  },
+  {
+    "directory": "/home/hmarquez/SOURCES/SoC_SW/sdk_core",
+    "file": "build/test/runners/test_irq_ctrl_it_runner.c",
+    "command": "gcc --coverage -I\"humberto\" -I\"hw/irq_ctrl/drv/inc\" -I\"hw/irq_ctrl/ral/inc\" -I\"hw/irq_ctrl/ral/inc/platform\" -I\"hw/lf_timer/ral/inc\" -I\"hw/lf_timer/ral/inc/platform\" -I\"hw/spis/ral/inc\" -I\"hw/spis/ral/inc/platform\" -I\"hw/spis/core/inc\" -I\"common/inc\" -I\"build/vendor/unity/src\" -I\"build/vendor/cmock/src\" -D\"TEST\" -D\"IRQ_CTRL_INVERT_MASK_REGISTER=1\" -D\"UNITY_EXCLUDE_FLOAT\" -D\"UNITY_USE_COMMAND_LINE_ARGS\" -DGNU_COMPILER -g -c \"build/test/runners/test_irq_ctrl_it_runner.c\" -o \"build/gcov/out/test_irq_ctrl_it/test_irq_ctrl_it_runner.o\" -MMD -MF \"build/test/dependencies/test_irq_ctrl_it_runner.d\"",
+    "output": "build/gcov/out/test_irq_ctrl_it/test_irq_ctrl_it_runner.o"
+  },
+  {
+    "directory": "/home/hmarquez/SOURCES/SoC_SW/sdk_core",
+    "file": "build/vendor/unity/src/unity.c",
+    "command": "gcc --coverage -I\"humberto\" -D\"TEST\" -D\"UNITY_EXCLUDE_FLOAT\" -D\"UNITY_USE_COMMAND_LINE_ARGS\" -DGNU_COMPILER -g -c \"build/vendor/unity/src/unity.c\" -o \"build/gcov/out/test_spis_core_ut/unity.o\" -MMD -MF \"build/test/dependencies/unity.d\"",
+    "output": "build/gcov/out/test_spis_core_ut/unity.o"
+  },
+  {
+    "directory": "/home/hmarquez/SOURCES/SoC_SW/sdk_core",
+    "file": "hw/irq_ctrl/drv/test/int_test/test_irq_ctrl_it_non_inverted_mask.c",
+    "command": "gcc --coverage -I\"humberto\" -I\"hw/irq_ctrl/drv/inc\" -I\"hw/irq_ctrl/ral/inc\" -I\"hw/irq_ctrl/ral/inc/platform\" -I\"hw/lf_timer/ral/inc\" -I\"hw/lf_timer/ral/inc/platform\" -I\"hw/spis/ral/inc\" -I\"hw/spis/ral/inc/platform\" -I\"hw/spis/core/inc\" -I\"common/inc\" -I\"build/vendor/unity/src\" -I\"build/vendor/cmock/src\" -D\"TEST\" -D\"IRQ_CTRL_INVERT_MASK_REGISTER=0\" -D\"UNITY_EXCLUDE_FLOAT\" -D\"UNITY_USE_COMMAND_LINE_ARGS\" -DGNU_COMPILER -g -c \"hw/irq_ctrl/drv/test/int_test/test_irq_ctrl_it_non_inverted_mask.c\" -o \"build/gcov/out/test_irq_ctrl_it_non_inverted_mask/test_irq_ctrl_it_non_inverted_mask.o\" -MMD -MF \"build/test/dependencies/test_irq_ctrl_it_non_inverted_mask.d\"",
+    "output": "build/gcov/out/test_irq_ctrl_it_non_inverted_mask/test_irq_ctrl_it_non_inverted_mask.o"
+  },
+  {
+    "directory": "/home/hmarquez/SOURCES/SoC_SW/sdk_core",
+    "file": "build/test/runners/test_irq_ctrl_it_non_inverted_mask_runner.c",
+    "command": "gcc --coverage -I\"humberto\" -I\"hw/irq_ctrl/drv/inc\" -I\"hw/irq_ctrl/ral/inc\" -I\"hw/irq_ctrl/ral/inc/platform\" -I\"hw/lf_timer/ral/inc\" -I\"hw/lf_timer/ral/inc/platform\" -I\"hw/spis/ral/inc\" -I\"hw/spis/ral/inc/platform\" -I\"hw/spis/core/inc\" -I\"common/inc\" -I\"build/vendor/unity/src\" -I\"build/vendor/cmock/src\" -D\"TEST\" -D\"IRQ_CTRL_INVERT_MASK_REGISTER=0\" -D\"UNITY_EXCLUDE_FLOAT\" -D\"UNITY_USE_COMMAND_LINE_ARGS\" -DGNU_COMPILER -g -c \"build/test/runners/test_irq_ctrl_it_non_inverted_mask_runner.c\" -o \"build/gcov/out/test_irq_ctrl_it_non_inverted_mask/test_irq_ctrl_it_non_inverted_mask_runner.o\" -MMD -MF \"build/test/dependencies/test_irq_ctrl_it_non_inverted_mask_runner.d\"",
+    "output": "build/gcov/out/test_irq_ctrl_it_non_inverted_mask/test_irq_ctrl_it_non_inverted_mask_runner.o"
+  },
+  {
+    "directory": "/home/hmarquez/SOURCES/SoC_SW/sdk_core",
+    "file": "hw/irq_ctrl/drv/test/unit_test/test_irq_ctrl_ut.c",
+    "command": "gcc --coverage -I\"humberto\" -I\"hw/irq_ctrl/drv/inc\" -I\"hw/irq_ctrl/ral/inc\" -I\"hw/irq_ctrl/ral/inc/platform\" -I\"hw/lf_timer/ral/inc\" -I\"hw/lf_timer/ral/inc/platform\" -I\"hw/spis/ral/inc\" -I\"hw/spis/ral/inc/platform\" -I\"hw/spis/core/inc\" -I\"common/inc\" -I\"build/vendor/unity/src\" -I\"build/vendor/cmock/src\" -D\"TEST\" -D\"UNITY_EXCLUDE_FLOAT\" -D\"UNITY_USE_COMMAND_LINE_ARGS\" -DGNU_COMPILER -g -c \"hw/irq_ctrl/drv/test/unit_test/test_irq_ctrl_ut.c\" -o \"build/gcov/out/test_irq_ctrl_ut/test_irq_ctrl_ut.o\" -MMD -MF \"build/test/dependencies/test_irq_ctrl_ut.d\"",
+    "output": "build/gcov/out/test_irq_ctrl_ut/test_irq_ctrl_ut.o"
+  },
+  {
+    "directory": "/home/hmarquez/SOURCES/SoC_SW/sdk_core",
+    "file": "build/test/mocks/test_irq_ctrl_ut/mock_irq_ctrl_ral.c",
+    "command": "gcc --coverage -I\"humberto\" -I\"hw/irq_ctrl/drv/inc\" -I\"hw/irq_ctrl/ral/inc\" -I\"hw/irq_ctrl/ral/inc/platform\" -I\"hw/lf_timer/ral/inc\" -I\"hw/lf_timer/ral/inc/platform\" -I\"hw/spis/ral/inc\" -I\"hw/spis/ral/inc/platform\" -I\"hw/spis/core/inc\" -I\"common/inc\" -I\"build/vendor/unity/src\" -I\"build/vendor/cmock/src\" -D\"TEST\" -D\"UNITY_EXCLUDE_FLOAT\" -D\"UNITY_USE_COMMAND_LINE_ARGS\" -DGNU_COMPILER -g -c \"build/test/mocks/test_irq_ctrl_ut/mock_irq_ctrl_ral.c\" -o \"build/gcov/out/test_irq_ctrl_ut/mock_irq_ctrl_ral.o\" -MMD -MF \"build/test/dependencies/mock_irq_ctrl_ral.d\"",
+    "output": "build/gcov/out/test_irq_ctrl_ut/mock_irq_ctrl_ral.o"
+  },
+  {
+    "directory": "/home/hmarquez/SOURCES/SoC_SW/sdk_core",
+    "file": "build/test/runners/test_irq_ctrl_ut_runner.c",
+    "command": "gcc --coverage -I\"humberto\" -I\"hw/irq_ctrl/drv/inc\" -I\"hw/irq_ctrl/ral/inc\" -I\"hw/irq_ctrl/ral/inc/platform\" -I\"hw/lf_timer/ral/inc\" -I\"hw/lf_timer/ral/inc/platform\" -I\"hw/spis/ral/inc\" -I\"hw/spis/ral/inc/platform\" -I\"hw/spis/core/inc\" -I\"common/inc\" -I\"build/vendor/unity/src\" -I\"build/vendor/cmock/src\" -D\"TEST\" -D\"UNITY_EXCLUDE_FLOAT\" -D\"UNITY_USE_COMMAND_LINE_ARGS\" -DGNU_COMPILER -g -c \"build/test/runners/test_irq_ctrl_ut_runner.c\" -o \"build/gcov/out/test_irq_ctrl_ut/test_irq_ctrl_ut_runner.o\" -MMD -MF \"build/test/dependencies/test_irq_ctrl_ut_runner.d\"",
+    "output": "build/gcov/out/test_irq_ctrl_ut/test_irq_ctrl_ut_runner.o"
+  },
+  {
+    "directory": "/home/hmarquez/SOURCES/SoC_SW/sdk_core",
+    "file": "build/vendor/cmock/src/cmock.c",
+    "command": "gcc --coverage -I\"humberto\" -I\"build/vendor/cmock/src\" -D\"TEST\" -D\"UNITY_EXCLUDE_FLOAT\" -D\"UNITY_USE_COMMAND_LINE_ARGS\" -DGNU_COMPILER -g -c \"build/vendor/cmock/src/cmock.c\" -o \"build/gcov/out/test_spis_core_ut/cmock.o\" -MMD -MF \"build/test/dependencies/cmock.d\"",
+    "output": "build/gcov/out/test_spis_core_ut/cmock.o"
+  },
+  {
+    "directory": "/home/hmarquez/SOURCES/SoC_SW/sdk_core",
+    "file": "hw/irq_ctrl/ral/test/unit_test/test_irq_ctrl_ral_ut.c",
+    "command": "gcc --coverage -I\"humberto\" -I\"hw/irq_ctrl/drv/inc\" -I\"hw/irq_ctrl/ral/inc\" -I\"hw/irq_ctrl/ral/inc/platform\" -I\"hw/lf_timer/ral/inc\" -I\"hw/lf_timer/ral/inc/platform\" -I\"hw/spis/ral/inc\" -I\"hw/spis/ral/inc/platform\" -I\"hw/spis/core/inc\" -I\"common/inc\" -I\"build/vendor/unity/src\" -I\"build/vendor/cmock/src\" -D\"TEST\" -D\"IRQ_CTRL_INVERT_MASK_REGISTER=1\" -D\"UNITY_EXCLUDE_FLOAT\" -D\"UNITY_USE_COMMAND_LINE_ARGS\" -DGNU_COMPILER -g -c \"hw/irq_ctrl/ral/test/unit_test/test_irq_ctrl_ral_ut.c\" -o \"build/gcov/out/test_irq_ctrl_ral_ut/test_irq_ctrl_ral_ut.o\" -MMD -MF \"build/test/dependencies/test_irq_ctrl_ral_ut.d\"",
+    "output": "build/gcov/out/test_irq_ctrl_ral_ut/test_irq_ctrl_ral_ut.o"
+  },
+  {
+    "directory": "/home/hmarquez/SOURCES/SoC_SW/sdk_core",
+    "file": "build/test/runners/test_irq_ctrl_ral_ut_runner.c",
+    "command": "gcc --coverage -I\"humberto\" -I\"hw/irq_ctrl/drv/inc\" -I\"hw/irq_ctrl/ral/inc\" -I\"hw/irq_ctrl/ral/inc/platform\" -I\"hw/lf_timer/ral/inc\" -I\"hw/lf_timer/ral/inc/platform\" -I\"hw/spis/ral/inc\" -I\"hw/spis/ral/inc/platform\" -I\"hw/spis/core/inc\" -I\"common/inc\" -I\"build/vendor/unity/src\" -I\"build/vendor/cmock/src\" -D\"TEST\" -D\"IRQ_CTRL_INVERT_MASK_REGISTER=1\" -D\"UNITY_EXCLUDE_FLOAT\" -D\"UNITY_USE_COMMAND_LINE_ARGS\" -DGNU_COMPILER -g -c \"build/test/runners/test_irq_ctrl_ral_ut_runner.c\" -o \"build/gcov/out/test_irq_ctrl_ral_ut/test_irq_ctrl_ral_ut_runner.o\" -MMD -MF \"build/test/dependencies/test_irq_ctrl_ral_ut_runner.d\"",
+    "output": "build/gcov/out/test_irq_ctrl_ral_ut/test_irq_ctrl_ral_ut_runner.o"
+  },
+  {
+    "directory": "/home/hmarquez/SOURCES/SoC_SW/sdk_core",
+    "file": "hw/irq_ctrl/ral/test/unit_test/test_irq_ctrl_ral_ut_non_inverted_mask.c",
+    "command": "gcc --coverage -I\"humberto\" -I\"hw/irq_ctrl/drv/inc\" -I\"hw/irq_ctrl/ral/inc\" -I\"hw/irq_ctrl/ral/inc/platform\" -I\"hw/lf_timer/ral/inc\" -I\"hw/lf_timer/ral/inc/platform\" -I\"hw/spis/ral/inc\" -I\"hw/spis/ral/inc/platform\" -I\"hw/spis/core/inc\" -I\"common/inc\" -I\"build/vendor/unity/src\" -I\"build/vendor/cmock/src\" -D\"TEST\" -D\"IRQ_CTRL_INVERT_MASK_REGISTER=0\" -D\"UNITY_EXCLUDE_FLOAT\" -D\"UNITY_USE_COMMAND_LINE_ARGS\" -DGNU_COMPILER -g -c \"hw/irq_ctrl/ral/test/unit_test/test_irq_ctrl_ral_ut_non_inverted_mask.c\" -o \"build/gcov/out/test_irq_ctrl_ral_ut_non_inverted_mask/test_irq_ctrl_ral_ut_non_inverted_mask.o\" -MMD -MF \"build/test/dependencies/test_irq_ctrl_ral_ut_non_inverted_mask.d\"",
+    "output": "build/gcov/out/test_irq_ctrl_ral_ut_non_inverted_mask/test_irq_ctrl_ral_ut_non_inverted_mask.o"
+  },
+  {
+    "directory": "/home/hmarquez/SOURCES/SoC_SW/sdk_core",
+    "file": "build/test/runners/test_irq_ctrl_ral_ut_non_inverted_mask_runner.c",
+    "command": "gcc --coverage -I\"humberto\" -I\"hw/irq_ctrl/drv/inc\" -I\"hw/irq_ctrl/ral/inc\" -I\"hw/irq_ctrl/ral/inc/platform\" -I\"hw/lf_timer/ral/inc\" -I\"hw/lf_timer/ral/inc/platform\" -I\"hw/spis/ral/inc\" -I\"hw/spis/ral/inc/platform\" -I\"hw/spis/core/inc\" -I\"common/inc\" -I\"build/vendor/unity/src\" -I\"build/vendor/cmock/src\" -D\"TEST\" -D\"IRQ_CTRL_INVERT_MASK_REGISTER=0\" -D\"UNITY_EXCLUDE_FLOAT\" -D\"UNITY_USE_COMMAND_LINE_ARGS\" -DGNU_COMPILER -g -c \"build/test/runners/test_irq_ctrl_ral_ut_non_inverted_mask_runner.c\" -o \"build/gcov/out/test_irq_ctrl_ral_ut_non_inverted_mask/test_irq_ctrl_ral_ut_non_inverted_mask_runner.o\" -MMD -MF \"build/test/dependencies/test_irq_ctrl_ral_ut_non_inverted_mask_runner.d\"",
+    "output": "build/gcov/out/test_irq_ctrl_ral_ut_non_inverted_mask/test_irq_ctrl_ral_ut_non_inverted_mask_runner.o"
+  },
+  {
+    "directory": "/home/hmarquez/SOURCES/SoC_SW/sdk_core",
+    "file": "hw/lf_timer/ral/test/unit_test/test_lf_timer_ral_ut.c",
+    "command": "gcc --coverage -I\"humberto\" -I\"hw/irq_ctrl/drv/inc\" -I\"hw/irq_ctrl/ral/inc\" -I\"hw/irq_ctrl/ral/inc/platform\" -I\"hw/lf_timer/ral/inc\" -I\"hw/lf_timer/ral/inc/platform\" -I\"hw/spis/ral/inc\" -I\"hw/spis/ral/inc/platform\" -I\"hw/spis/core/inc\" -I\"common/inc\" -I\"build/vendor/unity/src\" -I\"build/vendor/cmock/src\" -D\"TEST\" -D\"UNITY_EXCLUDE_FLOAT\" -D\"UNITY_USE_COMMAND_LINE_ARGS\" -DGNU_COMPILER -g -c \"hw/lf_timer/ral/test/unit_test/test_lf_timer_ral_ut.c\" -o \"build/gcov/out/test_lf_timer_ral_ut/test_lf_timer_ral_ut.o\" -MMD -MF \"build/test/dependencies/test_lf_timer_ral_ut.d\"",
+    "output": "build/gcov/out/test_lf_timer_ral_ut/test_lf_timer_ral_ut.o"
+  },
+  {
+    "directory": "/home/hmarquez/SOURCES/SoC_SW/sdk_core",
+    "file": "build/test/runners/test_lf_timer_ral_ut_runner.c",
+    "command": "gcc --coverage -I\"humberto\" -I\"hw/irq_ctrl/drv/inc\" -I\"hw/irq_ctrl/ral/inc\" -I\"hw/irq_ctrl/ral/inc/platform\" -I\"hw/lf_timer/ral/inc\" -I\"hw/lf_timer/ral/inc/platform\" -I\"hw/spis/ral/inc\" -I\"hw/spis/ral/inc/platform\" -I\"hw/spis/core/inc\" -I\"common/inc\" -I\"build/vendor/unity/src\" -I\"build/vendor/cmock/src\" -D\"TEST\" -D\"UNITY_EXCLUDE_FLOAT\" -D\"UNITY_USE_COMMAND_LINE_ARGS\" -DGNU_COMPILER -g -c \"build/test/runners/test_lf_timer_ral_ut_runner.c\" -o \"build/gcov/out/test_lf_timer_ral_ut/test_lf_timer_ral_ut_runner.o\" -MMD -MF \"build/test/dependencies/test_lf_timer_ral_ut_runner.d\"",
+    "output": "build/gcov/out/test_lf_timer_ral_ut/test_lf_timer_ral_ut_runner.o"
+  },
+  {
+    "directory": "/home/hmarquez/SOURCES/SoC_SW/sdk_core",
+    "file": "hw/spis/ral/test/unit_test/test_spis_ral_ut.c",
+    "command": "gcc --coverage -I\"humberto\" -I\"hw/irq_ctrl/drv/inc\" -I\"hw/irq_ctrl/ral/inc\" -I\"hw/irq_ctrl/ral/inc/platform\" -I\"hw/lf_timer/ral/inc\" -I\"hw/lf_timer/ral/inc/platform\" -I\"hw/spis/ral/inc\" -I\"hw/spis/ral/inc/platform\" -I\"hw/spis/core/inc\" -I\"common/inc\" -I\"build/vendor/unity/src\" -I\"build/vendor/cmock/src\" -D\"TEST\" -D\"UNITY_EXCLUDE_FLOAT\" -D\"UNITY_USE_COMMAND_LINE_ARGS\" -DGNU_COMPILER -g -c \"hw/spis/ral/test/unit_test/test_spis_ral_ut.c\" -o \"build/gcov/out/test_spis_ral_ut/test_spis_ral_ut.o\" -MMD -MF \"build/test/dependencies/test_spis_ral_ut.d\"",
+    "output": "build/gcov/out/test_spis_ral_ut/test_spis_ral_ut.o"
+  },
+  {
+    "directory": "/home/hmarquez/SOURCES/SoC_SW/sdk_core",
+    "file": "build/test/runners/test_spis_ral_ut_runner.c",
+    "command": "gcc --coverage -I\"humberto\" -I\"hw/irq_ctrl/drv/inc\" -I\"hw/irq_ctrl/ral/inc\" -I\"hw/irq_ctrl/ral/inc/platform\" -I\"hw/lf_timer/ral/inc\" -I\"hw/lf_timer/ral/inc/platform\" -I\"hw/spis/ral/inc\" -I\"hw/spis/ral/inc/platform\" -I\"hw/spis/core/inc\" -I\"common/inc\" -I\"build/vendor/unity/src\" -I\"build/vendor/cmock/src\" -D\"TEST\" -D\"UNITY_EXCLUDE_FLOAT\" -D\"UNITY_USE_COMMAND_LINE_ARGS\" -DGNU_COMPILER -g -c \"build/test/runners/test_spis_ral_ut_runner.c\" -o \"build/gcov/out/test_spis_ral_ut/test_spis_ral_ut_runner.o\" -MMD -MF \"build/test/dependencies/test_spis_ral_ut_runner.d\"",
+    "output": "build/gcov/out/test_spis_ral_ut/test_spis_ral_ut_runner.o"
+  },
+  {
+    "directory": "/home/hmarquez/SOURCES/SoC_SW/sdk_core",
+    "file": "hw/spis/core/test/unit_test/test_spis_core_ut.c",
+    "command": "gcc --coverage -I\"humberto\" -I\"hw/irq_ctrl/drv/inc\" -I\"hw/irq_ctrl/ral/inc\" -I\"hw/irq_ctrl/ral/inc/platform\" -I\"hw/lf_timer/ral/inc\" -I\"hw/lf_timer/ral/inc/platform\" -I\"hw/spis/ral/inc\" -I\"hw/spis/ral/inc/platform\" -I\"hw/spis/core/inc\" -I\"common/inc\" -I\"build/vendor/unity/src\" -I\"build/vendor/cmock/src\" -D\"TEST\" -D\"UNITY_EXCLUDE_FLOAT\" -D\"UNITY_USE_COMMAND_LINE_ARGS\" -DGNU_COMPILER -g -c \"hw/spis/core/test/unit_test/test_spis_core_ut.c\" -o \"build/gcov/out/test_spis_core_ut/test_spis_core_ut.o\" -MMD -MF \"build/test/dependencies/test_spis_core_ut.d\"",
+    "output": "build/gcov/out/test_spis_core_ut/test_spis_core_ut.o"
+  },
+  {
+    "directory": "/home/hmarquez/SOURCES/SoC_SW/sdk_core",
+    "file": "hw/spis/core/src/spis_core.c",
+    "command": "gcc --coverage -g -fprofile-arcs -ftest-coverage -I\"humberto\" -I\"hw/irq_ctrl/drv/inc\" -I\"hw/irq_ctrl/ral/inc\" -I\"hw/irq_ctrl/ral/inc/platform\" -I\"hw/lf_timer/ral/inc\" -I\"hw/lf_timer/ral/inc/platform\" -I\"hw/spis/ral/inc\" -I\"hw/spis/ral/inc/platform\" -I\"hw/spis/core/inc\" -I\"common/inc\" -I\"build/vendor/unity/src\" -I\"build/vendor/cmock/src\" -D\"TEST\" -D\"UNITY_EXCLUDE_FLOAT\" -D\"UNITY_USE_COMMAND_LINE_ARGS\" -DGCOV_COMPILER -DCODE_COVERAGE -c \"hw/spis/core/src/spis_core.c\" -o \"build/gcov/out/test_spis_core_ut/spis_core.o\" -MMD -MF \"build/test/dependencies/spis_core.d\"",
+    "output": "build/gcov/out/test_spis_core_ut/spis_core.o"
+  },
+  {
+    "directory": "/home/hmarquez/SOURCES/SoC_SW/sdk_core",
+    "file": "build/test/mocks/test_spis_core_ut/mock_spis_ral.c",
+    "command": "gcc --coverage -I\"humberto\" -I\"hw/irq_ctrl/drv/inc\" -I\"hw/irq_ctrl/ral/inc\" -I\"hw/irq_ctrl/ral/inc/platform\" -I\"hw/lf_timer/ral/inc\" -I\"hw/lf_timer/ral/inc/platform\" -I\"hw/spis/ral/inc\" -I\"hw/spis/ral/inc/platform\" -I\"hw/spis/core/inc\" -I\"common/inc\" -I\"build/vendor/unity/src\" -I\"build/vendor/cmock/src\" -D\"TEST\" -D\"UNITY_EXCLUDE_FLOAT\" -D\"UNITY_USE_COMMAND_LINE_ARGS\" -DGNU_COMPILER -g -c \"build/test/mocks/test_spis_core_ut/mock_spis_ral.c\" -o \"build/gcov/out/test_spis_core_ut/mock_spis_ral.o\" -MMD -MF \"build/test/dependencies/mock_spis_ral.d\"",
+    "output": "build/gcov/out/test_spis_core_ut/mock_spis_ral.o"
+  },
+  {
+    "directory": "/home/hmarquez/SOURCES/SoC_SW/sdk_core",
+    "file": "build/test/runners/test_spis_core_ut_runner.c",
+    "command": "gcc --coverage -I\"humberto\" -I\"hw/irq_ctrl/drv/inc\" -I\"hw/irq_ctrl/ral/inc\" -I\"hw/irq_ctrl/ral/inc/platform\" -I\"hw/lf_timer/ral/inc\" -I\"hw/lf_timer/ral/inc/platform\" -I\"hw/spis/ral/inc\" -I\"hw/spis/ral/inc/platform\" -I\"hw/spis/core/inc\" -I\"common/inc\" -I\"build/vendor/unity/src\" -I\"build/vendor/cmock/src\" -D\"TEST\" -D\"UNITY_EXCLUDE_FLOAT\" -D\"UNITY_USE_COMMAND_LINE_ARGS\" -DGNU_COMPILER -g -c \"build/test/runners/test_spis_core_ut_runner.c\" -o \"build/gcov/out/test_spis_core_ut/test_spis_core_ut_runner.o\" -MMD -MF \"build/test/dependencies/test_spis_core_ut_runner.d\"",
+    "output": "build/gcov/out/test_spis_core_ut/test_spis_core_ut_runner.o"
+  }
+]
