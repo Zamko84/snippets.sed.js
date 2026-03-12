@@ -1,0 +1,2 @@
+GRUB="1789sysctl=1"
+GRUB="sysctl=1"
