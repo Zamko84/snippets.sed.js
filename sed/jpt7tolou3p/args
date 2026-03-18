@@ -1,0 +1,1 @@
+'s/\([^\s]+\)\s+\(c1_active|c1_test|c1_training|c1_scratch\)\s+\([^\s]+\)\s+\(.*\)/\1|\2|\3|\4)/'
