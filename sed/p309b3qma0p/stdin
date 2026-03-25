@@ -1,0 +1,45 @@
+#!/bin/bash
+SERVICE_NAME=xuum
+PATH_TO_JAR=/usr/tomcat/xuum_services/xuum-api.jar
+PID_PATH_NAME=/usr/tomcat/xuum_services/xuum-pid
+JAVA_OPTS="-Xmx256m -Xss64m -jar -Dfile.encoding=UTF-8  -Dsun.jnu.encoding=UTF-8"
+JAVA_OPTS="$JAVA_OPTS -jar /usr/tomcat/xuum_services/xuum-api.jar  --spring.profiles.active=qa-ig"
+JAVA_JRE=/usr/lib/jvm/java-17/bin/java
+case $1 in
+    start)
+        echo "Starting $SERVICE_NAME ..."
+        if [ ! -f $PID_PATH_NAME ]; then
+            nohup $JAVA_JRE $JAVA_OPTS -jar $PATH_TO_JAR>/usr/tomcat/xuum_services/logs/xuum.log 2>&1 &
+            echo $! > $PID_PATH_NAME
+            echo "$SERVICE_NAME started ..."
+        else
+            echo "$SERVICE_NAME is already running ..."
+        fi
+    ;;
+    stop)
+        if [ -f $PID_PATH_NAME ]; then
+            PID=$(cat $PID_PATH_NAME);
+            echo "$SERVICE_NAME stoping ..."
+            kill $PID;
+            echo "$SERVICE_NAME stopped ..."
+            rm $PID_PATH_NAME
+        else
+            echo "$SERVICE_NAME is not running ..."
+        fi
+    ;;
+    restart)
+        if [ -f $PID_PATH_NAME ]; then
+            PID=$(cat $PID_PATH_NAME);
+            echo "$SERVICE_NAME stopping ...";
+            kill $PID;
+            echo "$SERVICE_NAME stopped ...";
+            rm $PID_PATH_NAME
+            echo "$SERVICE_NAME starting ..."
+            nohup $JAVA_JRE $JAVA_OPTS -jar $PATH_TO_JAR >/dev/null 2>&1 &
+            echo $! > $PID_PATH_NAME
+            echo "$SERVICE_NAME started ..."
+        else
+            echo "$SERVICE_NAME is not running ..."
+        fi
+    ;;
+esac

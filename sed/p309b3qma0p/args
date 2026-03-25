@@ -1,0 +1,1 @@
+sed -i 's|JAVA_OPTS="\$JAVA_OPTS -jar|JAVA_OPTS="\$JAVA_OPTS -javaagent:/home/tamgr/opentelemetry-javaagent.jar -Dotel.traces.exporter=otlp -Dotel.metrics.exporter=otlp -Dotel.logs.exporter=otlp -jar|' startup.sh
