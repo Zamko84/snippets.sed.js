@@ -1,0 +1,1 @@
+'s/(?i)(The data has successfully been exported to\s+.*|Import file\s+.*|Moving\s+.*)/The data has successfully been exported to File.csv/'

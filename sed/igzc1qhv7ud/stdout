@@ -1,0 +1,52 @@
+32 00 Starting batch job group ST_DIVIDEND_ID
+00 00 The user is BATCH
+00 00 The batch date is 2/16/2026
+00 00 Batch date have been set using command line option
+02 00 Batch job ST_DIV_ID_EXP started
+00 00 Exporter definition (ST_DIVIDEND_ID) has been loaded
+00 00 Press the cancel button to interrupt the extraction.
+00 00 Initiating the data extract...
+00 00 Starting extraction setup 'ST_DIVIDEND_ID'
+00 00 Initializing data source...
+00 00 The extraction 'ST_DIVIDEND_ID' is complete.
+00 00 Status:	Finished
+00 00 Start:	3/31/2026 1:28:11 PM America/New_York
+00 00 Stop:	3/31/2026 1:28:12 PM America/New_York
+00 00 Records extracted:	0
+00 00 Records applied:	0
+00 00 The data has successfully been exported to \\STRS02M-activedata.private-strs.simcorpcloud.com\STRS02M-ActiveData\ActiveData\Interfaces\IN\Direct\Dividend_ID\Dividend_Identification_20260216_132812.csv.
+03 00 Batch job ST_DIV_ID_EXP completed
+02 00 Batch job ST_DIV_ID_IMP started
+00 00 Data Format Setup (ST_DIV_IDENT) has been loaded
+01 00 Parameters:
+01 00      Message queue = DIVIDEND_ID
+01 00      Reference file = ST_DIV_ID_IMP
+10 00 Import file \\STRS02M-activedata.private-strs.simcorpcloud.com\STRS02M-ActiveData\ActiveData\Interfaces\IN\Direct\Dividend_ID\Dividend_Identification_20260216_132812.csv contains only empty records
+03 00 Batch job ST_DIV_ID_IMP completed
+02 00 Batch job ST_DIV_ID_WAIT started
+00 00 Wait until message queue DIVIDEND_ID is empty.
+00 00 Queue DIVIDEND_ID is empty.
+03 00 Batch job ST_DIV_ID_WAIT completed
+02 00 Batch job ST_DIV_ID_MULTI_UPD started
+00 00 Data Format Setup (ST_DIV_ID_MULTI) has been loaded
+01 00 Parameters:
+01 00      Message queue = DIVIDEND_ID
+01 00      Reference file = ST_DIV_ID_UPD
+10 00 Import file \\STRS02M-activedata.private-strs.simcorpcloud.com\STRS02M-ActiveData\ActiveData\Interfaces\IN\Direct\Dividend_ID\Dividend_Identification_20260216_132812.csv contains only empty records
+03 00 Batch job ST_DIV_ID_MULTI_UPD completed
+02 00 Batch job ST_DIV_ID_ARC started
+00 00 Moving "\\STRS02M-activedata.private-strs.simcorpcloud.com\STRS02M-ActiveData\ActiveData\Interfaces\IN\Direct\Dividend_ID\Dividend_Identification_20260216_132812.csv" to "\\STRS02M-activedata.private-strs.simcorpcloud.com\STRS02M-ActiveData\ActiveData\Interfaces\IN\Direct\Dividend_ID\Archive\Dividend_Identification_20260216_132812.csv"
+03 00 Batch job ST_DIV_ID_ARC completed
+02 00 Batch job ST_DIV_ID_WAIT started
+00 00 Wait until message queue DIVIDEND_ID is empty.
+00 00 Queue DIVIDEND_ID is empty.
+03 00 Batch job ST_DIV_ID_WAIT completed
+95 00 Started: 3/31/2026 1:28 PM
+95 00 Ended: 3/31/2026 1:28 PM
+95 00 ST_DIV_ID_EXP: Executed (0:00:02)
+95 00 ST_DIV_ID_IMP: Executed (0:00:04)
+95 00 ST_DIV_ID_WAIT: Executed (0:00:00)
+95 00 ST_DIV_ID_MULTI_UPD: Executed (0:00:01)
+95 00 ST_DIV_ID_ARC: Executed (0:00:00)
+95 00 ST_DIV_ID_WAIT: Executed (0:00:00)
+33 00 Batch job group ended
