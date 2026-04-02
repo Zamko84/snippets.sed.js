@@ -1,0 +1,1 @@
+find extensions -name 'openclaw.plugin.json' -exec sh -c '

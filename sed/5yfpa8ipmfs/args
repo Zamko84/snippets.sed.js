@@ -1,0 +1,1 @@
+'s|-name \x27openclaw.plugin.json\x27|\\(-name \x27openclaw.plugin.json\x27 -o -name \x27package.json\x27\\)|'
