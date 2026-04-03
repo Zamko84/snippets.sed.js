@@ -1,0 +1,6 @@
+|_. 再実行結果 |_. テストケース |_. 初回失敗理由 |_. 備考 |
+|Fail| admin.autoragistration.AutoRegistrationTest.registerUserTestWithShuffledItem | わーい |  |
+|Failse Fail| admin.autoragistration.AutoRegistrationTest.registerUserTestWithShuffledItem | わーい |  |
+|Pass| admin.autoragistration.AutoRegistrationTest.registerUserTestWithShuffledItem | わーい |  |
+|Skip| admin.autoragistration.AutoRegistrationTest.registerUserTestWithShuffledItem | わーい |  |
+
