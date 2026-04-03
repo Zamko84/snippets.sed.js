@@ -1,0 +1,57 @@
+   org.springframework.boot:spring-boot-autoconfigure:jar:3.4.7:compile -- module spring.boot.autoconfigure [auto]
+   org.springframework.boot:spring-boot-starter-data-jpa:jar:3.4.7:compile -- module spring.boot.starter.data.jpa [auto]
+   org.springframework.boot:spring-boot-starter-web:jar:3.4.7:compile -- module spring.boot.starter.web [auto]
+   org.springframework.boot:spring-boot-configuration-processor:jar:3.4.7:compile -- module spring.boot.configuration.processor [auto]
+   org.apache.httpcomponents.client5:httpclient5:jar:5.4.1:compile -- module org.apache.httpcomponents.client5.httpclient5 [auto]
+   org.springframework.boot:spring-boot-starter-actuator:jar:3.4.7:compile -- module spring.boot.starter.actuator [auto]
+   com.github.ben-manes.caffeine:caffeine:jar:3.1.8:compile -- module com.github.benmanes.caffeine
+   org.springframework:spring-context-support:jar:6.2.7:compile -- module spring.context.support [auto]
+   org.springframework.boot:spring-boot-devtools:jar:3.4.7:runtime -- module spring.boot.devtools [auto]
+   io.vavr:vavr:jar:0.10.4:compile -- module io.vavr [auto]
+   com.zooplus.tech:boot-logging3:jar:1.0.5:runtime -- module boot.logging3 (auto)
+   io.micrometer:micrometer-registry-prometheus:jar:1.14.8:runtime -- module micrometer.registry.prometheus [auto]
+   com.zooplus.api:custom-headers:jar:2.0.1:compile -- module custom.headers (auto)
+   org.springframework.cloud:spring-cloud-starter-openfeign:jar:4.2.1:compile -- module spring.cloud.starter.openfeign (auto)
+   io.micrometer:micrometer-registry-influx:jar:1.14.8:compile -- module micrometer.registry.influx [auto]
+   io.github.resilience4j:resilience4j-spring-boot3:jar:2.2.0:compile -- module io.github.resilience4j.springboot3 [auto]
+   org.springframework.boot:spring-boot-starter-aop:jar:3.4.7:compile -- module spring.boot.starter.aop [auto]
+   org.springframework.cloud:spring-cloud-starter-hystrix:jar:1.4.7.RELEASE:compile -- module spring.cloud.starter.hystrix (auto)
+   io.micrometer:micrometer-tracing-bridge-brave:jar:1.4.7:compile -- module micrometer.tracing.bridge.brave [auto]
+   com.netflix.hystrix:hystrix-metrics-event-stream:jar:1.5.18:compile -- module hystrix.metrics.event.stream (auto)
+   com.netflix.hystrix:hystrix-core:jar:1.5.18:compile -- module hystrix.core (auto)
+   com.opencsv:opencsv:jar:5.5.2:compile -- module com.opencsv [auto]
+   com.google.code.gson:gson:jar:2.11.0:compile -- module com.google.gson
+   org.mapstruct:mapstruct:jar:1.6.3:compile -- module org.mapstruct [auto]
+   org.springdoc:springdoc-openapi-starter-webmvc-ui:jar:2.6.0:compile -- module org.springdoc.openapi.ui [auto]
+   org.springframework.boot:spring-boot-starter-test:jar:3.4.7:test -- module spring.boot.starter.test [auto]
+   org.springframework.batch:spring-batch-test:jar:5.2.2:test -- module spring.batch.test [auto]
+   org.wiremock:wiremock-standalone:jar:3.10.0:test -- module wiremock.standalone (auto)
+   joda-time:joda-time:jar:2.12.7:compile -- module org.joda.time [auto]
+   org.springframework:spring-messaging:jar:6.2.7:compile -- module spring.messaging [auto]
+   software.amazon.awssdk:secretsmanager:jar:2.30.22:compile -- module software.amazon.awssdk.services.secretsmanager [auto]
+   software.amazon.awssdk:s3-event-notifications:jar:2.30.22:compile -- module software.amazon.awssdk.eventnotifications.s3 [auto]
+   software.amazon.awssdk:s3:jar:2.30.22:compile -- module software.amazon.awssdk.services.s3 [auto]
+   software.amazon.awssdk:athena:jar:2.30.22:compile -- module software.amazon.awssdk.services.athena [auto]
+   software.amazon.awssdk:sts:jar:2.30.22:compile -- module software.amazon.awssdk.services.sts [auto]
+   software.amazon.awssdk:sqs:jar:2.30.22:compile -- module software.amazon.awssdk.services.sqs [auto]
+   io.awspring.cloud:spring-cloud-aws-starter-sqs:jar:3.3.0:compile -- module spring.cloud.aws.starter.sqs (auto)
+   software.amazon.awssdk:aws-core:jar:2.30.22:compile -- module software.amazon.awssdk.awscore [auto]
+   software.amazon.awssdk:sdk-core:jar:2.30.22:compile -- module software.amazon.awssdk.core [auto]
+   com.zooplus.aws:zooplus-aws-credential-provider:jar:4.0.44:compile -- module zooplus.aws.credential.provider (auto)
+   com.fasterxml.jackson.core:jackson-core:jar:2.18.4.1:compile -- module com.fasterxml.jackson.core
+   com.fasterxml.jackson.core:jackson-databind:jar:2.18.4:compile -- module com.fasterxml.jackson.databind
+   com.fasterxml.jackson.core:jackson-annotations:jar:2.18.4:compile -- module com.fasterxml.jackson.annotation
+   com.fasterxml.jackson.datatype:jackson-datatype-jsr310:jar:2.18.4:compile -- module com.fasterxml.jackson.datatype.jsr310
+   org.apache.avro:avro:jar:1.8.2:compile -- module avro (auto)
+   org.springframework.boot:spring-boot-starter-batch:jar:3.4.7:compile -- module spring.boot.starter.batch [auto]
+   org.apache.commons:commons-collections4:jar:4.4:compile -- module org.apache.commons.collections4 [auto]
+   org.apache.commons:commons-lang3:jar:3.17.0:compile -- module org.apache.commons.lang3
+   commons-io:commons-io:jar:2.11.0:compile -- module org.apache.commons.io [auto]
+   org.projectlombok:lombok:jar:1.18.38:provided -- module lombok
+   com.oracle:ojdbc8:jar:12.2.0.1:compile -- module ojdbc8 (auto)
+   com.h2database:h2:jar:2.3.232:compile -- module com.h2database [auto]
+   com.google.guava:guava:jar:31.1-jre:compile -- module com.google.common [auto]
+   com.zooplus.cats.authorization:authorization-lib:jar:1.6.3:compile -- module authorization.lib (auto)
+   com.zooplus.config.java:loader:jar:4.0.18:compile -- module loader (auto)
+   org.json:json:jar:20220320:compile -- module org.json [auto]
+   com.zooplus.config.java.adapter:spring:jar:4.0.18:compile -- module spring (auto)
