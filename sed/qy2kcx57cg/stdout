@@ -1,0 +1,7 @@
+images:
+  - name: placeholder-nextjs
+    newName: registry.b-global.com.my/estro-nextjs-app
+    newTag: "latest" # Your Gitea Action will update this
+  - name: placeholder-laravel
+    newName: registry.b-global.com.my/estro-laravel-app
+    newTag: "}"
