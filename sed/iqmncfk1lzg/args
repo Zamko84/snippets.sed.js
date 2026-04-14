@@ -1,0 +1,1 @@
+-e 's/Mapped public port //g' -e 's/ protocol [A-Z]* to local port [0-9]* lifetime [0-9]*//g'
