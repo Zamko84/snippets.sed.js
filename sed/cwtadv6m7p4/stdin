@@ -1,0 +1,9 @@
+scopy(x.l,y.l)
+scopy(x.u,y.u)
+scopy(x.u,y.l)
+scopy(x.l,y.u)
+
+scopy(x,y)
+scopy(m1[i,j],m2[i,j])
+
+
