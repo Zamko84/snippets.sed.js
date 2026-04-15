@@ -1,0 +1,5 @@
+scopy(s1,s2);
+rcopy(x1.u,rt);
+rcopy(x1.l,rt);
+rcopy(rt,x1.u);
+rcopy(rt,x1.l);
