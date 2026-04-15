@@ -1,0 +1,7 @@
+rcopy(x.l,y.l)
+rcopy(x.u,y.u)
+rcopy(x.u,y.l)
+rcopy(x.l,y.u)
+
+scopy(x,y)
+scopy(m1[i,j],m2[i,j])
