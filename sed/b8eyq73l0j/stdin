@@ -1,0 +1,12 @@
+scopy(x.l,y.l)
+scopy(x.u,y.u)
+scopy(x.u,y.l)
+scopy(x.l,y.u)
+scopy(x.l.ma,y.u)
+scopy(x.l,r)
+
+
+scopy(x,y)
+scopy(m1[i,j],m2[i,j])
+scopy(m1[i,j].l,m2[i,j].u)
+scopy(m1[i,j],m2[i,j])
