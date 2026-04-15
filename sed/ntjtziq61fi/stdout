@@ -1,0 +1,11 @@
+rcopy(x.l,y.l)
+rcopy(x.u,y.u)
+rcopy(x.u,y.l)
+rcopy(x.l,y.u)
+scopy(x.l,r)
+
+scopy(x,y)
+scopy(m1[i,j],m2[i,j])
+
+sed -E 's/scopy\(([^.]+)\.([lu]),([^.]+)\.([lu])\)/rcopy(\1.\2,\3.\4)/g'
+-E '/\([^.]+,[^.]+\)/! s/scopy\(([^.]+[.][ul])\,([^.]+[.][ul])\)/rcopy(\1,\2)/g'
