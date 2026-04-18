@@ -1,0 +1,1 @@
+printf("abc ="); printf(rst(v[i].u,buf)); printf("\n");

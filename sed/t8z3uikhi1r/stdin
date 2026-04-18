@@ -1,0 +1,1 @@
+writeln('abc =',rst(v[i].u,buf))
