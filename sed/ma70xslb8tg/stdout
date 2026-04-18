@@ -1,0 +1,3 @@
+  writeln('abc =',rst(v[i].u,buf));
+  writeln('ABC','DEF');
+  printf("ABC");
