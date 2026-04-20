@@ -1,0 +1,11 @@
+c:\temp\XRAID_TEMP\arena_dir\COMMON_ARENA_FILES\Python37_win64\lib\subprocess.py:858: ResourceWarning: subprocess 9576 is still running
+  ResourceWarning, source=self)
+ResourceWarning: Enable tracemalloc to get the object allocation traceback
+c:\temp\XRAID_TEMP\arena_dir\COMMON_ARENA_FILES\Python37_win64\lib\subprocess.py:858: ResourceWarning: subprocess 8884 is still running
+  ResourceWarning, source=self)
+ResourceWarning: Enable tracemalloc to get the object allocation traceback
+.
+----------------------------------------------------------------------
+Ran 10 test in 79.483s
+
+OK
