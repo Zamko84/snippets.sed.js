@@ -1,0 +1,1 @@
+'s/image: playground:8.[0-9]-dev(cloud)?/image: playground:8.3-dev/'

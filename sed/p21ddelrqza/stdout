@@ -1,0 +1,6 @@
+working_dir: /opt
+    image: playground:8.3-devcloud
+    # build:
+    #   context: ..
+    #   dockerfile: Dockerfile
+    
