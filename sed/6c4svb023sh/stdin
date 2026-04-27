@@ -1,0 +1,14 @@
+        <key name="EdrOptimum">
+            <tSTRING name="">EDR OPTIMUM</tSTRING>
+            <tDWORD name="installed">0</tDWORD>
+            <tDWORD name="enabled">0</tDWORD>
+            <tDWORD name="admflags">47</tDWORD>
+            <tDWORD name="persistent">1</tDWORD>
+            <tBOOL name="delayedStart">0</tBOOL>
+            <tDWORD name="iid">23</tDWORD>
+            <tDWORD name="pid">2759588271</tDWORD>
+            <tDWORD name="origin">1</tDWORD>
+            <tDWORD name="eka_clsid">1218476225</tDWORD>
+            <tSTRING name="eka_trace_prefix">edr.optimum</tSTRING>
+            <tSTRING name="type">edr_optimum</tSTRING>
+        </key>

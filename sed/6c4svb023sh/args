@@ -1,0 +1,1 @@
+'s/(\<tSTRING name\=\"\"\>EDR OPTIMUM\<\/tSTRING\>\n\s{12}\<tDWORD name\=\"installed\"\>)\d(\<\/tDWORD\>\n\s{12}\<tDWORD name\=\"enabled\"\>)\d(\<\/tDWORD\>)/\11\21\3/'
