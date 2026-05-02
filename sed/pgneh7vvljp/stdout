@@ -1,0 +1,1 @@
+    if d=0 then scopy(sone,x2) else scopy(x,x2);
