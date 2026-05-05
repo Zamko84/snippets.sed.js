@@ -1,0 +1,1 @@
+--quiet --regexp-extended '/^[[:space:]]*"variable"[[:space:]]*"min_ecs_count"[[:space:]]*\{/,/^[[:space:]]*\}/p'

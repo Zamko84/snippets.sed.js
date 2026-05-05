@@ -1,0 +1,245 @@
+variable "region" {
+  description = "The AWS region in which resources are set up."
+  type        = string
+  default     = "us-east-2"
+}
+
+variable "project_name" {
+  description = "Default project name"
+  default     = "TGLGolf"
+}
+
+variable "env_name" {
+  description = "Environment"
+  default     = "uat"
+}
+
+variable "vpc_id" {
+  description = "VPC ID"
+  default     = "vpc-0536d479a7ea21764"
+}
+
+variable "vpc_private_subnet_ids" {
+  description = "Private subnet ID"
+  default     = ["subnet-01e05f05a51f68e37","subnet-05c712e66e5708b78","subnet-08df20afecb2b4cb0"]
+}
+
+variable "vpc_private_subnets" {
+  description = "Private subnet IP addresses"
+  default     = ["10.8.136.0/24","10.8.137.0/24","10.8.138.0/24"]
+}
+
+variable "vpc_public_subnet_ids" {
+  description = "Public subnet ID"
+  default     = ["subnet-0325d40f4e18e685c","subnet-0f1ae75bc4c6ddaeb","subnet-0021cead487eee55f"]
+}
+
+variable "vpc_public_subnets" {
+  description = "Public subnet IP addresses"
+  default     = ["10.8.139.0/26","10.8.139.64/26","10.8.139.128/26"]
+}
+
+variable "ip_whitelist" {
+  description = "List of IPs to allow access to various resources"
+  default     = ["176.102.48.86/32","3.225.172.220/32","52.203.58.190/32","35.182.161.107/32","3.99.129.92/32"]
+#                 DZ                 Pritunl VPN        Cisco Any Connect  Kroll team          Kroll team
+}
+
+variable "ip_whitelist_size" {
+  description = "Amount of entries in IP whitelist"
+  default     = 5
+}
+
+variable "env_private_prefix_list" {
+  description = "Prefix list with env-specific private IP addresses"
+  default     = "pl-0d1794c2e94789b83"
+}
+# DEV  pl-073b20a9d9b8679ae
+# QA   pl-011239170add6e98b
+# UAT  east-2: pl-0d1794c2e94789b83  west-2: pl-027e6c2515503859d
+# PROD pl-083413e12df267736
+
+variable "key_name" {
+  description = "Name of key pair for SSH login to ECS cluster instances"
+  default     = "nl-2023"
+}
+
+variable "ami" {
+  description = "ECS cluster instance AMI id, default is Amazon ECS-optimized AMI in us-east-2"
+  default     = "ami-0055ee7e27f0385e1"
+}
+# us-east-2   = "ami-0055ee7e27f0385e1"
+# us-west-2   = "ami-0ee4048ce28a1717c"
+
+variable "image" {
+  description = "Docker image name for ECS service"
+  default     = "381049668553.dkr.ecr.us-east-2.amazonaws.com/fe-league:latest"
+}
+
+variable "container_port" {
+  description = "Port number exposed by container"
+  default     = 3000
+}
+
+variable "cpu_unit" {
+  description = "Limit of cpu units for container"
+  default     = 2048
+}
+
+variable "memory" {
+  description = "Limit of memory for container"
+  default     = 900
+}
+
+variable "instance_type" {
+  description = "Instance type launched by ECS fleet"
+  default     = "t3.micro"
+}
+
+# Instance       Price   vCPU    Memory  Storage         Network performance
+# ---------------------------------------------------------------------------
+# t3.nano        $0.0052 2       0.5 GiB EBS Only        Up to 5 Gigabit
+# t3.micro       $0.0104 2       1 GiB   EBS Only        Up to 5 Gigabit
+# t3.small       $0.0208 2       2 GiB   EBS Only        Up to 5 Gigabit
+# t3.medium      $0.0416 2       4 GiB   EBS Only        Up to 5 Gigabit
+# c5a.large      $0.077  2       4 GiB   EBS Only        Up to 10 Gigabit
+# m5a.large      $0.086  2       8 GiB   EBS Only        Up to 10 Gigabit
+
+variable "strategy" {
+  description = "Instance placement strategy name. Valid values: lowestPrice, diversified, capacityOptimized, capacityOptimizedPrioritized, and priceCapacityOptimized."
+  default     = "diversified"
+}
+# https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/spot-fleet-allocation-strategy.html
+
+variable "volume_size" {
+  description = "Root volume size in GiB. For ECS optimized instances have o be at least 30GiB"
+  default     = 30
+}
+
+variable "app_port" {
+  description = "Port number of application"
+  default     = 80
+}
+
+variable "min_ecs_count" {
+  description = "Minimum amount of instances and tasks in ECS cluster"
+  default     = 2
+}
+
+variable "max_ecs_count" {
+  description = "Maximum amount of instances and tasks in ECS cluster"
+  default     = 8
+}
+
+variable "ecs_upsacale_amount" {
+  description = "Smount of instances to add on upscale event"
+  default     = 2
+}
+
+variable "ecs_downsacale_amount" {
+  description = "Smount of instances to shutdown on downscale event"
+  default     = -1
+}
+
+variable "cf_pwd_ignore_list" {
+    type = list(string)
+    default = ["/favicon.ico"]
+    description = "ignore url path list"
+}
+
+variable "cf_pwd_include_list" {
+    type = list(string)
+    default = ["/schedule","/stats","/standings","/match/","/live"]
+    description = "include url path list"
+}
+
+variable "tmrw_certificate_global" {
+  description = "Certificate ARN for tmrwsportsgroup.com domain in us-east-1"
+  default     = "arn:aws:acm:us-east-1:381049668553:certificate/239cd94b-1edc-47fc-88f8-9ebd5c357313"
+}
+
+variable "tmrw_certificate_regional" {
+  description = "Certificate ARN for tmrwsportsgroup.com domain in us-east-2"
+  default     = "arn:aws:acm:us-east-2:381049668553:certificate/e87568cf-3c50-4db1-81f4-289a345d88ff"
+}
+
+variable "wtglgolf_certificate_global" {
+  description = "Certificate ARN for wtglgolf.com domain in us-east-1"
+  default     = "arn:aws:acm:us-east-1:381049668553:certificate/ddd0c4d9-7012-4608-a117-e854e44b0003"
+}
+
+variable "wtglgolf_certificate_regional" {
+  description = "Certificate ARN for wtglgolf.com domain in us-east-2"
+  default     = "arn:aws:acm:us-east-2:381049668553:certificate/eca0763f-63cf-4825-896c-1d1417ed7ec6"
+}
+
+variable "soficenter_certificate_global" {
+  description = "Certificate ARN for soficenter.com domain in us-east-1"
+  default     = "arn:aws:acm:us-east-1:381049668553:certificate/d82619ca-5c78-47ef-9807-558cd113e96e"
+}
+
+variable "soficenter_certificate_regional" {
+  description = "Certificate ARN for soficenter.com domain in us-east-2"
+  default     = "arn:aws:acm:us-east-2:381049668553:certificate/0e9ac71a-92ee-49d9-8162-393dc4b8c736"
+}
+
+
+variable "atlantadrivegc_certificate_regional" {
+  description = "Certificate ARN for atlantadrivegc.com domain in us-east-2"
+  default     = "arn:aws:acm:us-east-2:381049668553:certificate/f05b5ee8-57e2-4d13-b76e-e17cf9c6a0af"
+}
+
+variable "atlantadrivegc_certificate_global" {
+  description = "Certificate ARN for atlantadrivegc.com domain in us-east-1"
+  default     = "arn:aws:acm:us-east-1:381049668553:certificate/02800f88-c1a9-4482-9cca-4c902118bb09"
+}
+
+variable "bostoncommongolf_certificate_regional" {
+  description = "Certificate ARN for bostoncommongolf.com domain in us-east-2"
+  default     = "arn:aws:acm:us-east-2:381049668553:certificate/21e55a6d-85d7-4980-9f01-de065aa8b76e"
+}
+
+variable "bostoncommongolf_certificate_global" {
+  description = "Certificate ARN for bostoncommongolf.com domain in us-east-1"
+  default     = "arn:aws:acm:us-east-1:381049668553:certificate/1ef3b288-0ccf-4a41-928c-116609313029"
+}
+
+variable "jupiterlinksgolfclub_certificate_regional" {
+  description = "Certificate ARN for jupiterlinksgolfclub.com domain in us-east-2"
+  default     = "arn:aws:acm:us-east-2:381049668553:certificate/e8a03484-b776-44ee-b8ba-cf1a90847bd6"
+}
+
+variable "jupiterlinksgolfclub_certificate_global" {
+  description = "Certificate ARN for jupiterlinksgolfclub.com domain in us-east-1"
+  default     = "arn:aws:acm:us-east-1:381049668553:certificate/7406a758-f8f1-4de2-87bc-a91adbeb5327"
+}
+
+variable "lagc_certificate_regional" {
+  description = "Certificate ARN for lagc.com domain in us-east-2"
+  default     = "arn:aws:acm:us-east-2:381049668553:certificate/29ba0d2e-7290-4879-ab43-30189fe4d1a4"
+}
+
+variable "lagc_certificate_global" {
+  description = "Certificate ARN for lagc.com domain in us-east-1"
+  default     = "arn:aws:acm:us-east-1:381049668553:certificate/8ff6ed58-f339-4941-ac62-91fb684a3bed"
+}
+
+variable "nygolfclub_certificate_regional" {
+  description = "Certificate ARN for nygolfclub.com domain in us-east-2"
+  default     = "arn:aws:acm:us-east-2:381049668553:certificate/373d7823-a4a5-4336-845f-6f53378be23f"
+}
+
+variable "nygolfclub_certificate_global" {
+  description = "Certificate ARN for nygolfclub.com domain in us-east-1"
+  default     = "arn:aws:acm:us-east-1:381049668553:certificate/a8df2e80-f55d-43c6-948a-2a10b1c4760f"
+}
+
+variable "thebaygolfclub_certificate_regional" {
+  description = "Certificate ARN for thebaygolfclub.com domain in us-east-2"
+  default     = "arn:aws:acm:us-east-2:381049668553:certificate/c781bfcf-b4f1-4e77-842a-cff30296ec9f"
+}
+
+variable "thebaygolfclub_certificate_global" {
+  description = "Certificate ARN for thebaygolfclub.com domain in us-east-1"
+  default     = "arn:aws:acm:us-east-1:381049668553:certificate/857b8bf7-45ec-48cb-ab7c-29bef4b06063"
+}
