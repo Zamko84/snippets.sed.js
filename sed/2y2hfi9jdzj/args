@@ -1,0 +1,1 @@
+-E 's/^([ ]+)if ([^ ]+) then ([^ ]+) else begin/\1if \2 then begin \3; end else begin/'

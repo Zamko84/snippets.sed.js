@@ -1,0 +1,20 @@
+  if i=0 then x2:=sone else begin
+    if j<jmin then s2:=s3 else begin
+
+-E 's/^([ ]+)if ([^ ]+) then ([^ ]+) else begin/\1if \2 then begin \3; end else begin/'
+
+diff -U0 <(cat ) <(cat | sed -E 's/^([ ]+)if ([^ ]+) then ([^ ]+) else begin/\1if \2 then begin \3; end else begin/')
+
+$diff -U0 <(cat Section.6_Stage00/vector/vtrans) <(cat Section.6_Stage00/vector/vtrans | sed -E '39s/^([ ]+)if ([^ ]+) then ([^ ]+) else begin/\1if \2 then begin \3; end else begin/')
+--- /dev/fd/63  2026-05-06 23:40:18.000000000 +0900
++++ /dev/fd/62  2026-05-06 23:40:18.000000000 +0900
+@@ -39 +39 @@
+-    if j<jmin then s2:=s3 else begin
++    if j<jmin then begin s2:=s3; end else begin
+$diff -U0 <(cat Section.6_Stage00/scalar/ispower) <(cat Section.6_Stage00/scalar/ispower | sed -E '6s/^([ ]+)if ([^ ]+) then ([^ ]+) else begin/\1if \2 then begin \3; end else begin/')
+--- /dev/fd/63  2026-05-06 23:40:49.000000000 +0900
++++ /dev/fd/62  2026-05-06 23:40:49.000000000 +0900
+@@ -6 +6 @@
+-  if i=0 then x2:=sone else begin
++  if i=0 then begin x2:=sone; end else begin
+$
