@@ -1,0 +1,111 @@
+program checkgap(input,output);
+{ check that the zeros in zeros.t satify the desired bound }
+{ and verify the bound (3.2) in reference [1] }
+const
+  hdim=13;
+  edim=27;
+  vdim=0;
+  lmax=0;
+  dz_val='1.0E-40';
+  kappa_val='7.5E-1';
+  l0=35;
+  n0=40;
+
+#include "types.h" {gpc}
+
+var
+  imin,imax,i: integer16;
+  beta2,dz,k2,p1,p2,gamma,kappa,a,theta: scalar;
+  s0,s1,s2,s3,s4,s5,s6,s7,s8,st1,st2,st3: scalar;
+  guess: zeros;
+
+#include "reps.i" {gpc}
+#include "scalar.i" {gpc}
+#include "sfun.i" {gpc}
+
+#include "ztread" {gpc}
+
+procedure gap(n: integer16; var s: scalar);
+{ s:=(gap_n plusminus dz of guessed zeros), uses globals }
+var
+  dg,g0,g1,s0,s1: scalar;
+begin { gap }
+  if (n<1) or (n>zdim) then writeln('gap: error - index out of range')
+  else begin
+    dg:=dz;
+    dg.l.si:=-1;
+    ssum(guess[n],dg,g0);
+    ssqrt(g0,s0);
+    ssum(guess[n-1],dg,g1);
+    ssqrt(g1,s1);
+    sdiff(s0,s1,s);
+  end;
+end { gap };
+
+begin { checkgap }
+  sinit;
+  ssset(dz_val,dz);
+  ssset(kappa_val,kappa);
+  sread('beta2.s',beta2);
+  ztread('zeros.t',guess);
+  writeln;
+
+  write('checkgap: determine upper bound gamma on gaps');
+  imin:=n0-l0;
+  imax:=2*n0-1;
+  writeln(imin:3,' ...',imax:3);
+  gap(imin,gamma);
+  for i:=imin+1 to imax do begin
+    gap(i,st2);
+    sunion(gamma,st2,st3);
+    gamma:=st3;
+  end;
+  squot(sone,gamma,st1);
+  writeln('checkgap: 1/gamma >=', rst(st1.l));
+  writeln('checkgap: kappa    =', rst(kappa.l));
+  if sge(st1,kappa) then writeln('checkgap: ok')
+  else writeln('checkgap: error - test failed');
+
+  writeln('checkgap: find allowed range for theta');
+  sprod(kappa,kappa,k2);                { k2 = kappa^2 }
+  sarctan(sone,p1);
+  ismult(4,p1);                         { p1 = pi }
+  sprod(p1,p1,p2);                      { p2 = pi^2 }
+  sdiff(sone,beta2,s0);
+  sprod(s0,k2,s1);                      { s1 = (1-beta^2)*kappa^2 }
+  sprod(s1,p2,st1);
+  s2:=st1;
+  ismult(2,s2);                         { s2 = 2*(1-beta^2)*(pi*kappa)^2 }
+  sneg(st1);
+  sexp(st1,s3);                         { s3 = exp(-(1-beta^2)*(pi*kappa)^2) }
+  ssum(sone,s2,st1);
+  ssum(st1,s3,st2);
+  squot(st2,k2,s4);                     { s4 = (1+s2+s3)/k2 }
+  squot(beta2,s1,st1);
+  isdiv(4,st1);
+  sexp(st1,s5);                         { s5 = exp(beta^2/(4*s1)) }
+  sprod(s0,s5,st1);
+  sprod(st1,s4,a);                      { a = (1-beta^2)*s5*s4 }
+  writeln('checkgap: a <=',rst(a.u));
+
+  sprod(k2,k2,st1);
+  isdiv(1+l0,st1);
+  sprod(st1,a,st2);
+  ssum(s3,st2,s6);                      { s6 = s3+sa*kappa^4/(1+l0) }
+  ssqrt(beta2,st1);
+  squot(shalf,st1,s7);
+  sdiff(sone,s7,s8);                    { s8 = 1-1/(2*beta) }
+  sprod(st1,p1,st2);
+  sarcsin(s6,st1);
+  squot(st1,st2,theta);                 { theta = arcsin(s6)/(pi*beta) }
+
+  writeln('checkgap: need theta >',rst(theta.u));
+  writeln('checkgap: need theta <',rst(s8.l));
+  theta.l:=theta.u;
+  s8.u:=s8.l;
+  if sge(theta,s8) then writeln('checkgap: error - test failed')
+  else writeln('checkgap: ok');
+
+  sdone('checkgap');
+end { checkgap }.
+
