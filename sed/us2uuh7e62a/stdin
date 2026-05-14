@@ -1,0 +1,11 @@
+    "teamName": "Nokia (Digital Office)",
+    "userId": 358328305,
+    "authId": "auth0|user_01KRCW37QKQECTBSTE48B3BBAK"
+  },
+  "network": {
+    "useHttp1ForAgent": true
+  },
+  "approvalMode": "allowlist",
+  "sandbox": {
+    "mode": "disabled",
+    "networkAccess": "user_config_with_defaults"
