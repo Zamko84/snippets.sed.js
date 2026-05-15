@@ -1,0 +1,12 @@
+package main
+
+import (
+sdf/
+	"container/heap"
+	"math"
+	"sort"
+)
+
+func buildBoard(state GameState) *Board {
+// ..
+}
