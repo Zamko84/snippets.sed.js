@@ -1,0 +1,4 @@
+  if
+     tput bel
+  end
+    [ -t 1 ] && tput bell || true
