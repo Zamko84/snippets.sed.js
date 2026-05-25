@@ -1,0 +1,3 @@
+  else if abs(i)>9999 then writeln('irset: error - integer16 too large')
+    else if x3.si<0 then rtowinfty(x3);
+
