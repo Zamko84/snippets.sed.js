@@ -1,0 +1,1 @@
+sed -E 's/h/\1shortcuts:\/\/\2/'
