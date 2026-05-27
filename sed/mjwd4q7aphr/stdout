@@ -1,0 +1,27 @@
+    if x1.l.si>=0 then x2.u:=x1.u
+    else if x1.u.si<=0 then begin
+      x2.u:=x1.l;
+      x2.u.si:=-x1.l.si;
+    end
+    else begin
+      x1.l.si:=-x1.l.si;
+      if irdiff(x1.u,x1.l)>0 then x2.u:=x1.u else x2.u:=x1.l;
+      x1.l.si:=-x1.l.si;
+    end;
+  end;
+  x2.l.si:=0;
+
+    if x1.l.si>=0 then x2:=x1
+    else if x1.u.si<=0 then begin
+      x2.l:=x1.u;
+      x2.l.si:=-x1.u.si;
+      x2.u:=x1.l;
+      x2.u.si:=-x1.l.si;
+    end
+    else begin
+      x2.l.si:=0;
+      x1.l.si:=-x1.l.si;
+      if irdiff(x1.u,x1.l)>0 then x2.u:=x1.u else x2.u:=x1.l;
+      x1.l.si:=-x1.l.si;
+    end;
+  end;
