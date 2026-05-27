@@ -1,0 +1,12 @@
+    if l.si>=0 then x2.u:=u
+    else if u.si<=0 then begin
+      x2.u:=l;
+      x2.u.si:=-l.si;
+    end
+    else begin
+      l.si:=-l.si;
+      if irdiff(u,l)>0 then x2.u:=u else x2.u:=l;
+      l.si:=-l.si;
+    end;
+  end;
+  x2.l.si:=0;
