@@ -1,0 +1,2 @@
+      for j:=0 to lmax do scopy(mt1[j,i],dkk[i,j])
+      for j:=lmax downto 0 do scopy(v2[j],v1[j])
