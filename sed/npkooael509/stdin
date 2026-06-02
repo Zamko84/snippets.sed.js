@@ -1,0 +1,2 @@
+      for j:=0 to lmax do dkk[i,j]:=mt1[j,i];
+      for j:=lmax downto 0 do v1[j]:=v2[j];
