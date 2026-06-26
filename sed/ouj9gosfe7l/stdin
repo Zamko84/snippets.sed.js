@@ -1,0 +1,1 @@
+"configuration.add(new LibraryMapping("ui", "carfin.common.ui.web"));
