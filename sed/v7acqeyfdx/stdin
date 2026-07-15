@@ -1,0 +1,2 @@
+  pb->e=rzero;
+  pbres->e=pb->e;

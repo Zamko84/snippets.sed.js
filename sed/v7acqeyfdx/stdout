@@ -1,0 +1,2 @@
+  requal(pb->e,rzero);
+  requal(pbres->e,pb->e);
