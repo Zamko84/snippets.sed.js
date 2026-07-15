@@ -1,0 +1,4 @@
+pv->p+i,pv0->p+k-i
+  sprod(pva->p+i,pvb->p+k-i,&s2);
+
+-E -e  's/\b([a-zA-Z0-9_]+)->p\s*\+\s*([a-zA-Z0-9_]+)/\1->p[\2]/g'
