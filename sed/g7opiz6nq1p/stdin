@@ -1,0 +1,6 @@
+vector* pv
+vector vt;
+pv->p+1
+&pv.g
+vt.p+i
+&vt.g

@@ -1,0 +1,6 @@
+vector_ptr  pv
+vector_t vt;
+pv->p[1]
+pv->g
+vt->p[i]
+vt->g
