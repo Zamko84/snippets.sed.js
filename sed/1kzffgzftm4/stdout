@@ -1,0 +1,107 @@
+bmult(borel_function_ptr pb1,borel_function_ptr pb2,scalar_ptr psescalar_ptr ps,borel_function_ptr pbres)
+{
+
+
+  extern logical
+    lsequal();
+
+  extern reps
+    rmaxabs();
+
+  int
+    i,k;
+
+  scalar
+    st1,st2,s1,s2,
+    sb1,sb2,sb1eps,sb2eps,
+    sa1g,sa1h,sa2g,sa2h,
+    sagres,sbres;
+
+  borel_function
+    bt1;
+
+  sequal(pb1->g,sa1g);
+  sequal(pb1->h,sa1h);
+  sequal(pb2->g,sa2g);
+  sequal(pb2->h,sa2h);
+  srconst(pb1->e,sb1);
+  srconst(pb2->e,sb2);
+
+/* compute polynomial part */
+  bsetzo(bt1);
+  for(k=0;k<=n;k++){
+    sequal(szero,s1);
+    for(i=0;i<=k;i++){
+      sprod(pb1->p[i],pb2->p[k-i],s2);
+      sadd(s2,s1);
+    }
+    sequal(s1,bt1.p+k);
+  }
+
+/* determine constant in exponential */
+  sequal(pseps,sb1eps);
+  sadd(sb1,sb1eps);
+  sequal(pseps,sb2eps);
+  sadd(sb2,sb2eps);
+  sequal(pseps,sbres);
+  sadd(sb1,sbres);
+  sadd(sb2,sbres);
+
+/* bound error terms */
+  sequal(szero,sagres);
+
+  for(k=n1;k<=n+n;k++){
+    sequal(szero,st1);
+    for(i=k-n;i<=n;i++){
+      sprod(pb1->p[i],pb2->p[k-i],st2);
+      sadd(st2,st1);
+    }
+    sabs(st1,st1);
+    sabound(sbres,k-1,st2);
+    sprod(st1,st2,st1);
+    sadd(st1,sagres);
+  }
+
+  for(i=0;i<=n;i++){
+    sabs(pb1->p[i],st1);
+    sprod(st1,sa2g,st1);
+    sabound(sb1eps,i,st2);
+    sprod(st1,st2,st1);
+    sadd(st1,sagres);
+    sabs(pb1->p[i],st1);
+    sprod(st1,sa2h,st1);
+    sabound(sb1eps,i+n,st2);
+    sprod(st1,st2,st1);
+    sadd(st1,sagres);
+    sabs(pb2->p[i],st1);
+    sprod(st1,sa1g,st1);
+    sabound(sb2eps,i,st2);
+    sprod(st1,st2,st1);
+    sadd(st1,sagres);
+    sabs(pb2->p[i],st1);
+    sprod(st1,sa1h,st1);
+    sabound(sb2eps,i+n,st2);
+    sprod(st1,st2,st1);
+    sadd(st1,sagres);
+  }
+
+  sabound(pseps,1,st1);
+  sprod(sa1g,sa2g,st2);
+  sprod(st1,st2,st1);
+  sadd(st1,sagres);
+
+  if(!lsequal(sa1h,szero) && 
+     !lsequal(sa2h,szero)){
+    sabound(pseps,n1+n,st1);
+    sprod(sa1h,sa2h,st2);
+    sprod(st1,st2,st1);
+    sadd(st1,sagres);
+  }
+
+/* return result */
+  sscalar(rzero,rmaxabs(sagres),bt1.g);
+  srconst(rzero,bt1.h);
+  bt1.e=rmaxabs(sbres);
+  bequal(bt1,pbres);
+}
+/*---------------------------------------------*/
