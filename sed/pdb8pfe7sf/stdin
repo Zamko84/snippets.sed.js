@@ -1,0 +1,11 @@
+bequal(pb,pbres)
+borel_function *pb,*pbres;
+{
+  int i;
+
+  for(i=0;i<=n;i++)
+    sequal(pb->p+i,pbres->p+i);
+  sequal(&pb->g,&pbres->g);
+  sequal(&pb->h,&pbres->h);
+  pbres->e=pb->e;
+}
