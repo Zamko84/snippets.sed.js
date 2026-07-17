@@ -1,0 +1,84 @@
+vmult(vector_ptr pva,vector_ptr pvb,vector_ptr pvres)
+{
+
+  int
+    i,k;
+
+  scalar
+    s1,s2,s3,st1,st2,
+    seg,seh,sag,sah,sbg,sbh,
+    sx[degree_plus_one];
+
+  sequal(pva->g,sag);
+  sequal(pva->h,sah);
+  sequal(pvb->g,sbg);
+  sequal(pvb->h,sbh);
+
+/* calculate polynomial part */
+  for(i=0;i<=n;i++)
+    sequal(szero,sx+i);
+
+  for(k=0;k<=n;k++){
+    sequal(szero,s1);
+    for(i=0;i<=k;i++){
+      sprod(pva->p[i],pvb->p[k-i],s2);
+      sadd(s2,s1);
+    }
+    sequal(s1,sx+k);
+  }
+
+/* estimate higher order error */
+  sequal(szero,seh);
+  for(k=n1;k<=n+n;k++){
+    sequal(szero,s1);
+    for(i=k-n;i<=n;i++){
+      sprod(pva->p[i],pvb->p[k-i],s2);
+      sadd(s2,s1);
+    }
+    sabs(s1,s1);
+    sadd(s1,seh);
+  }
+  sequal(szero,s1);
+  sequal(szero,s2);
+  for(i=1;i<=n;i++){
+    sabs(pva->p[n-i],s3);
+    sadd(s3,s1);
+    sabs(pvb->p[n-i],s3);
+    sadd(s3,s2);
+  }
+  sabs(pva->p[n],st1);
+  sadd(s1,st1);
+  sprod(sbh,st1,st1);
+  sabs(pvb->p[n],st2);
+  sadd(s2,st2);
+  sprod(sah,st2,st2);
+  sadd(st2,st1);
+  sprod(sah,sbh,st2);
+  sadd(st2,st1);
+  sprod(sah,sbg,st2);
+  sadd(st2,st1);
+  sprod(sag,sbh,st2);
+  sadd(st2,st1);
+  sabs(pvb->p[n],st2);
+  sprod(st2,sag,st2);
+  sadd(st2,st1);
+  sabs(pva->p[n],st2);
+  sprod(st2,sbg,st2);
+  sadd(st2,st1);
+  sadd(st1,seh);
+
+/* estimate general error */
+  sprod(s2,sag,st1);
+  sprod(s1,sbg,st2);
+  sadd(st2,st1);
+  sprod(sag,sbg,st2);
+  sadd(st2,st1);
+  sequal(st1,seg);
+
+/* return result */
+  for(i=0;i<=n;i++)
+    sequal(sx+i,pvres->p[i]);
+  sequal(seg,pvres->g);
+  sequal(seh,pvres->h);
+}
+/*---------------------------------------------*/
