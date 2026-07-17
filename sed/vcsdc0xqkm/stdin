@@ -1,0 +1,13 @@
+
+  pv1->p+i
+  pvb->p+k-i //vsmult
+  pvb->p+n-i //vsmult
+
+  pv->p+i-2 //
+  pv->p+i-1 //vsetin, vsetms
+
+  pva->p+n-i
+
+  pb1->p+i
+  pb2->p+k-i
+  pb1->p+n-i
