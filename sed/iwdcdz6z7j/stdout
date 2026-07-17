@@ -1,0 +1,10 @@
+vsetzo(vector_ptr pv)
+{
+
+  int i;
+
+  for(i=0;i<=n;i++)
+    sequal(szero,pv->p[i]);
+  sequal(szero,pv->g);
+  sequal(szero,pv->h);
+}
