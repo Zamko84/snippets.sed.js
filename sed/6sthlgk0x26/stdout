@@ -1,0 +1,18 @@
+  st1->l
+  st1->u
+
+  vt1->p[i]
+  vt1->g
+  vt1->h
+
+  bt1->p[i]
+  bt1->g
+  bt1->h
+  bt1->e
+
+    sequal(&s1,bt1->p[k]);
+  bt1->e=rmaxabs(sbres);
+  sscalar(rzero,rmaxabs(&sagres),&bt1->g);
+  srconst(rzero,&bt1->h);
+
+2026-07-17
