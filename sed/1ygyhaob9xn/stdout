@@ -1,0 +1,9 @@
+      rdcprod(r1l,r2l,psres->l); rucprod(r1u,r2u,psres->u);
+      rdcprod(r1l,r2l,psres->l); rucprod(r1u,r2u,psres->u);
+      rdcprod(r1u,r2l,psres->l); rucprod(r1l,r2u,psres->u);
+      rdcprod(r1u,r2l,psres->l); rucprod(r1u,r2u,psres->u);
+      rdcprod(r1l,r2u,psres->l); rucprod(r1u,r2l,psres->u);
+      rdcprod(r1u,r2u,psres->l); rucprod(r1l,r2l,psres->u);
+      rdcprod(r1l,r2u,psres->l); rucprod(r1l,r2l,psres->u);
+      rdcprod(r1l,r2u,psres->l); rucprod(r1u,r2u,psres->u);
+      rdcprod(r1u,r2l,psres->l); rucprod(r1l,r2l,psres->u);
