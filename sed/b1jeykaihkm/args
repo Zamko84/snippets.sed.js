@@ -1,0 +1,2 @@
+-E -n
+-e 's/sscalar\(([rducprod]+)\(([r12ul]+)\,([r12ul]+)\),([rducprod]+)\(https://sed.js.org/help.html([r12ul]+)\,([r12ul]+)\)\,([psres]+)\)\;/\1(\2,\3,\7->l); \4(\5,\6,\7->u);/p'

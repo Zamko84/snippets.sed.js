@@ -1,0 +1,40 @@
+      sscalar(rdcprod(r1l,r2l),rucprod(r1u,r2u),psres);
+
+  if(r1u==rzero && r1l==r1u||
+     r2u==rzero && r2l==r2u)
+    sequal(&szero,psres);
+  else if(r1l>=rzero){
+    if(r2l>=rzero)
+      sscalar(rdcprod(r1l,r2l),rucprod(r1u,r2u),psres);
+    else if(r2u<rzero)
+      sscalar(rdcprod(r1u,r2l),rucprod(r1l,r2u),psres);
+    else
+      sscalar(rdcprod(r1u,r2l),rucprod(r1u,r2u),psres);
+  }
+  else if(r1u<rzero){
+    if(r2l>=rzero)
+      sscalar(rdcprod(r1l,r2u),rucprod(r1u,r2l),psres);
+    else if(r2u<rzero)
+      sscalar(rdcprod(r1u,r2u),rucprod(r1l,r2l),psres);
+    else
+      sscalar(rdcprod(r1l,r2u),rucprod(r1l,r2l),psres);
+  }
+  else{
+    if(r2l==rzero)
+      sscalar(rdcprod(r1l,r2u),rucprod(r1u,r2u),psres);
+    else if(r2u<rzero)
+      sscalar(rdcprod(r1u,r2l),rucprod(r1l,r2l),psres);
+    else{
+      rlu=rdcprod(r1l,r2u);
+      rul=rdcprod(r1u,r2l);
+      ruu=rucprod(r1u,r2u);
+      rll=rucprod(r1l,r2l);
+      sscalar(rmin2(rlu,rul),rmax2(ruu,rll),psres);
+    }
+  }
+}
+
+
+-E 's/sscalar\(rdcprod\(r1l\,r2l\),rucprod\(r1u\,r2u\)\,psres\)\;/&/p'
+
+-e 's/sscalar\(([rducprod]+)\(([r12ul]+)\,([r12ul]+)\),([rducprod]+)\(([r12ul]+)\,([r12ul]+)\)\,([psres]+)\)\;/\1(\2,\3) \2 \3 \4 \5 \6 \7/p'
