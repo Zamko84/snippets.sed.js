@@ -1,0 +1,6 @@
+-E
+-e 's/([r12lu]+)==([r12lurzero]+)/req(\1,\2)/'
+-e 's/([r12lu]+)>=([r12lurzero]+)/rge(\1,\2)/'
+-e 's/([r12lu]+)>([r12lurzero]+)/rgt(\1,\2)/'
+-e 's/([r12lu]+)<=([r12lurzero]+)/rle(\1,\2)/'
+-e 's/([r12lu]+)<([r12lurzero]+)/rlt(\1,\2)/'

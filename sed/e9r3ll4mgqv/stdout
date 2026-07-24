@@ -1,0 +1,46 @@
+sprod(ps1,ps2,psres)
+scalar *ps1,*ps2,*psres;
+{
+  extern reps
+    rup();
+
+  reps
+    rlu,rul,ruu,rll,
+    r1l=ps1->l,
+    r1u=ps1->u,
+    r2l=ps2->l,
+    r2u=ps2->u;
+
+  if(req(r1u,rzero) && r1l==r1u||
+     req(r2u,rzero) && r2l==r2u)
+    sequal(&szero,psres);
+  else if(rge(r1l,rzero)){
+    if(rge(r2l,rzero))
+      sscalar(rdcprod(r1l,r2l),rucprod(r1u,r2u),psres);
+    else if(rlt(r2u,rzero))
+      sscalar(rdcprod(r1u,r2l),rucprod(r1l,r2u),psres);
+    else
+      sscalar(rdcprod(r1u,r2l),rucprod(r1u,r2u),psres);
+  }
+  else if(rlt(r1u,rzero)){
+    if(rge(r2l,rzero))
+      sscalar(rdcprod(r1l,r2u),rucprod(r1u,r2l),psres);
+    else if(rlt(r2u,rzero))
+      sscalar(rdcprod(r1u,r2u),rucprod(r1l,r2l),psres);
+    else
+      sscalar(rdcprod(r1l,r2u),rucprod(r1l,r2l),psres);
+  }
+  else{
+    if(req(r2l,rzero))
+      sscalar(rdcprod(r1l,r2u),rucprod(r1u,r2u),psres);
+    else if(rlt(r2u,rzero))
+      sscalar(rdcprod(r1u,r2l),rucprod(r1l,r2l),psres);
+    else{
+      rlu=rdcprod(r1l,r2u);
+      rul=rdcprod(r1u,r2l);
+      ruu=rucprod(r1u,r2u);
+      rll=rucprod(r1l,r2l);
+      sscalar(rmin2(rlu,rul),rmax2(ruu,rll),psres);
+    }
+  }
+}
