@@ -1,0 +1,76 @@
+#!/bin/bash
+# © 2023 Spiria Digital inc. All rights reserved. See LICENSE.TXT for details.
+
+MIGRATION_DIR=$( cd -- "$( dirname -- "${BASH_SOURCE[0]}" )" &> /dev/null && pwd )
+
+. "${MIGRATION_DIR}/migration_init.sh"
+
+if [ -z "$1" ]; then    # Did we specify a single file to run? If not, run everything in the folder, and (re)set the stored procs and triggers.
+   for i in {0..9}; do
+       for file in $(ls -v ${MIGRATION_DIR}/../stored_procs/${i}*.sql 2> /dev/null)
+       do
+            echo ${file}
+            mysql --defaults-extra-file=${DB_CFG_FILE} < ${file}
+       done
+   done
+
+   for file in $(ls -v ${MIGRATION_DIR}/2*.{sh,sql,php} 2> /dev/null)
+   do
+      if [ ! -e "${file}" ]; then
+          # If there's nothing to parse in the folder, this 'exist' test will fail
+          # and we can abort looping.
+          break;
+      fi
+
+      case ${file##*.} in
+        sql)
+            echo "SQL> ${file}"
+
+            cat ${MIGRATION_DIR}/set_session_vars.sql ${file} | mysql --defaults-extra-file=${DB_CFG_FILE}
+            ;;
+        php)
+            echo "PHP> ${file}"
+            php -f ${file}
+            ;;
+        sh)
+            echo "SH > ${file}"
+
+            # Source the subshell, which gives it access to our environment variables (ie: all DB*) if they need it.
+            # Fix Windows-Unix linefeed issues.
+            sed -i 's/\r//' "${file}"
+            . ${file}
+            ;;
+      esac
+	  if [ $? = 1 ]; then 
+        exit 1
+	  fi
+
+     echo "AuditTriggers"
+     . "${MIGRATION_DIR}/migration_triggers.sh"
+   done
+
+else
+   for file in "$@"
+   do
+      echo "${file}"
+      case ${file##*.} in
+        sql)
+            cat ${MIGRATION_DIR}/set_session_vars.sql ${file} | mysql --defaults-extra-file=${DB_CFG_FILE}
+            ;;
+        php)
+            php -f ${file}
+            ;;
+        sh)
+            # Fix Windows-Unix linefeed issues.
+            sed -i 's/\r//' "${file}"
+            . ${file} 
+            ;;
+      esac
+   done
+fi
+
+. "${MIGRATION_DIR}/migration_cleanup.sh"
+
+exit 0
+
+
