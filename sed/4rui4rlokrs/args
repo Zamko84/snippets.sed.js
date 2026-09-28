@@ -1,0 +1,1 @@
+s/(\\w)(cemia)\\b/\\1cemic/gi
