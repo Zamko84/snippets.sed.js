@@ -1,0 +1,6 @@
+deb http://archive.debian.org/debian bullseye
+deb http://archive.debian.org/debian bullseye
+deb http://security.debian.org/ bullseye-security main contrib
+deb-src http://security.debian.org/ bullseye-security main contrib
+deb http://archive.debian.org/debian bullseye
+deb http://archive.debian.org/debian bullseye
