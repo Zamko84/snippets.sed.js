@@ -1,0 +1,1 @@
+"s/\(^[[:blank:]]*\"name\"[[:blank:]]*:[[:blank:]]*\"\)\([[:upper:]]\{1,\}[.]\)\(ENV\)/\1\2CAPITAL_ENV/g"

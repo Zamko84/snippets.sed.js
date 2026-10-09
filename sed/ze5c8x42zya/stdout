@@ -1,0 +1,56 @@
+[
+  {
+    "topic": "AWS.ENV.SAO.SERVICEDELIVERY.WORKFLOW.MILESTONE.JSON.SPECIFIC.EVENT",
+    "partition": [
+      0,
+      1,
+      2
+    ],
+    "offset": "5588",
+    "processed": 0,
+    "subscribers": 99999,
+    "avro": "NO",
+    "subInfo": [
+      {
+        "subname": "genericNeoConsumer",
+        "rabbit": "genericNeoConsumer",
+        "throttle": {},
+        "filters": [
+          "(?=.*\\\"correlationId\\\"\\s*:\\s*\\\"AP-.*\\\")(?=.*\\\"messageType\\\"\\s*:\\s*(\\\"DISCOVERY_SUCCEEDED\\\">
+        ]
+      }
+    ],
+    "source": "props"
+  },
+  {
+    "topic": "AWSSS.ENV.SFENT.CUSTOMER.ORDERING.VLOCITYFULFILLMENT.JSON.SPECIFIC.EVENT",
+    "partition": [
+      0,
+      1,
+      2
+    ],
+    "offset": 0,
+    "processed": 0,
+    "subscribers": 99999,
+    "avro": "NO",
+    "subInfo": [
+      {
+        "subname": "ddosVlocityFilter",
+        "rabbit": "ddosVlocityFilter",
+        "throttle": {},
+        "filters": [
+          "^(?=.*\\\"entr-salessvc-product-code\\\"\\s*:\\s*\\\"SVC_DDoS_MitigationSvc_Tech\\\").*$"
+        ]
+      },
+      {
+        "subname": "simpleWanMaster",
+        "rabbit": "simpleWanMaster",
+        "throttle": {},
+        "filters": [
+          "^(?=.*\\\"entr-message-type\\\"\\s*:\\s*\\\"(ReadyToProvision|SuppCancel|SuppCCDChange|SuppRequest)\\\")(?=.*\>
+        ]
+      }
+    ],
+    "source": "props"
+  }
+]
