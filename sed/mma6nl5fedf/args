@@ -1,0 +1,1 @@
+'s/\(initialSyncMethod: \)fileCopyBased/\1logical/'
